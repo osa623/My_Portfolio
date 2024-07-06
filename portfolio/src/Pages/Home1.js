@@ -47,7 +47,7 @@ const Home1 = () => {
       </section>
 
       <section className='relative top-0 h-[50vh] w-full bg-primary'>
-        {/* Add content for the sticky section here */}
+        
       </section>
       <section className='relative flex h-screen w-full'>
       </section>
