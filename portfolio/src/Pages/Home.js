@@ -8,6 +8,7 @@ import '../custom/stareffect.css'
 import namelogo from '../assests/logo_1.png';
 import sample from '../assests/sample.png';
 import welcome from '../assests/welcome.png';
+import Stareffect from '../utils/Stareffect';
 
 
 
@@ -22,19 +23,13 @@ const Home = () => {
 
   return (
     <main className='relative flex-col h-auto w-full'>
-      <div class="bg-animation">
-                    <div class="absolute w-full h-full">
-                        <div class="star-animation" id="stars"></div>
-                        <div class="star-animation" id="stars2"></div>
-                        <div class="star-animation" id="stars3"></div>
-                        <div class="star-animation" id="stars4"></div>
-                    </div>
-              </div>
+      <Stareffect/>
       <section className='flex flex-col h-auto w-full bg-secondary '>
         <div className='sticky flex w-full h-auto justify-center items-start bg-secondary pl-5'>
           <img src={namelogo} alt='' style={{ width: '250px' }} />
         </div>
         <div className='flex flex-col justify-center items-center p-2'>
+        
           <ul className='flex text-sm gap-10 font-kanit'>
             <li className='hover-effect'>Home</li>
             <li className='hover-effect'>Mobile Apps</li>
@@ -48,15 +43,7 @@ const Home = () => {
               <img className='absolute left-0 top-0 mt-10 ml-10' src={welcome} alt='' style={{
                 width:'600px'
               }} data-aos='zoom-in'/>
-              <div class="bg-animation">
-                    <div class="absolute w-full h-full">
-                        <div class="star-animation" id="stars"></div>
-                        <div class="star-animation" id="stars2"></div>
-                        <div class="star-animation" id="stars3"></div>
-                        <div class="star-animation" id="stars4"></div>
-                    </div>
-              </div>
-               
+               <Stareffect/>
         </div>
         
         
