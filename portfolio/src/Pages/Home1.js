@@ -5,11 +5,14 @@ import 'aos/dist/aos.css';
 import '../custom/stareffect.css';
 import Marquee from "react-fast-marquee";
 
+
 // Main-Image files
 import namelogo from '../assests/logo_1.png';
 import sample from '../assests/sample.png';
 import welcome from '../assests/welcome.png';
 import about from '../assests/about.png';
+import mytools from '../assests/my tools.png';
+import myworks from '../assests/my works.png';
 
 //Dev-tools image files
 
@@ -32,22 +35,29 @@ import Typewritereffect from '../utils/Typewritereffect';
 
 const Home1 = () => {
 
+  //animations 
 
-  useEffect(() => {
+
+
+   // Initialize AOS
+   useEffect(() => {
     Aos.init({
-      duration: 2000
+      duration: 2000,
     });
   }, []);
 
 
+
+  
+// devtool image array
   const devtools = [
-    {name:'html', path: html },
-    {name:'css', path: css},
-    {name:'js', path: js},
-    {name:'node', path: node},
-    {name:'tailwind', path: tailwind},
-    {name:'react', path: react},
-    {name:'kotlin', path: kotlin}
+    {name:'HTML', path: html },
+    {name:'CSS', path: css},
+    {name:'JS', path: js},
+    {name:'NODE', path: node},
+    {name:'TAILWIND', path: tailwind},
+    {name:'REACT', path: react},
+    {name:'KOTLIN', path: kotlin}
     
   
   ];
@@ -86,27 +96,26 @@ const Home1 = () => {
               </div>
             </div>
           </div> 
-          <div className='absolute flex right-0 bottom-0 justify-center items-center bg-primary rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
-            <div className='absolute right-0 flex justify-center items-center bg-baseprimary rounded-l-full w-[34vw] h-[33vw] overflow-hidden' data-aos='fade-left'>
+          <div className='absolute flex right-0 bottom-0 justify-center items-center bg-primary border-5 border-gray-500 rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
+           <div className='flex justify-center items-center bg-slate-700 rounded-full w-100 h-100'/>
               <img src={sample} alt='Sample' style={{ width: '450px' }} data-aos='zoom-in' />
-            </div>
+            
           </div>
         </div>
       </section>
 
      
-      <section className='flex h-[40vh] max-w-full bg-primary items-center justify-start cursor-default space-x-3 mt-2'data-aos='flip-up'>
+      <section className='flex h-[40vh] max-w-full  border-none items-center justify-start cursor-default space-x-7 mt-10'>
   
-          <div className='flex flex-col h-auto w-[25vw] ml-5 items-center '>
+          <div className='flex flex-col h-[20vh] w-[25vw] ml-5 items-center pt-10'>
                   <img src={about} alt=''style={{
     
                    }} 
-                  data-aos='zoom-in'/>
+                  data-aos='fade-right'/>
            </div>
-           <div className='flex h-auto max-w-[65vw] space-x-1' data-aos='flip-up' data-aos-delay='200'>
-              <h2 className='flex items-start justify-start text-6xl font-russoone text-baseprimary'>"I</h2>
-              <p className='flex w-[50vw] items-center justify-between font-kanit text-lg'>am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p>
-              <h2 className='flex items-start justify-end text-6xl font-russoone text-baseprimary rotate-180'>"</h2>
+           <div className='flex h-auto max-w-[65vw] space-x-3' data-aos='zoom-in' data-aos-delay='600'>
+              <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary'>I</h2>
+              <p className='flex w-[50vw] items-center text-primary justify-between font-kanit text-xl'> am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p>
            </div>
            <div className='flex h-auto max-w-[10vw]' data-aos='flip-down' data-aos-delay='1000'>
              <button className='bg-[#ffb700] w-[10vw] h-[6vh] rounded-xl text-xl font-russoone border-2 shadow-xl hover:border-black'>
@@ -118,11 +127,12 @@ const Home1 = () => {
       
       <div className='relative flex h-[10vh] max-w-full'/> 
       
-      <section className='flex h-[40vh] max-w-full bg-primary items-center justify-start cursor-default space-x-3 mt-2'data-aos='flip-down' data-aos-delay='300'>
-        <div className='flex max-h-30 w-[60vw] ml-2'>
+      <section className='flex h-[30vh] max-w-full bg-transparent items-center justify-start cursor-default mt-2'>
+        <div className='flex h-30 w-[60vw] pt-4 pb-4 ml-10 bg-primary rounded-xl border-4' data-aos='flip-down' data-aos-delay='300'>
            <Marquee>
               {devtools.map((brand, index) =>(
-                  <div key={index} className='flex flex-col grid-flow-row items-center justify-center '>
+                  
+                  <div key={index} className='flex flex-col grid-flow-row items-centerjustify-center'>
                       
                       <img src={brand.path} alt='' style={{
                         width:'150px',
@@ -134,9 +144,56 @@ const Home1 = () => {
               ))};
        
           </Marquee>
-          
+        </div>
+        <div className='flex flex-col items-center w-[40vw] max-h-auto justify-center space-y-6'>
+          <img src={mytools} alt=''
+          style={{
+            width:'400px'
+          }} data-aos='fade-left' data-aos-delay='400'/>
+           <div className='flex w-auto h-auto items-center justify-center space-x-1'data-aos='zoom-in' data-aos-delay='450'>
+              <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-10'>T</h2>
+              <p className='flex w-[30vw] h-auto text-xl items-center justify-start text-primary font-kanit'>hese are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions</p>
+          </div>
         </div>
       </section>
+
+      <div className='relative flex h-[15vh] max-w-full'/> 
+
+      <section className='relative h-auto max-w-full'>
+        <div className='flex flex-col h-auto max-w-full items-center justify-center pt-5 space-y-5'>
+          <img src={myworks} alt='' style={{
+            width:'500px'
+          }} data-aos='zoom-in' data-aos-delay='300'/>
+          <div className='flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
+             <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
+             <p className='flex w-[60vw] h-auto text-xl text-justify text-primary font-kanit'>hese are some of the web applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
+          </div>
+          <div className='flex flex-col h-auto w-full p-10'>
+              <div className='sticky flex-col top-10 h-screen w-full bg-baseprimary rounded-lg'>
+                <h2 className='font-kanit text-6xl text-primary'>Section 1</h2>
+
+              </div>
+              <div className='sticky flex top-10 h-screen w-full bg-[#c42121] rounded-lg'>
+                <h2 className='font-kanit text-6xl text-primary'>Section 2</h2>
+             </div>
+             <div className='sticky flex-col top-10 h-screen w-full bg-baseprimary rounded-lg'>
+                <h2 className='font-kanit text-6xl text-primary'>Section 3</h2>
+
+            </div>
+            <div className='sticky flex top-10 h-screen w-full bg-[#c42121] rounded-lg'>
+                <h2 className='font-kanit text-6xl text-primary'>Section 4</h2>
+            </div>
+          </div>  
+        </div>
+
+      </section>
+
+      <div className='relative flex h-[15vh] max-w-full'/> 
+
+      <section className='relative h-screen max-w-full'>
+
+      </section>
+      
 
       
     </main>
