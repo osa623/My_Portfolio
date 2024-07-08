@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import '../custom/style.css'; 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import '../custom/stareffect.css';
 import Marquee from "react-fast-marquee";
+import Countup from 'react-countup';
+import ScrollTrigger from 'react-scroll-trigger';
 
 
 // Main-Image files
@@ -13,6 +15,8 @@ import welcome from '../assests/welcome.png';
 import about from '../assests/about.png';
 import mytools from '../assests/my tools.png';
 import myworks from '../assests/my works.png';
+import socialcircle from '../assests/social circle.png';
+import bwlogo from '../assests/bwlogo.png';
 
 //Dev-tools image files
 
@@ -35,8 +39,8 @@ import Typewritereffect from '../utils/Typewritereffect';
 
 const Home1 = () => {
 
-  //animations 
-
+  //count animation
+const [CounterOn, setCounterOn] = useState(false);
 
 
    // Initialize AOS
@@ -168,7 +172,7 @@ const Home1 = () => {
              <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
              <p className='flex w-[60vw] h-auto text-xl text-justify text-primary font-kanit'>hese are some of the web applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
           </div>
-          <div className='flex flex-col h-auto w-full p-10'>
+          <div className='flex flex-col h-auto w-full p-10' data-aos='fade-up' data-aos-delay='400'>
               <div className='sticky flex-col top-10 h-screen w-full bg-baseprimary rounded-lg'>
                 <h2 className='font-kanit text-6xl text-primary'>Section 1</h2>
 
@@ -188,13 +192,46 @@ const Home1 = () => {
 
       </section>
 
-      <div className='relative flex h-[15vh] max-w-full'/> 
+      <div className='flex h-[5vh] max-w-full'/> 
 
-      <section className='relative h-screen max-w-full'>
-
+   <ScrollTrigger onEnter={()=> setCounterOn(true)} onExit={()=> setCounterOn(false)}>
+      <section className='relative h-auto max-w-full'>
+        <div className='flex h-[40vh] max-w-full items-center justify-start space-x-3'>
+           <div className='flex flex-col w-[35vw] h-auto items-center justify-center space-y-4 p-2'>
+              <img src={socialcircle} alt='' style={{
+                width:'400px'
+              }} data-aos='fade-right' data-aos-delay='300'/>
+               <div className='flex h-auto w-[30vw] items-start justify-center space-x-1 cursor-default' data-aos='zoom-in' data-aos-delay='350'>
+                 <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-10'>D</h2>
+                 <p className='flex w-[30vw] h-auto text-lg text-justify text-primary font-kanit'>ev life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
+              </div>
+           </div>
+           <div className='flex h-[30vh] w-[60vw] items-center justify-center space-x-8 border-4 border-gray-600 bg-primary rounded-xl' data-aos='flip-down' data-aos-delay='200'>
+                <img src={bwlogo} alt='' style={{
+                  width:'150px',
+            
+                }} className='rounded-full border-2 border-secondary' data-aos='flip-right'/>
+              <div className='flex flex-col h-auto w-[25vw] items-center justify-center' data-aos='zoom-in'>
+                    <div className='flex h-auto w-[30vw] items-center justify-center'>
+                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>{CounterOn && <Countup start={0} end={40000} duration={2} delay={0.2}/>}</h2>
+                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>+</h2>
+                    </div>
+                    <h2 className='flex text-[#3a3a3a] text-6xl font-russoone font-bold text-center'>Followers</h2>
+                    <h2 className='flex text-secondary w-[22vw] text-2xl font-kanit text-center'>Have gathered from all the main and popular platforms</h2>
+              </div>
+              <div className='flex flex-col h-auto w-[15vw] items-center justify-center space-y-2'>
+                  <button className=' bg-blue-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='250'>Facebook</button>
+                  <button className=' bg-secondary w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='300'>Tiktok</button>
+                  <button className=' bg-red-600 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='350'>Youtube</button>
+                  <button className=' bg-pink-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='400'>Instagram</button>
+                  <button className=' bg-gray-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='450'>Web</button>
+              </div>
+          </div>
+        </div>
       </section>
-      
+    </ScrollTrigger>  
 
+    <div className='flex h-[5vh] max-w-full'/>
       
     </main>
   );
