@@ -228,7 +228,7 @@ const [CounterOn, setCounterOn] = useState(false);
               }} data-aos='fade-right' data-aos-delay='300'/>
                <div className='flex h-auto w-[30vw] items-start justify-center space-x-1 cursor-default' data-aos='zoom-in' data-aos-delay='350'>
                  <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-10'>D</h2>
-                 <p className='flex w-[30vw] h-auto text-lg text-justify text-primary font-kanit'>ev life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
+                 <p className='flex w-[30vw] h-auto text-xl text-justify text-primary font-lorniasolid font-light '>ev life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
               </div>
            </div>
            <div className='flex h-[30vh] w-[60vw] items-center justify-center space-x-8 border-4 border-gray-600 bg-primary rounded-xl' data-aos='flip-down' data-aos-delay='200'>
