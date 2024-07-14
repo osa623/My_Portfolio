@@ -17,6 +17,9 @@ module.exports = {
       bebasneue:['Bebas Neue', 'sans-serif'],
       bricolagegrotesque:['Bricolage Grotesque', 'sans-serif'],
       kanit:['Kanit', 'sans-serif'],
+      dmsans:['DM Sans', 'sans-serif'],
+      londrina:['Londrina Solid', 'sans-serif'],
+      atma:['Atma', 'sans serif']
 
     },
     

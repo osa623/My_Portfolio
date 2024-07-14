@@ -12,7 +12,7 @@ const Stareffect = () => {
       
 
   return (
-    <div class="bg-animation">
+    <div class="bg-animation w-full h-auto">
                     <div class="absolute w-full h-full" data-aos='fade-up'>
                         <div class="star-animation" id="stars"></div>
                         <div class="star-animation" id="stars2"></div>

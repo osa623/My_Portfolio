@@ -6,6 +6,8 @@ import '../custom/stareffect.css';
 import Marquee from "react-fast-marquee";
 import Countup from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
+import { motion } from 'framer-motion';
+
 
 
 // Main-Image files
@@ -17,6 +19,11 @@ import mytools from '../assests/my tools.png';
 import myworks from '../assests/my works.png';
 import socialcircle from '../assests/social circle.png';
 import bwlogo from '../assests/bwlogo.png';
+
+//sections images
+
+import chocomate from '../assests/chocomate.png';
+import rocketimage from '../assests/rocketimage.png';
 
 //Dev-tools image files
 
@@ -107,10 +114,15 @@ const [CounterOn, setCounterOn] = useState(false);
           </div>
         </div>
       </section>
-
+      
+      <div className='flex h-[20vh] w-full bg-transparent'/>
      
-      <section className='flex h-[40vh] max-w-full  border-none items-center justify-start cursor-default space-x-7 mt-10'>
-  
+      <section className='flex h-[40vh] max-w-full  border-none items-center justify-start cursor-default mt-10 overflow-hidden'>
+        <motion.div
+        initial={{marginLeft:'-1420px'}}
+        whileInView={{marginLeft:'0px'}}
+        transition={{duration:'1.5', ease:'easeInOut', delay:'0.3'}}
+        className='flex h-[35vh] w-full bg-primary items-center justify-start space-x-5 mr-3 rounded-r-full shadow-lg shadow-[#ffb700] pr-10'>
           <div className='flex flex-col h-[20vh] w-[25vw] ml-5 items-center pt-10'>
                   <img src={about} alt=''style={{
     
@@ -118,20 +130,29 @@ const [CounterOn, setCounterOn] = useState(false);
                   data-aos='fade-right'/>
            </div>
            <div className='flex h-auto max-w-[65vw] space-x-3' data-aos='zoom-in' data-aos-delay='600'>
-              <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary'>I</h2>
-              <p className='flex w-[50vw] items-center text-primary justify-between font-kanit text-xl'> am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p>
+              <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary '>I</h2>
+              <p className='flex w-[50vw] items-center text-secondary justify-between font-lorniasolid font-light text-2xl'> am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p>
            </div>
            <div className='flex h-auto max-w-[10vw]' data-aos='flip-down' data-aos-delay='1000'>
              <button className='bg-[#ffb700] w-[10vw] h-[6vh] rounded-xl text-xl font-russoone border-2 shadow-xl hover:border-black'>
                 My Resume
              </button>
+
           </div>
-        
+        </motion.div>
+        <motion.div
+        initial={{marginLeft:'60px'}}
+        whileInView={{marginLeft:'200px'}}
+        transition={{duration:'1.5', ease:'easeInOut', delay:'0.3'}}        
+        className='flex h-[20vh] w-[30vw] items-center justify-center'>
+              <img src={rocketimage} alt='' style={{
+              }}/>
+        </motion.div>
       </section>
       
       <div className='relative flex h-[10vh] max-w-full'/> 
       
-      <section className='flex h-[30vh] max-w-full bg-transparent items-center justify-start cursor-default mt-2'>
+      <section className='flex h-[30vh] max-w-full bg-transparent items-center justify-start cursor-default mt-2 overflow-hidden'>
         <div className='flex h-30 w-[60vw] pt-4 pb-4 ml-10 bg-primary rounded-xl border-4' data-aos='flip-down' data-aos-delay='300'>
            <Marquee>
               {devtools.map((brand, index) =>(
@@ -174,7 +195,8 @@ const [CounterOn, setCounterOn] = useState(false);
           </div>
           <div className='flex flex-col h-auto w-full p-10' data-aos='fade-up' data-aos-delay='400'>
               <div className='sticky flex-col top-10 h-screen w-full bg-baseprimary rounded-lg'>
-                <h2 className='font-kanit text-6xl text-primary'>Section 1</h2>
+                <h2 className='font-kanit text-6xl text-primary'>Chocomate</h2>
+                <img src={chocomate} alt=''/>
 
               </div>
               <div className='sticky flex top-10 h-screen w-full bg-[#c42121] rounded-lg'>
@@ -195,7 +217,7 @@ const [CounterOn, setCounterOn] = useState(false);
       <div className='flex h-[5vh] max-w-full'/> 
 
    <ScrollTrigger onEnter={()=> setCounterOn(true)} onExit={()=> setCounterOn(false)}>
-      <section className='relative h-auto max-w-full'>
+      <section className='relative h-auto max-w-full overflow-hidden'>
         <div className='flex h-[40vh] max-w-full items-center justify-start space-x-3'>
            <div className='flex flex-col w-[35vw] h-auto items-center justify-center space-y-4 p-2'>
               <img src={socialcircle} alt='' style={{
@@ -213,7 +235,7 @@ const [CounterOn, setCounterOn] = useState(false);
                 }} className='rounded-full border-2 border-secondary' data-aos='flip-right'/>
               <div className='flex flex-col h-auto w-[25vw] items-center justify-center' data-aos='zoom-in'>
                     <div className='flex h-auto w-[30vw] items-center justify-center'>
-                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>{CounterOn && <Countup start={0} end={40000} duration={2} delay={0.2}/>}</h2>
+                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>{CounterOn && <Countup start={0} end={44000} duration={2} delay={0.2}/>}</h2>
                       <h2 className='flex text-secondary text-7xl font-russoone text-center'>+</h2>
                     </div>
                     <h2 className='flex text-[#3a3a3a] text-6xl font-russoone font-bold text-center'>Followers</h2>
