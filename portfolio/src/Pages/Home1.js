@@ -25,6 +25,7 @@ import bwlogo from '../assests/bwlogo.png';
 import chocomate from '../assests/chocomate.png';
 import rocketimage from '../assests/rocketimage.png';
 
+
 //Dev-tools image files
 
 import html from '../assests/devtools/html.png';
@@ -89,7 +90,9 @@ const [CounterOn, setCounterOn] = useState(false);
           </ul>
         </div>
         <div className='flex flex-col justify-center items-center w-full h-[65vh] mr-auto overflow-hidden pl-2'>
+
           <div className='flex flex-col justify-start items-center w-[65vw] h-[65vh] mr-auto overflow-hidden pl-2 space-y-2'>
+
             <div className='flex flex-col w-auto items-center justify-center'>
               <img src={welcome} alt='Welcome' style={{ width: '800px' }} data-aos='zoom-in' />
             </div>
@@ -106,8 +109,9 @@ const [CounterOn, setCounterOn] = useState(false);
                 <button className='bg-[#ffc400] rounded-2xl w-[18vw] h-[5vh] font-bold font-kanit'>Contact me</button>      
               </div>
             </div>
+
           </div> 
-          <div className='absolute flex right-0 bottom-0 justify-center items-center bg-primary border-5 border-gray-500 rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
+        <div className='absolute flex right-0 bottom-0 justify-center items-center bg-primary border-5 border-gray-500 rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
            <div className='flex justify-center items-center bg-slate-700 rounded-full w-100 h-100'/>
               <img src={sample} alt='Sample' style={{ width: '450px' }} data-aos='zoom-in' />
             
@@ -119,7 +123,7 @@ const [CounterOn, setCounterOn] = useState(false);
      
       <section className='flex h-[40vh] max-w-full  border-none items-center justify-start cursor-default mt-10 overflow-hidden'>
         <motion.div
-        initial={{marginLeft:'-1420px'}}
+        initial={{marginLeft:'-1400px'}}
         whileInView={{marginLeft:'0px'}}
         transition={{duration:'1.5', ease:'easeInOut', delay:'0.3'}}
         className='flex h-[35vh] w-full bg-primary items-center justify-start space-x-5 mr-3 rounded-r-full shadow-lg shadow-[#ffb700] pr-10'>
@@ -141,18 +145,17 @@ const [CounterOn, setCounterOn] = useState(false);
           </div>
         </motion.div>
         <motion.div
-        initial={{marginLeft:'60px'}}
-        whileInView={{marginLeft:'200px'}}
-        transition={{duration:'1.5', ease:'easeInOut', delay:'0.3'}}        
-        className='flex h-[20vh] w-[30vw] items-center justify-center'>
-              <img src={rocketimage} alt='' style={{
-              }}/>
-        </motion.div>
+    initial={{ x: '0%' }}
+    whileInView={{ x: '120%' }}
+    transition={{ duration: 1.0, ease: 'easeInOut', delay: 0.3 }}
+    className='flex h-[20vh] w-[30vw] items-center justify-center'>
+    <img src={rocketimage} alt='' style={{}} />
+</motion.div>
       </section>
       
       <div className='relative flex h-[10vh] max-w-full'/> 
       
-      <section className='flex h-[30vh] max-w-full bg-transparent items-center justify-start cursor-default mt-2 overflow-hidden'>
+      <section className='flex h-[40vh] max-w-full bg-transparent items-center justify-start cursor-default mt-2 overflow-hidden'>
         <div className='flex h-30 w-[60vw] pt-4 pb-4 ml-10 bg-primary rounded-xl border-4' data-aos='flip-down' data-aos-delay='300'>
            <Marquee>
               {devtools.map((brand, index) =>(
@@ -176,8 +179,8 @@ const [CounterOn, setCounterOn] = useState(false);
             width:'400px'
           }} data-aos='fade-left' data-aos-delay='400'/>
            <div className='flex w-auto h-auto items-center justify-center space-x-1'data-aos='zoom-in' data-aos-delay='450'>
-              <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-10'>T</h2>
-              <p className='flex w-[30vw] h-auto text-xl items-center justify-start text-primary font-kanit'>hese are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions</p>
+              <h2 className='flex items-start justify-start text-8xl font-russoone text-baseprimary lg:mb-20'>T</h2>
+              <p className='flex w-[30vw] h-auto text-2xl items-center justify-start text-primary font-lorniasolid font-light'>hese are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions</p>
           </div>
         </div>
       </section>
@@ -191,7 +194,7 @@ const [CounterOn, setCounterOn] = useState(false);
           }} data-aos='zoom-in' data-aos-delay='300'/>
           <div className='flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
              <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
-             <p className='flex w-[60vw] h-auto text-xl text-justify text-primary font-kanit'>hese are some of the web applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
+             <p className='flex w-[60vw] h-auto text-2xl text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
           </div>
           <div className='flex flex-col h-auto w-full p-10' data-aos='fade-up' data-aos-delay='400'>
               <div className='sticky flex-col top-10 h-screen w-full bg-baseprimary rounded-lg'>
