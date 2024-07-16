@@ -364,11 +364,11 @@ const [CounterOn, setCounterOn] = useState(false);
                         className="absolute flex top-2 left-5  w-auto h-[40vh] z-40 overflow-hidden">
                            <div className='flex bg-primary w-[60vw] h-[30vh] rounded-3xl items-start justify-center p-5 space-x-3'>
 
-                           <p className='flex w-[15vw] h-auto text-3xl font-londrina pt-5 cursor-default'>If you appreciate my Designing works and find it valuable,consider</p>
-                           <p className='flex w-[10vw] h-auto text-5xl font-londrina bg-[#ffb700] rounded-3xl pt-5 text-center text-[#613215] cursor-pointer p-0'><a href='https://buymeacoffee.com/osandamuthukumarana'>Buy me a
-                           <FontAwesomeIcon icon={faCoffee} className='mx-5 size-11 ' />
+                           <p className='flex w-[15vw] h-auto text-3xl font-londrina  cursor-default'>If you appreciate my Designing works and find it valuable,consider</p>
+                           <p className='flex w-[10vw] h-auto text-5xl font-londrina bg-[#ffb700] rounded-3xl text-center text-[#613215] cursor-pointer p-0'><a href='https://buymeacoffee.com/osandamuthukumarana'>Buy me a
+                           <FontAwesomeIcon icon={faCoffee} className='mx-5 size-11 rounded-full bg-primary border-8' />
                            Coffee</a></p>
-                           <p className='flex w-[35vw] h-auto text-3xl font-londrina pt-5 cursor-default'>Your support fuels my creativity and helps me continue crafting and sharing high-quality projects. Thank you for your generosity!</p>
+                           <p className='flex w-[35vw] h-auto text-3xl font-londrina  cursor-default'>Your support fuels my creativity and helps me continue crafting and sharing high-quality projects. Thank you for your generosity!</p>
                            </div>
                            <div className='flex w-[18vw] h-auto rounded-3xl' style={{
                             backgroundImage:`url(${quoteimg})`,
