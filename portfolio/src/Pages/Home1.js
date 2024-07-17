@@ -1,3 +1,5 @@
+
+//All the dependencies 
 import React, { useState,useEffect } from 'react';
 import '../custom/style.css'; 
 import Aos from 'aos';
@@ -8,7 +10,7 @@ import Countup from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -59,6 +61,8 @@ const Home1 = () => {
 const [CounterOn, setCounterOn] = useState(false);
 
 
+
+
    // Initialize AOS
    useEffect(() => {
     Aos.init({
@@ -83,23 +87,43 @@ const [CounterOn, setCounterOn] = useState(false);
   ];
     
   return (
-    <main className='relative h-auto w-full bg-secondary'>
+    <main className='relative h-auto w-full bg-secondary sm:overflow-hidden'>
       <Stareffect/>
       <section className='relative flex-col h-auto w-full'>
-        <div className='flex flex-col items-center justify-center w-full cursor-pointer'>
-          <img src={namelogo} alt='Logo' style={{ width: '250px' }} />
-        </div>
-        <div className='flex flex-col justify-center items-center p-2'>
-          <ul className='flex text-sm gap-10 font-kanit'>
-            <li className='hover-effect'>Home</li>
-            <li className='hover-effect'>Mobile Apps</li>
-            <li className='hover-effect'>Web Designs</li>
-            <li className='hover-effect'>Social Circle</li>
-          </ul>
-        </div>
-        <div className='flex flex-col justify-center items-center w-full h-[65vh] mr-auto overflow-hidden pl-2'>
+        <div className='flex items-center md:justify-center sm:justify-start w-auto cursor-pointer p-2'>
+          <img src={namelogo} alt='Logo' style={{ 
+            
+            width: '250px' }} />
 
-          <div className='flex flex-col justify-start items-center w-[65vw] h-[65vh] mr-auto overflow-hidden pl-2 space-y-2'>
+              <div className='md:hidden flex w-full h-auto bg-transparent items-center justify-end'>
+                <svg class="h-8 w-8 text-primary hover:text-blue-400"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="21" y1="10" x2="3" y2="10" />  <line x1="21" y1="6" x2="3" y2="6" />  <line x1="21" y1="14" x2="3" y2="14" />  <line x1="21" y1="18" x2="3" y2="18" /></svg>
+              </div>
+
+        </div>
+        <div className='flex justify-center items-center lg:p-2'>
+              <ul className='hidden md:flex text-sm gap-10 font-kanit'>
+                <li className='hover-effect'>Home</li>
+                <li className='hover-effect'>Mobile Apps</li>
+                <li className='hover-effect'>Web Designs</li>
+                <li className='hover-effect'>Social Circle</li>
+              </ul>
+           
+    </div>
+        <div className='flex flex-col justify-center items-center max-w-full h-[65vh] mr-auto overflow-hidden pl-2'>
+
+          {/* Elements in when the scale size is smale */}
+
+          <div className='sm:hidden flex flex-col w-full h-auto bg-transparent items-center justify-center'>
+              <img src={sample} alt='' style={{
+                width:'450px'
+              }}/>
+
+          </div>
+          
+
+
+          {/* Elements in when the scale size is medium and large */}
+          <div className='hidden md:flex flex-col justify-start items-center w-[65vw] h-[65vh] mr-auto overflow-hidden pl-2 space-y-2'>
 
             <div className='flex flex-col w-auto items-center justify-center'>
               <img src={welcome} alt='Welcome' style={{ width: '800px' }} data-aos='zoom-in' />
@@ -109,19 +133,19 @@ const [CounterOn, setCounterOn] = useState(false);
                 <h2 className='font-poppins text-4xl text-primary'>I'm </h2>
                 <h2 className='font-russoone text-6xl text-[#fdd122]'>Osanda Muthukumarana</h2>
               </div>
-              <div className='flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
+              <div className='hidden md:flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
                 <h2 className='font-kanit text-3xl text-primary font-bold'>Full-Stack Developer &</h2>
                 <Typewritereffect/>
               </div>
-              <div className='flex flex-col w-auto h-auto items-start justify-center pt-10' data-aos='zoom-in' data-aos-delay='800'>
+              <div className='hidden md:flex flex-col w-auto h-auto items-start justify-center pt-10' data-aos='zoom-in' data-aos-delay='800'>
                 <button className='bg-[#ffc400] rounded-2xl w-[18vw] h-[5vh] font-bold font-kanit'>Contact me</button>      
               </div>
             </div>
 
           </div> 
-        <div className='absolute flex right-0 bottom-0 justify-center items-center bg-primary border-5 border-gray-500 rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
-           <div className='flex justify-center items-center bg-slate-700 rounded-full w-100 h-100'/>
-              <img src={sample} alt='Sample' style={{ width: '450px' }} data-aos='zoom-in' />
+        <div className='absolute hidden md:flex right-0 bottom-0 justify-center items-center bg-transparent border-5 border-gray-500 rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
+           
+              <img src={sample} alt='Sample' style={{ width: '800px' }} data-aos='zoom-in' />
             
           </div>
         </div>
@@ -330,7 +354,7 @@ const [CounterOn, setCounterOn] = useState(false);
                                                       <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         fill="currentColor"
-                                                        class="text-gray-400"
+                                                        class="text-gray-400 hover:scale-150 transition-transform "
                                                         viewBox="0 0 640 512">
                                                         <path
                                                           d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z" />
@@ -349,7 +373,7 @@ const [CounterOn, setCounterOn] = useState(false);
 
                                   </div>
                                   <div className='flex w-[60vw] h-auto bg-transparent items-center justify-center'>
-                                    <h2 className='text-primary text-lg pt-5 font-poppins font-thin'>2024 Osanda Muthukumarana. All rights reserved.</h2>
+                                    <h2 className='text-primary text-lg pt-5 font-mono font-thin'>2024 Osanda Muthukumarana. All rights reserved.</h2>
                                   </div>
                           </div>
                     </div>
@@ -360,9 +384,9 @@ const [CounterOn, setCounterOn] = useState(false);
                         <motion.div 
                         initial={{opacity:'0'}}
                         whileInView={{opacity:'100'}}
-                        transition={{duration:'5.0', ease:'easeInOut', delay:'5.0'}}
+                        transition={{duration:'4.0', ease:'easeInOut', delay:'5.0'}}
                         className="absolute flex top-2 left-5  w-auto h-[40vh] z-40 overflow-hidden">
-                           <div className='flex bg-primary w-[60vw] h-[30vh] rounded-3xl items-start justify-center p-5 space-x-3'>
+                           <div className='flex bg-primary w-[60vw] h-[30vh] rounded-full items-center p-10 justify-center space-x-3'>
 
                            <p className='flex w-[15vw] h-auto text-3xl font-londrina  cursor-default'>If you appreciate my Designing works and find it valuable,consider</p>
                            <p className='flex w-[10vw] h-auto text-5xl font-londrina bg-[#ffb700] rounded-3xl text-center text-[#613215] cursor-pointer p-0'><a href='https://buymeacoffee.com/osandamuthukumarana'>Buy me a
