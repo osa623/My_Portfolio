@@ -46,7 +46,8 @@ import tailwind from '../assests/devtools/tailwind css.png';
 import react from '../assests/devtools/react.png';
 import node from '../assests/devtools/node.png';
 import kotlin from '../assests/devtools/kotlin.png';
-
+import next from '../assests/devtools/node.png';
+import flutter from '../assests/devtools/kotlin.png';
 
 // Effect backgrounds
 import Stareffect from '../utils/Stareffect';
@@ -83,7 +84,10 @@ const [CounterOn, setCounterOn] = useState(false);
     {name:'NODE', path: node},
     {name:'TAILWIND', path: tailwind},
     {name:'REACT', path: react},
-    {name:'KOTLIN', path: kotlin}
+    {name:'KOTLIN', path: kotlin},
+    {name:'NEXT', path: next},
+    {name:'FLUTTER', path: flutter}
+
     
   
   ];
@@ -150,7 +154,7 @@ const [CounterOn, setCounterOn] = useState(false);
 
                         <div className='sm:hidden flex flex-col w-[90vw] h-auto items-center justify-start'>
                                 <h1 className='flex font-russoone text-center text-primary ' style={{
-                                  fontSize:'70px',
+                                  fontSize:'65px',
                                   height:'60px'
                                 }}>Full Stack</h1>
                                 <h2 className='flex  font-russoone text-[#fdd122]' style={{
@@ -214,15 +218,20 @@ const [CounterOn, setCounterOn] = useState(false);
                                   <img src={about} alt=''style={{
                     
                                   }} 
-                                  data-aos='fade-right'/>
+                                  data-aos='flip-up'/>
                           </div>
 
                         <div className='flex flex-col h-auto w-[75vw] ml-2 items-start justify-center pt-5'>
                             <p className='flex w-auto items-center text-secondary text-center font-lorniasolid font-light text-2xl'>I am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p> 
                          </div>
                         <div className='flex h-auto w-auto items-center justify-center'>
-                        <button className='bg-[#ffb700] w-20 h-20 rounded-xl text-xl font-russoone mb-2 border-2 shadow-xl hover:border-black'>
-                          CV
+                            <button className='bg-[#ffb700] flex  w-20 h-20 rounded-xl items-center justify-center text-xl font-russoone space-x-2 mb-2 cursor-pointer border-2 shadow-xl hover:border-black'>
+                            <h2 className='font-londrina text-4xl text-secondary'>CV</h2>
+                                  <div className='flex h-auto w-auto'>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                              </svg>
+                                 </div>
                       </button>
                         </div>
 
@@ -265,81 +274,112 @@ const [CounterOn, setCounterOn] = useState(false);
 
       </section>
       
-      <div className='relative flex h-[10vh] max-w-full'/> 
+      <div className='relative flex md:h-[10vh] max-w-full'/> 
       
 
 
-<section className='flex h-[60vh] max-w-full items-center justify-center overflow-hidden'>
-      <motion.div
-            initial={{marginRight:'-2500px'}}
-            whileInView={{marginRight:'1000px'}}
-            transition={{duration:'2.0', ease:'easeInOut', delay:'0.3'}}
-            className='flex h-auto w-full space-x-10'>  
-                      <img src={rocketimage} alt='' style={{
-                        width:'500px',
-                        rotate:'180deg'
-                      }}/>
+     <section className='flex md:h-[60vh] sm:h-auto max-w-full items-center justify-center overflow-hidden'>
 
-            <div className='flex h-[40vh] w-full bg-primary rounded-l-full p-10  shadow-xl shadow-[#ffb700]'>  
-                <div className='flex h-[30vh] w-[50vw] pt-4 pb-4 ml-10 bg-primary rounded-l-full '>
-                  <Marquee className='rounded-l-full'>
-                      {devtools.map((brand, index) =>(
-                          
-                          <div key={index} className='flex flex-col items-center justify-center rounded-l-full' data-aos='flip-down' data-aos-delay='700'>
-                              
-                              <img src={brand.path} alt='' style={{
-                                width:'150px',
-                              }}/>
-                              
-                              <h2 className='font-russoone text-md text-secondary text-center'>{brand.name}</h2>
-                          </div>
-                      ))};
-              
-                  </Marquee>
-                </div>
-                <div className='flex flex-col items-center w-[60vw] max-h-auto justify-center space-y-6 '>
-                  <img src={mytools} alt=''
-                  style={{
-                    width:'400px'
-                  }} data-aos='fade-left' data-aos-delay='400'/>
-                  <div className='flex w-auto h-auto items-center justify-center space-x-1'data-aos='zoom-in' data-aos-delay='450'>
-                      <h2 className='flex items-start justify-start text-8xl font-russoone text-baseprimary lg:mb-10'>T</h2>
-                      <p className='flex w-[35vw] h-auto text-2xl items-center justify-start text-secondary font-lorniasolid font-light'>hese are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions</p>
+      
+                {/* small size screen configs */}
+                  
+                <div className='sm:hidden flex flex-col bg-primary w-full h- items-center justify-center m-5 rounded-3xl'>
+                  <div className='flex items-center justify-center h-auto w-[75vw] mt-5'>
+                      <img src={mytools} alt='' data-aos='flip-down' data-aos-delay='400'/>
+                  </div>
+
+                  <div className='flex flex-col w-full h-auto items-center justify-center'>
+                      <div className='grid grid-flow-row grid-cols-3 gap-4 p-5'>
+                        {devtools.map((brand,index) =>(
+                            <div key={index} className='border-2 border-secondary rounded-xl'>
+                              <img src={brand.path}
+                                  alt={brand.name}
+                                  className='w-30 h-30 ' style={{
+                                    objectFit:'contain'
+                                  }} data-aos='flip-down'/>
+                                  <h2 className='flex flex-col  font-londrina text-xl text-center text-secondary' data-aos='zoom-in'>{brand.name}</h2>
+                                  </div>
+
+                        ))}
+                      </div>
                   </div>
                 </div>
-              </div>   
-      </motion.div>   
-      </section>
+                    
 
-      <div className='relative flex h-[15vh] max-w-full'/> 
 
-      <section className='relative h-auto max-w-full overflow-hidden'>
-        <div className='flex flex-col h-auto max-w-full items-center justify-center pt-5 space-y-5'>
-          <img src={myworks} alt='' style={{
-            width:'500px'
-          }} data-aos='zoom-in' data-aos-delay='300'/>
-          <div className='flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
-             <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
-             <p className='flex w-[60vw] h-auto text-2xl text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
-          </div>
-          <div className='flex flex-col h-auto w-full p-10' data-aos='fade-up' data-aos-delay='400'>
-              <div className='sticky flex-col top-10 h-screen w-full bg-baseprimary rounded-lg'>
-                <h2 className='font-kanit text-6xl text-primary'>Chocomate</h2>
-                <img src={chocomate} alt=''/>
 
+
+                {/* medium and large screen configs */}
+                <motion.div
+                      initial={{marginRight:'-2500px'}}
+                      whileInView={{marginRight:'1000px'}}
+                      transition={{duration:'2.0', ease:'easeInOut', delay:'0.3'}}
+                      className='hidden md:flex h-auto w-full space-x-10'>  
+                                <img src={rocketimage} alt='' style={{
+                                  width:'500px',
+                                  rotate:'180deg'
+                                }}/>
+
+                      <div className='flex h-[40vh] w-full bg-primary rounded-l-full p-10  shadow-xl shadow-[#ffb700]'>  
+                          <div className='flex h-[30vh] w-[50vw] pt-4 pb-4 ml-10 bg-primary rounded-l-full '>
+                            <Marquee className='rounded-l-full'>
+                                {devtools.map((brand, index) =>(
+                                    
+                                    <div key={index} className='flex flex-col items-center justify-center rounded-l-full' data-aos='flip-down' data-aos-delay='700'>
+                                        
+                                        <img src={brand.path} alt='' style={{
+                                          width:'150px',
+                                        }}/>
+                                        
+                                        <h2 className='font-russoone text-md text-secondary text-center'>{brand.name}</h2>
+                                    </div>
+                                ))};
+                        
+                            </Marquee>
+                          </div>
+                          <div className='flex flex-col items-center w-[60vw] max-h-auto justify-center space-y-6 '>
+                            <img src={mytools} alt=''
+                            style={{
+                              width:'400px'
+                            }} data-aos='fade-left' data-aos-delay='400'/>
+                            <div className='flex w-auto h-auto items-center justify-center space-x-1'data-aos='zoom-in' data-aos-delay='450'>
+                                <h2 className='flex items-start justify-start text-8xl font-russoone text-baseprimary lg:mb-10'>T</h2>
+                                <p className='flex w-[35vw] h-auto text-2xl items-center justify-start text-secondary font-lorniasolid font-light'>hese are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions</p>
+                            </div>
+                          </div>
+                        </div>   
+                </motion.div>   
+                </section>
+
+                <div className='relative flex h-[15vh] max-w-full'/> 
+
+                <section className='relative h-auto max-w-full overflow-hidden'>
+                  <div className='flex flex-col h-auto max-w-full items-center justify-center pt-5 space-y-5'>
+                    <img src={myworks} alt='' style={{
+                      width:'500px'
+                    }} data-aos='zoom-in' data-aos-delay='300'/>
+                    <div className='flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
+                      <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
+                      <p className='flex w-[60vw] h-auto text-2xl text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
+                    </div>
+                    <div className='flex flex-col h-auto w-full p-10' data-aos='fade-up' data-aos-delay='400'>
+                        <div className='sticky flex-col top-10 h-screen w-full bg-baseprimary rounded-lg'>
+                          <h2 className='font-kanit text-6xl text-primary'>Chocomate</h2>
+                          <img src={chocomate} alt=''/>
+
+                        </div>
+                        <div className='sticky flex top-10 h-screen w-full bg-[#c42121] rounded-lg'>
+                          <h2 className='font-kanit text-6xl text-primary'>Section 2</h2>
+                      </div>
+                      <div className='sticky flex-col top-10 h-screen w-full bg-baseprimary rounded-lg'>
+                          <h2 className='font-kanit text-6xl text-primary'>Section 3</h2>
+
+                      </div>
+                      <div className='sticky flex top-10 h-screen w-full bg-[#c42121] rounded-lg'>
+                          <h2 className='font-kanit text-6xl text-primary'>Section 4</h2>
+                      </div>
+                    </div>  
               </div>
-              <div className='sticky flex top-10 h-screen w-full bg-[#c42121] rounded-lg'>
-                <h2 className='font-kanit text-6xl text-primary'>Section 2</h2>
-             </div>
-             <div className='sticky flex-col top-10 h-screen w-full bg-baseprimary rounded-lg'>
-                <h2 className='font-kanit text-6xl text-primary'>Section 3</h2>
-
-            </div>
-            <div className='sticky flex top-10 h-screen w-full bg-[#c42121] rounded-lg'>
-                <h2 className='font-kanit text-6xl text-primary'>Section 4</h2>
-            </div>
-          </div>  
-    </div>
 
       </section>
 
