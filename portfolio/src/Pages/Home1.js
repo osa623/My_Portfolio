@@ -17,6 +17,7 @@ import { faCoffee} from '@fortawesome/free-solid-svg-icons';
 // Main-Image files
 import namelogo from '../assests/logo_1.png';
 import sample from '../assests/sample.png';
+import sample2 from '../assests/sample2.png';
 import welcome from '../assests/welcome.png';
 import about from '../assests/about.png';
 import mytools from '../assests/my tools.png';
@@ -50,6 +51,7 @@ import kotlin from '../assests/devtools/kotlin.png';
 // Effect backgrounds
 import Stareffect from '../utils/Stareffect';
 import Typewritereffect from '../utils/Typewritereffect';
+import Typewrittermobile from '../utils/Typewrittermobile';
 
 
 
@@ -87,10 +89,10 @@ const [CounterOn, setCounterOn] = useState(false);
   ];
     
   return (
-    <main className='relative h-auto w-full bg-secondary sm:overflow-hidden'>
+    <main className='relative h-auto w-full bg-secondary '>
       <Stareffect/>
       <section className='relative flex-col h-auto w-full'>
-        <div className='flex items-center md:justify-center sm:justify-start w-auto cursor-pointer p-2'>
+        <div className='flex items-center md:justify-center sm:justify-start w-auto cursor-pointer p-5'>
           <img src={namelogo} alt='Logo' style={{ 
             
             width: '250px' }} />
@@ -108,41 +110,93 @@ const [CounterOn, setCounterOn] = useState(false);
                 <li className='hover-effect'>Social Circle</li>
               </ul>
            
-    </div>
-        <div className='flex flex-col justify-center items-center max-w-full h-[65vh] mr-auto overflow-hidden pl-2'>
+        </div>
+        <div className='flex flex-col justify-center items-center md:w-full md:h-[65vh] sm:h-auto mr-auto overflow-hidden pl-2'>
 
           {/* Elements in when the scale size is smale */}
 
-          <div className='sm:hidden flex flex-col w-full h-auto bg-transparent items-center justify-center'>
-              <img src={sample} alt='' style={{
-                width:'450px'
-              }}/>
+                <div className='sm:hidden flex flex-col w-full h-auto bg-transparent items-center justify-center p-2'>
+                    <img src={sample2} alt='' style={{
+                      width:'420px'
+                    }}/>
+                
+                </div>
 
-          </div>
-          
+
+          <div className='flex flex-col justify-start items-center sm:w-full sm:h-auto  md:w-[65vw] md:h-[65vh] md:mr-auto sm:mr-0  overflow-hidden md:pl-2 space-y-1'>
+
+             {/* Elements in when the scale size is medium and large */}
+                <div className='hidden md:flex flex-col w-auto items-center justify-center'>
+                  <img src={welcome} alt='Welcome' style={{ width: '800px' }} data-aos='zoom-in' />
+                </div>
+
+              {/* Elements in when the scale size is small */}
 
 
-          {/* Elements in when the scale size is medium and large */}
-          <div className='hidden md:flex flex-col justify-start items-center w-[65vw] h-[65vh] mr-auto overflow-hidden pl-2 space-y-2'>
+                        <div className='sm:hidden flex items-center justify-center w-full h-auto'>
+                          <h2 className='font-russoone text-primary' style={{
+                            fontSize:'110px'
+                          }}>I'M</h2>
+                              <div className='flex flex-col w-auto h-auto'>
+                                <h2 className='font-russoone text-5xl text-[#fdd122]'>Osanda</h2>
+                                <h2 className='font-russoone  text-primary' style={{
+                                    fontSize:'30px'
+                                  }}>uthukumarana</h2>
+                              </div>  
+    
+                        </div>
 
-            <div className='flex flex-col w-auto items-center justify-center'>
-              <img src={welcome} alt='Welcome' style={{ width: '800px' }} data-aos='zoom-in' />
-            </div>
-            <div className='flex flex-col h-auto w-auto justify-start items-start'>
-              <div className='flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
-                <h2 className='font-poppins text-4xl text-primary'>I'm </h2>
-                <h2 className='font-russoone text-6xl text-[#fdd122]'>Osanda Muthukumarana</h2>
-              </div>
-              <div className='hidden md:flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
-                <h2 className='font-kanit text-3xl text-primary font-bold'>Full-Stack Developer &</h2>
-                <Typewritereffect/>
-              </div>
-              <div className='hidden md:flex flex-col w-auto h-auto items-start justify-center pt-10' data-aos='zoom-in' data-aos-delay='800'>
-                <button className='bg-[#ffc400] rounded-2xl w-[18vw] h-[5vh] font-bold font-kanit'>Contact me</button>      
-              </div>
-            </div>
+                        <div className='sm:hidden flex bg-baseprimary w-40 h-1 rounded-2xl'/>
 
-          </div> 
+                        <div className='sm:hidden flex flex-col w-[90vw] h-auto items-center justify-start'>
+                                <h1 className='flex font-russoone text-center text-primary ' style={{
+                                  fontSize:'70px',
+                                  height:'60px'
+                                }}>Full Stack</h1>
+                                <h2 className='flex  font-russoone text-[#fdd122]' style={{
+                                  fontSize:'70px',
+                                  
+                                  
+                                }}>
+                                  Developer
+                                </h2>
+                        </div>
+                        <div className='sm:hidden flex bg-primary w-40 h-1 rounded-2xl'/>
+                        
+                        <div className='sm:hidden flex flex-col w-[30vw] h-auto items-center justify-start'>
+                                <h1 className='flex font-londrina text-center text-primary ' style={{
+                                  fontSize:'70px',
+
+                                  
+                                }}>AND</h1>
+                        </div>
+                        <div className='sm:hidden flex bg-baseprimary w-40 h-1 rounded-2xl'/>
+
+                        <div className='sm:hidden flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
+
+                                <Typewrittermobile/>
+                              </div>        
+
+
+
+                      <div className='hidden md:flex flex-col h-auto w-auto justify-start items-start'>
+                              <div className='flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
+                                <h2 className='font-poppins text-4xl text-primary'>I'm </h2>
+                                <h2 className='font-russoone text-6xl text-[#fdd122]'>Osanda Muthukumarana</h2>
+                              </div>
+                              
+
+
+                              <div className='hidden md:flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
+                                <h2 className='font-kanit text-3xl text-primary font-bold'>Full-Stack Developer &</h2>
+                                <Typewritereffect/>
+                              </div>
+                              <div className='hidden md:flex flex-col w-auto h-auto items-start justify-center pt-10' data-aos='zoom-in' data-aos-delay='800'>
+                                <button className='bg-[#ffc400] rounded-2xl w-[18vw] h-[5vh] font-bold font-kanit'>Contact me</button>      
+                              </div>
+                      </div>
+                                  
+        </div> 
         <div className='absolute hidden md:flex right-0 bottom-0 justify-center items-center bg-transparent border-5 border-gray-500 rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
            
               <img src={sample} alt='Sample' style={{ width: '800px' }} data-aos='zoom-in' />
@@ -151,38 +205,63 @@ const [CounterOn, setCounterOn] = useState(false);
         </div>
       </section>
       
-      <div className='flex h-[20vh] w-full bg-transparent'/>
+      <div className='hidden md:flex h-[20vh] w-full bg-transparent'/>
      
-      <section className='flex h-[40vh] max-w-full  border-none items-center justify-start cursor-default mt-10 overflow-hidden'>
-        <motion.div
-        initial={{marginLeft:'-1400px'}}
-        whileInView={{marginLeft:'0px'}}
-        transition={{duration:'2.0', ease:'easeInOut', delay:'0.3'}}
-        className='flex h-auto w-auto space-x-10'>
+      <section className='flex md:h-[40vh] sm:h-auto max-w-full border-none items-center justify-start cursor-default md:mt-10 overflow-hidden'>
+                  
+                  <div className='sm:hidden flex flex-col w-full h-auto bg-primary rounded-3xl m-5 items-center space-y-4'>
+                        <div className='flex flex-col h-auto w-[75vw] ml-2 items-center pt-10'>
+                                  <img src={about} alt=''style={{
+                    
+                                  }} 
+                                  data-aos='fade-right'/>
+                          </div>
 
-        <div className='flex h-[35vh] w-full bg-primary items-center justify-start space-x-5 mr-3 rounded-r-full shadow-xl shadow-[#ffb700] pr-10'>
-          <div className='flex flex-col h-[20vh] w-[25vw] ml-5 items-center pt-10'>
-                  <img src={about} alt=''style={{
-    
-                   }} 
-                  data-aos='fade-right'/>
-           </div>
-           <div className='flex h-auto max-w-[65vw] space-x-3' data-aos='zoom-in' data-aos-delay='600'>
-              <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary '>I</h2>
-              <p className='flex w-[50vw] items-center text-secondary justify-between font-lorniasolid font-light text-2xl'> am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p>
-           </div>
-           <div className='flex h-auto max-w-[10vw]' data-aos='flip-down' data-aos-delay='1000'>
-             <button className='bg-[#ffb700] w-[10vw] h-[6vh] rounded-xl text-xl font-russoone border-2 shadow-xl hover:border-black'>
-                My Resume
-             </button>
+                        <div className='flex flex-col h-auto w-[75vw] ml-2 items-start justify-center pt-5'>
+                            <p className='flex w-auto items-center text-secondary text-center font-lorniasolid font-light text-2xl'>I am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p> 
+                         </div>
+                        <div className='flex h-auto w-auto items-center justify-center'>
+                        <button className='bg-[#ffb700] w-20 h-20 rounded-xl text-xl font-russoone mb-2 border-2 shadow-xl hover:border-black'>
+                          CV
+                      </button>
+                        </div>
 
-          </div>
+                  </div>
+                  
+                  
+                  
+                  
+                  
+            {/*medium and large screen size configurations*/}      
+                  <motion.div
+                  initial={{marginLeft:'-1400px'}}
+                  whileInView={{marginLeft:'0px'}}
+                  transition={{duration:'2.0', ease:'easeInOut', delay:'0.3'}}
+                  className='hidden md:flex h-auto w-auto space-x-10'>
 
-          </div>
-          <img src={rocketimage} alt='' style={{
-            width:'500px'
-          }} />
-        </motion.div>
+                  <div className='flex h-[35vh] w-full bg-primary items-center justify-start space-x-5 mr-3 rounded-r-full shadow-xl shadow-[#ffb700] pr-10'>
+                    <div className='flex flex-col h-[20vh] w-[25vw] ml-5 items-center pt-10'>
+                            <img src={about} alt=''style={{
+              
+                            }} 
+                            data-aos='fade-right'/>
+                    </div>
+                    <div className='flex h-auto max-w-[65vw] space-x-3' data-aos='zoom-in' data-aos-delay='600'>
+                        <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary '>I</h2>
+                        <p className='flex w-[50vw] items-center text-secondary justify-between font-lorniasolid font-light text-2xl'> am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p>
+                    </div>
+                    <div className='flex h-auto max-w-[10vw]' data-aos='flip-down' data-aos-delay='1000'>
+                      <button className='bg-[#ffb700] w-[10vw] h-[6vh] rounded-xl text-xl font-russoone border-2 shadow-xl hover:border-black'>
+                          My Resume
+                      </button>
+
+                    </div>
+
+                    </div>
+                    <img src={rocketimage} alt='' style={{
+                      width:'500px'
+                    }} />
+                  </motion.div>
 
       </section>
       
@@ -234,7 +313,7 @@ const [CounterOn, setCounterOn] = useState(false);
 
       <div className='relative flex h-[15vh] max-w-full'/> 
 
-      <section className='relative h-auto max-w-full'>
+      <section className='relative h-auto max-w-full overflow-hidden'>
         <div className='flex flex-col h-auto max-w-full items-center justify-center pt-5 space-y-5'>
           <img src={myworks} alt='' style={{
             width:'500px'
