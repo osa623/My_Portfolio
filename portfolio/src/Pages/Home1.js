@@ -14,6 +14,8 @@ import { faCoffee} from '@fortawesome/free-solid-svg-icons';
 
 
 
+
+
 // Main-Image files
 import namelogo from '../assests/logo_1.png';
 import sample from '../assests/sample.png';
@@ -179,7 +181,10 @@ const [CounterOn, setCounterOn] = useState(false);
                         <div className='sm:hidden flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
 
                                 <Typewrittermobile/>
-                              </div>        
+                        </div>    
+                        <div className='sm:hidden flex flex-col w-auto h-auto items-start justify-center p-5' data-aos='zoom-in' data-aos-delay='800'>
+                                <button className='bg-[#ffc400] rounded-3xl w-[50vw] h-[5vh] text-3xl font-bold font-bebasneue'>Contact me</button>      
+                        </div>    
 
 
 
@@ -200,20 +205,20 @@ const [CounterOn, setCounterOn] = useState(false);
                               </div>
                       </div>
                                   
-        </div> 
-        <div className='absolute hidden md:flex right-0 bottom-0 justify-center items-center bg-transparent border-5 border-gray-500 rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
-           
-              <img src={sample} alt='Sample' style={{ width: '800px' }} data-aos='zoom-in' />
-            
-          </div>
-        </div>
-      </section>
+                  </div> 
+                  <div className='absolute hidden md:flex right-0 bottom-0 justify-center items-center bg-transparent border-5 border-gray-500 rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
+                    
+                        <img src={sample} alt='Sample' style={{ width: '800px' }} data-aos='zoom-in' />
+                      
+                    </div>
+                  </div>
+                </section>
       
       <div className='hidden md:flex h-[20vh] w-full bg-transparent'/>
      
       <section className='flex md:h-[40vh] sm:h-auto max-w-full border-none items-center justify-start cursor-default md:mt-10 overflow-hidden'>
                   
-                  <div className='sm:hidden flex flex-col w-full h-auto bg-primary rounded-3xl m-5 items-center space-y-4'>
+                  <div className='sm:hidden flex flex-col w-full h-auto bg-primary  items-center space-y-4'>
                         <div className='flex flex-col h-auto w-[75vw] ml-2 items-center pt-10'>
                                   <img src={about} alt=''style={{
                     
@@ -274,24 +279,30 @@ const [CounterOn, setCounterOn] = useState(false);
 
       </section>
       
-      <div className='relative flex md:h-[10vh] max-w-full'/> 
+      <div className='relative flex md:h-[10vh] max-w-full justify-center items-center m-5'>
+          <div className='flex h-1 w-[60vw] bg-primary rounded-3xl'/>
+      </div> 
       
 
 
-     <section className='flex md:h-[60vh] sm:h-auto max-w-full items-center justify-center overflow-hidden'>
+        <section className='flex md:h-[60vh] sm:h-auto max-w-full items-center justify-center overflow-hidden'>
 
       
                 {/* small size screen configs */}
                   
-                <div className='sm:hidden flex flex-col bg-primary w-full h- items-center justify-center m-5 rounded-3xl'>
+                <div className='sm:hidden flex flex-col bg-primary w-full h- items-center justify-center space-y-3'>
                   <div className='flex items-center justify-center h-auto w-[75vw] mt-5'>
                       <img src={mytools} alt='' data-aos='flip-down' data-aos-delay='400'/>
+                  </div>
+
+                  <div className='flex flex-col items-center justify-center'>
+                      <p className='w-[75vw] h-auto text-center font-londrina font-light text-xl'>These are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions</p>
                   </div>
 
                   <div className='flex flex-col w-full h-auto items-center justify-center'>
                       <div className='grid grid-flow-row grid-cols-3 gap-4 p-5'>
                         {devtools.map((brand,index) =>(
-                            <div key={index} className='border-2 border-secondary rounded-xl'>
+                            <div key={index} className='border-2 border-secondary rounded-xl pt-2'>
                               <img src={brand.path}
                                   alt={brand.name}
                                   className='w-30 h-30 ' style={{
@@ -304,10 +315,6 @@ const [CounterOn, setCounterOn] = useState(false);
                       </div>
                   </div>
                 </div>
-                    
-
-
-
 
                 {/* medium and large screen configs */}
                 <motion.div
@@ -351,19 +358,45 @@ const [CounterOn, setCounterOn] = useState(false);
                 </motion.div>   
                 </section>
 
-                <div className='relative flex h-[15vh] max-w-full'/> 
+                <div className='relative flex md:h-[15vh] max-w-full'/> 
 
-                <section className='relative h-auto max-w-full overflow-hidden'>
-                  <div className='flex flex-col h-auto max-w-full items-center justify-center pt-5 space-y-5'>
-                    <img src={myworks} alt='' style={{
-                      width:'500px'
-                    }} data-aos='zoom-in' data-aos-delay='300'/>
-                    <div className='flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
+                <section className='relative h-auto max-w-full '>
+                  <div className='flex flex-col h-auto max-w-full items-center justify-center pt-5 space-y-5'>\
+
+                    {/*Image for large and medium screen models*/}
+
+                    <div className='hidden md:flex h-auto w-full items-center justify-center'>
+                          <img src={myworks} alt='' style={{
+                            width:'500px'
+                          }} data-aos='zoom-in' data-aos-delay='300'/>
+                    </div> 
+
+                    {/*Image for small screen models*/}
+
+                    <div className='sm:hidden flex h-auto w-[75vw] items-center justify-center'>
+                          <img src={myworks} alt='' style={{
+                            width:'500px'
+                          }} data-aos='zoom-in' data-aos-delay='300'/>
+                    </div> 
+
+                    {/*Image for large and medium screen models*/}
+
+                    <div className='hidden md:flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
                       <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
-                      <p className='flex w-[60vw] h-auto text-2xl text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
+                      <p className='flex w-[75vw] h-auto md:text-2xl text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
                     </div>
+
+                     {/*Image for small screen models*/}
+
+                    <div className='sm:hidden flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
+                      <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
+                      <p className='flex w-[75vw] h-auto text-xl  text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
+                    </div>
+
+
+
                     <div className='flex flex-col h-auto w-full p-10' data-aos='fade-up' data-aos-delay='400'>
-                        <div className='sticky flex-col top-10 h-screen w-full bg-baseprimary rounded-lg'>
+                        <div className='sticky flex-col top-10 h-auto w-full bg-baseprimary rounded-lg'>
                           <h2 className='font-kanit text-6xl text-primary'>Chocomate</h2>
                           <img src={chocomate} alt=''/>
 
@@ -383,42 +416,94 @@ const [CounterOn, setCounterOn] = useState(false);
 
       </section>
 
-      <div className='flex h-[5vh] max-w-full'/> 
+      <div className='hidden md:flex h-[5vh] max-w-full'/> 
 
    <ScrollTrigger onEnter={()=> setCounterOn(true)} onExit={()=> setCounterOn(false)}>
       <section className='relative h-auto max-w-full overflow-hidden z-30'>
-        <div className='flex h-[60vh] max-w-full items-center justify-start space-x-3'>
-           <div className='flex flex-col w-[35vw] h-auto items-center justify-center space-y-4 p-2'>
-              <img src={socialcircle} alt='' style={{
-                width:'400px'
-              }} data-aos='fade-right' data-aos-delay='300'/>
-               <div className='flex h-auto w-[30vw] items-start justify-center space-x-1 cursor-default ' data-aos='zoom-in' data-aos-delay='350'>
-                 <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-10'>D</h2>
-                 <p className='flex w-[30vw] h-auto text-2xl text-justify text-primary font-lorniasolid font-light '>ev life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
+
+        {/*small screen configs */}
+
+              <div className='sm:hidden flex flex-col h-auto w-auto items-center space-y-4'>
+                <div className='flex flex-col w-[75vw] h-auto items-center justify-center space-y-4 p-2'>
+                                <img src={socialcircle} alt='' style={{
+                                  width:'500px'
+                                }} data-aos='fade-right' data-aos-delay='300'/>
+                 </div>
+                 <div className='flex h-auto w-[90vw] items-start justify-center space-x-1 cursor-default ' data-aos='zoom-in' data-aos-delay='350'>
+                                <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-10'>D</h2>
+                                <p className='flex w-[90vw] h-auto text-xl text-justify text-primary font-lorniasolid font-light '>ev life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
+                 </div>
+                 <div className='flex flex-col h-a w-full items-center justify-center space-y-8 bg-primary p-2' data-aos='flip-down' data-aos-delay='200'>
+                                <img src={bwlogo} alt='' style={{
+                                  width:'150px',
+                            
+                                }} className='rounded-full border-2 shadow-2xl shadow-baseprimary border-secondary' data-aos='flip-right'/>
+                              <div className='flex flex-col h-auto w-[25vw] items-center justify-center space-y-1' data-aos='zoom-in'>
+                                    <div className='flex h-auto w-auto items-center justify-center'>
+                                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>{CounterOn && <Countup start={0} end={44000} duration={2} delay={0.2}/>}</h2>
+                                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>+</h2>
+                                    </div>
+                                    <h2 className='flex text-[#3a3a3a] text-6xl font-russoone font-bold text-center'>Followers</h2>
+                                    <h2 className='flex text-secondary w-[75vw] text-2xl font-londrina font-light text-center'>Have gathered from all the main and popular platforms</h2>
+                              </div>
+                              <div className='flex h-[10vh] w-auto items-center justify-center space-x-5'>
+                                  <button className='bg-transparent border-blue-700 w-10 h-10 rounded-xl items-center justify-between text-primary font-russoone' data-aos='fade-left' data-aos-delay='300'> 
+                                  <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="facebook-new" className='hover:scale-125 transition-transform' style={{transitionDuration:'0.5s'}}/>          
+                                      </button>
+                                  <button className='w-10 h-10 text-xl rounded-xl text-center text-primary font-russoone ' data-aos='fade-left' data-aos-delay='300'>
+                                  <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/tiktok--v1.png" alt="tiktok--v1" className='hover:scale-125 transition-transform' style={{transitionDuration:'0.5s'}}/>
+                                  </button>
+                                  <button className='w-10 h-10 text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='350'>
+                                  <img width="40" height="40" src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png" alt="instagram-new--v1" className='hover:scale-125 transition-transform' style={{transitionDuration:'0.5s'}}/>
+                                  </button>
+                                  <button className='w-10 h-10 text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='400'>
+                                  <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="youtube-play" className='hover:scale-125 transition-transform' style={{transitionDuration:'0.5s'}}/>
+                                  </button>
+                                  <button className='w-10 h-10 text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='450'>
+                                  <img width="50" height="50" src="https://img.icons8.com/ios/50/domain--v1.png" alt="domain--v1" className='hover:scale-125 transition-transform' style={{transitionDuration:'0.5s'}}/>
+                                  </button>
+                              </div>
+                  </div>
+                        
               </div>
-           </div>
-           <div className='flex h-[30vh] w-[60vw] items-center justify-center space-x-8 border-4 border-gray-600 bg-primary rounded-xl' data-aos='flip-down' data-aos-delay='200'>
-                <img src={bwlogo} alt='' style={{
-                  width:'150px',
-            
-                }} className='rounded-full border-2 border-secondary' data-aos='flip-right'/>
-              <div className='flex flex-col h-auto w-[25vw] items-center justify-center' data-aos='zoom-in'>
-                    <div className='flex h-auto w-[30vw] items-center justify-center'>
-                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>{CounterOn && <Countup start={0} end={44000} duration={2} delay={0.2}/>}</h2>
-                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>+</h2>
-                    </div>
-                    <h2 className='flex text-[#3a3a3a] text-6xl font-russoone font-bold text-center'>Followers</h2>
-                    <h2 className='flex text-secondary w-[22vw] text-2xl font-kanit text-center'>Have gathered from all the main and popular platforms</h2>
-              </div>
-              <div className='flex flex-col h-auto w-[15vw] items-center justify-center space-y-2'>
-                  <button className=' bg-blue-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='250'>Facebook</button>
-                  <button className=' bg-secondary w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='300'>Tiktok</button>
-                  <button className=' bg-red-600 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='350'>Youtube</button>
-                  <button className=' bg-pink-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='400'>Instagram</button>
-                  <button className=' bg-gray-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='450'>Web</button>
-              </div>
-          </div>
-        </div>
+
+              
+        {/*medium and large screen configs */}
+      
+              <div className='hidden md:flex w-auto h-auto'>
+                        <div className='flex h-[60vh] max-w-full items-center justify-start space-x-3'>
+                          <div className='flex flex-col w-[35vw] h-auto items-center justify-center space-y-4 p-2'>
+                              <img src={socialcircle} alt='' style={{
+                                width:'400px'
+                              }} data-aos='fade-right' data-aos-delay='300'/>
+                              <div className='flex h-auto w-[30vw] items-start justify-center space-x-1 cursor-default ' data-aos='zoom-in' data-aos-delay='350'>
+                                <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-10'>D</h2>
+                                <p className='flex w-[30vw] h-auto text-2xl text-justify text-primary font-lorniasolid font-light '>ev life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
+                              </div>
+                          </div>
+                          <div className='flex h-[30vh] w-[60vw] items-center justify-center space-x-8 border-4 border-gray-600 bg-primary rounded-xl' data-aos='flip-down' data-aos-delay='200'>
+                                <img src={bwlogo} alt='' style={{
+                                  width:'150px',
+                            
+                                }} className='rounded-full border-2 border-secondary' data-aos='flip-right'/>
+                              <div className='flex flex-col h-auto w-[25vw] items-center justify-center' data-aos='zoom-in'>
+                                    <div className='flex h-auto w-[30vw] items-center justify-center'>
+                                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>{CounterOn && <Countup start={0} end={44000} duration={2} delay={0.2}/>}</h2>
+                                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>+</h2>
+                                    </div>
+                                    <h2 className='flex text-[#3a3a3a] text-6xl font-russoone font-bold text-center'>Followers</h2>
+                                    <h2 className='flex text-secondary w-[22vw] text-2xl font-kanit text-center'>Have gathered from all the main and popular platforms</h2>
+                              </div>
+                              <div className='flex flex-col h-auto w-[15vw] items-center justify-center space-y-2'>
+                                  <button className=' bg-blue-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='250'>Facebook</button>
+                                  <button className=' bg-secondary w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='300'>Tiktok</button>
+                                  <button className=' bg-red-600 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='350'>Youtube</button>
+                                  <button className=' bg-pink-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='400'>Instagram</button>
+                                  <button className=' bg-gray-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='450'>Web</button>
+                              </div>
+                          </div>
+                        </div>
+              </div>                  
       </section>
     </ScrollTrigger> 
 
