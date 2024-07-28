@@ -11,9 +11,7 @@ import ScrollTrigger from 'react-scroll-trigger';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee} from '@fortawesome/free-solid-svg-icons';
-
-
-
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 
 // Main-Image files
@@ -38,6 +36,10 @@ import astronut from '../assests/astronut.png';
 import quoteimg from '../assests/quoteimg.png';
 
 
+//mobile app images
+
+import callbook from '../assests/mobile Apps/callbook.png';
+import shilpadotlk from '../assests/mobile Apps/Shilpadotlk.png';
 
 //Dev-tools image files
 
@@ -64,6 +66,14 @@ const Home1 = () => {
 
   //count animation
 const [CounterOn, setCounterOn] = useState(false);
+
+// navigation bar mobile res
+const [nav, setNav] = useState(false);
+
+
+   const handleNav = () => {
+    setNav(!nav);
+   }
 
 
 
@@ -98,120 +108,207 @@ const [CounterOn, setCounterOn] = useState(false);
     <main className='relative h-auto w-full bg-secondary '>
       <Stareffect/>
       <section className='relative flex-col h-auto w-full'>
-        <div className='flex items-center md:justify-center sm:justify-start w-auto cursor-pointer p-5'>
-          <img src={namelogo} alt='Logo' style={{ 
-            
-            width: '250px' }} />
 
-              <div className='md:hidden flex w-full h-auto bg-transparent items-center justify-end'>
-                <svg class="h-8 w-8 text-primary hover:text-blue-400"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <line x1="21" y1="10" x2="3" y2="10" />  <line x1="21" y1="6" x2="3" y2="6" />  <line x1="21" y1="14" x2="3" y2="14" />  <line x1="21" y1="18" x2="3" y2="18" /></svg>
-              </div>
-
-        </div>
-        <div className='flex justify-center items-center lg:p-2'>
-              <ul className='hidden md:flex text-sm gap-10 font-kanit'>
-                <li className='hover-effect'>Home</li>
-                <li className='hover-effect'>Mobile Apps</li>
-                <li className='hover-effect'>Web Designs</li>
-                <li className='hover-effect'>Social Circle</li>
-              </ul>
-           
-        </div>
-        <div className='flex flex-col justify-center items-center md:w-full md:h-[65vh] sm:h-auto mr-auto overflow-hidden pl-2'>
-
-          {/* Elements in when the scale size is smale */}
-
-                <div className='sm:hidden flex flex-col w-full h-auto bg-transparent items-center justify-center p-2'>
-                    <img src={sample2} alt='' style={{
-                      width:'420px'
-                    }}/>
-                
-                </div>
-
-
-          <div className='flex flex-col justify-start items-center sm:w-full sm:h-auto  md:w-[65vw] md:h-[65vh] md:mr-auto sm:mr-0  overflow-hidden md:pl-2 space-y-1'>
-
-             {/* Elements in when the scale size is medium and large */}
-                <div className='hidden md:flex flex-col w-auto items-center justify-center'>
-                  <img src={welcome} alt='Welcome' style={{ width: '800px' }} data-aos='zoom-in' />
-                </div>
-
-              {/* Elements in when the scale size is small */}
-
-
-                        <div className='sm:hidden flex items-center justify-center w-full h-auto'>
-                          <h2 className='font-russoone text-primary' style={{
-                            fontSize:'110px'
-                          }}>I'M</h2>
-                              <div className='flex flex-col w-auto h-auto'>
-                                <h2 className='font-russoone text-5xl text-[#fdd122]'>Osanda</h2>
-                                <h2 className='font-russoone  text-primary' style={{
-                                    fontSize:'30px'
-                                  }}>uthukumarana</h2>
-                              </div>  
-    
-                        </div>
-
-                        <div className='sm:hidden flex bg-baseprimary w-40 h-1 rounded-2xl'/>
-
-                        <div className='sm:hidden flex flex-col w-[90vw] h-auto items-center justify-start'>
-                                <h1 className='flex font-russoone text-center text-primary ' style={{
-                                  fontSize:'65px',
-                                  height:'60px'
-                                }}>Full Stack</h1>
-                                <h2 className='flex  font-russoone text-[#fdd122]' style={{
-                                  fontSize:'70px',
-                                  
-                                  
-                                }}>
-                                  Developer
-                                </h2>
-                        </div>
-                        <div className='sm:hidden flex bg-primary w-40 h-1 rounded-2xl'/>
-                        
-                        <div className='sm:hidden flex flex-col w-[30vw] h-auto items-center justify-start'>
-                                <h1 className='flex font-londrina text-center text-primary ' style={{
-                                  fontSize:'70px',
-
-                                  
-                                }}>AND</h1>
-                        </div>
-                        <div className='sm:hidden flex bg-baseprimary w-40 h-1 rounded-2xl'/>
-
-                        <div className='sm:hidden flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
-
-                                <Typewrittermobile/>
-                        </div>    
-                        <div className='sm:hidden flex flex-col w-auto h-auto items-start justify-center p-5' data-aos='zoom-in' data-aos-delay='800'>
-                                <button className='bg-[#ffc400] rounded-3xl w-[50vw] h-[5vh] text-3xl font-bold font-bebasneue'>Contact me</button>      
-                        </div>    
-
-
-
-                      <div className='hidden md:flex flex-col h-auto w-auto justify-start items-start'>
-                              <div className='flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
-                                <h2 className='font-poppins text-4xl text-primary'>I'm </h2>
-                                <h2 className='font-russoone text-6xl text-[#fdd122]'>Osanda Muthukumarana</h2>
-                              </div>
-                              
-
-
-                              <div className='hidden md:flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
-                                <h2 className='font-kanit text-3xl text-primary font-bold'>Full-Stack Developer &</h2>
-                                <Typewritereffect/>
-                              </div>
-                              <div className='hidden md:flex flex-col w-auto h-auto items-start justify-center pt-10' data-aos='zoom-in' data-aos-delay='800'>
-                                <button className='bg-[#ffc400] rounded-2xl w-[18vw] h-[5vh] font-bold font-kanit'>Contact me</button>      
-                              </div>
-                      </div>
-                                  
-                  </div> 
-                  <div className='absolute hidden md:flex right-0 bottom-0 justify-center items-center bg-transparent border-5 border-gray-500 rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
+        <div className='flex flex-col h-auto w-full justify-between'>
+                <div className='hidden md:flex items-center md:justify-center sm:justify-start w-auto cursor-pointer p-5'>
+                  <img src={namelogo} alt='Logo' style={{ 
                     
-                        <img src={sample} alt='Sample' style={{ width: '800px' }} data-aos='zoom-in' />
-                      
+                    width: '250px' }} />
+
+                </div>
+                <div className='flex justify-center items-center lg:p-2'>
+                      <ul className='hidden md:flex text-sm gap-10 font-kanit'>
+                        <li className='hover-effect'>Home</li>
+                        <li className='hover-effect'>Mobile Apps</li>
+                        <li className='hover-effect'>Web Designs</li>
+                        <li className='hover-effect'>Social Circle</li>
+                      </ul>
+                </div>
+          </div> 
+          <div className='flex h-auto w-full justify-between'>  
+
+          <div className='sm:hidden flex items-center md:justify-center sm:justify-start w-auto cursor-pointer p-5'>
+                  <img src={namelogo} alt='Logo' style={{ 
+                    
+                    width: '300px' }} />
+
+                </div>
+
+                  <div className='flex h-auto w-auto justify-center items-center'>
+                    <div className="md:hidden transition-transform w-[15vw] " onClick={handleNav} style={{
+                             transitionDuration:'200s'
+                     }}>
+                         {nav ? <AiOutlineClose size={30} color="#FFFFFF" /> : <AiOutlineMenu size={30} color="#FFFFFF" />}
                     </div>
                   </div>
+            
+             <div className={
+                        nav
+                          ? 'fixed flex-col space-y-10 left-0 top-0 w-[75%] sm:w-100 md:w-[40%] h-full border-r border-r-gray-400 bg-secondary ease-in-out duration-500'
+                          : 'fixed flex-col space-y-10 left-[-100%] top-0 w-[75%] sm:w-[50%] md:w-[40%] h-full ease-in-out duration-500'
+                      } 
+                    >
+              <ul className="p-4 font-russoone text-primary items-center justify-center">
+                        <div className="flex items-center justify-center">
+                          <img src={namelogo} alt="bwlogo" className="h-10 w-auto m-4" />
+                        </div>
+                              <li className="p-4 border-b border-gray-600 text-center"><a href='/home'>Home</a></li>
+                              <li className="p-4 border-b border-gray-600 text-center"><a href='/reviews'>Mobile Apps</a></li>
+                              <li className="p-4 border-b border-gray-600 text-center"><a href='/articles'>Web Designs</a></li>
+                              <li className="p-4 border-b border-gray-600 text-center"><a href='/about'>Social Circle</a></li>
+              </ul>
+              <div className='absolute flex sms:bottom-20 w-full h-auto gap-6 items-center justify-center p-3'>
+                     <div className='flex h-0.5 w-[80vw] bg-primary mx-1'/>
+                     <span class="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer">
+                                                <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  fill="currentColor"
+                                                  class="text-gray-400  hover:scale-150 transition-transform"
+                                                  viewBox="0 0 320 512">
+                                                  <path
+                                                    d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z" />
+                                                </svg>
+                                      </span>
+                                      <span class="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer ">
+                                                <svg
+                                                  xmlns="http://www.w3.org/2000/svg"
+                                                  fill="currentColor"
+                                                  class="text-gray-400  hover:scale-150 transition-transform"
+                                                  viewBox="0 0 448 512">
+                                                      <path
+                                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                                                </svg>
+                                      </span>
+                                      <span class="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer">
+                                                    <svg
+                                                      xmlns="http://www.w3.org/2000/svg"
+                                                      fill="currentColor"
+                                                      class="text-gray-400  hover:scale-150 transition-transform"
+                                                      viewBox="0 0 448 512">
+                                                      <path
+                                                        d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
+                                                    </svg>
+                                       </span>
+                                       <span class="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer">
+                                                      <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        fill="currentColor"
+                                                        class="text-gray-400 hover:scale-150 transition-transform "
+                                                        viewBox="0 0 640 512">
+                                                        <path
+                                                          d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z" />
+                                                      </svg>
+                                       </span>
+                                       <span class="[&>svg]:h-5 [&>svg]:w-5 cursor-pointer">
+                                                        <svg
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          fill="currentColor"
+                                                          class="text-gray-400  hover:scale-150 transition-transform"
+                                                          viewBox="0 0 496 512">
+                                                          <path
+                                                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                                                        </svg>
+                                         </span>
+                      <div className='flex h-0.5 w-[80vw] bg-primary mx-1'/>
+              </div>
+          
+              </div>                
+              </div>
+              <div className='flex flex-col justify-center items-center md:w-full md:h-[65vh] sm:h-auto mr-auto overflow-hidden pl-2'>
+
+                {/* Elements in when the scale size is smale */}
+
+                      <div className='sm:hidden flex flex-col w-full h-auto bg-transparent items-center justify-center p-2'>
+                          <img src={sample2} alt='' style={{
+                            width:'420px'
+                          }}/>
+                      
+                      </div>
+
+
+                <div className='flex flex-col justify-start items-center sm:w-full sm:h-auto  md:w-[65vw] md:h-[65vh] md:mr-auto sm:mr-0  overflow-hidden md:pl-2 space-y-1'>
+
+                  {/* Elements in when the scale size is medium and large */}
+                      <div className='hidden md:flex flex-col w-auto items-center justify-center'>
+                        <img src={welcome} alt='Welcome' style={{ width: '800px' }} data-aos='zoom-in' />
+                      </div>
+
+                    {/* Elements in when the scale size is small */}
+
+
+                              <div className='sm:hidden flex items-center justify-center w-full h-auto'>
+                                <h2 className='font-russoone text-primary' style={{
+                                  fontSize:'110px'
+                                }}>I'M</h2>
+                                    <div className='flex flex-col w-auto h-auto'>
+                                      <h2 className='font-russoone text-5xl text-[#fdd122]'>Osanda</h2>
+                                      <h2 className='font-russoone  text-primary' style={{
+                                          fontSize:'30px'
+                                        }}>uthukumarana</h2>
+                                    </div>  
+          
+                              </div>
+
+                              <div className='sm:hidden flex bg-baseprimary w-40 h-1 rounded-2xl'/>
+
+                              <div className='sm:hidden flex flex-col w-[90vw] h-auto items-center justify-start'>
+                                      <h1 className='flex font-russoone text-center text-primary ' style={{
+                                        fontSize:'65px',
+                                        height:'60px'
+                                      }}>Full Stack</h1>
+                                      <h2 className='flex  font-russoone text-[#fdd122]' style={{
+                                        fontSize:'70px',
+                                        
+                                        
+                                      }}>
+                                        Developer
+                                      </h2>
+                              </div>
+                              <div className='sm:hidden flex bg-primary w-40 h-1 rounded-2xl'/>
+                              
+                              <div className='sm:hidden flex flex-col w-[30vw] h-auto items-center justify-start'>
+                                      <h1 className='flex font-londrina text-center text-primary ' style={{
+                                        fontSize:'70px',
+
+                                        
+                                      }}>AND</h1>
+                              </div>
+                              <div className='sm:hidden flex bg-baseprimary w-40 h-1 rounded-2xl'/>
+
+                              <div className='sm:hidden flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
+
+                                      <Typewrittermobile/>
+                              </div>    
+                              <div className='sm:hidden flex flex-col w-auto h-auto items-start justify-center p-5' data-aos='zoom-in' data-aos-delay='800'>
+                                      <button className='bg-[#ffc400] rounded-3xl w-[50vw] h-[5vh] text-3xl font-bold font-bebasneue'>Contact me</button>      
+                              </div>    
+
+
+
+                            <div className='hidden md:flex flex-col h-auto w-auto justify-start items-start'>
+                                    <div className='flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
+                                      <h2 className='font-poppins text-4xl text-primary'>I'm </h2>
+                                      <h2 className='font-russoone text-6xl text-[#fdd122]'>Osanda Muthukumarana</h2>
+                                    </div>
+                                    
+
+
+                                    <div className='hidden md:flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
+                                      <h2 className='font-kanit text-3xl text-primary font-bold'>Full-Stack Developer &</h2>
+                                      <Typewritereffect/>
+                                    </div>
+                                    <div className='hidden md:flex flex-col w-auto h-auto items-start justify-center pt-10' data-aos='zoom-in' data-aos-delay='800'>
+                                      <button className='bg-[#ffc400] rounded-2xl w-[18vw] h-[5vh] font-bold font-kanit'>Contact me</button>      
+                                    </div>
+                            </div>
+                                        
+                        </div> 
+                        <div className='absolute hidden md:flex right-0 bottom-0 justify-center items-center bg-transparent border-5 border-gray-500 rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
+                          
+                              <img src={sample} alt='Sample' style={{ width: '800px' }} data-aos='zoom-in' />
+                            
+                          </div>
+                        </div>
                 </section>
       
       <div className='hidden md:flex h-[20vh] w-full bg-transparent'/>
@@ -383,35 +480,54 @@ const [CounterOn, setCounterOn] = useState(false);
 
                     <div className='hidden md:flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
                       <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
-                      <p className='flex w-[75vw] h-auto md:text-2xl text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
+                      <p className='flex w-[75vw] h-auto md:text-2xl text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
                     </div>
 
                      {/*Image for small screen models*/}
 
                     <div className='sm:hidden flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
                       <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
-                      <p className='flex w-[75vw] h-auto text-xl  text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
+                      <p className='flex w-[75vw] h-auto text-xl  text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
+                    </div>
+
+                    <div className='sm:hidden flex flex-col h-auto w-full items-center justify-center bg-primary p-5 space-y-5'>
+                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-2 rounded-xl items-center justify-start p-2 space-y-5'>
+                            <h2 className='flex text-justify font-londrina font-bold text-5xl text-baseprimary bg-secondary rounded-lg p-1'>CallBook Application</h2>
+                            
+                              <img src={callbook} alt='' style={{
+                                width:'300px'
+                              }}/>
+
+                            <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
+                            Callbook is a simple mobile app for organizing and accessing all your contacts in one place. Easily manage your network with an intuitive interface.
+                            </p>
+
+                            <button className='flex bg-transparent border-2 border-secondary font-poppins justify-center p-1 w-[50vw] h-auto text-xl font-semibold rounded-full hover:bg-[#ffd024]'>
+                              Check This Out
+                            </button>
+
+                          </div>
+                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-2 rounded-xl items-center justify-start p-2 space-y-5'>
+                            <h2 className='flex text-justify font-londrina font-bold text-5xl text-baseprimary bg-secondary rounded-lg p-1'>Shilpa.lk Application</h2>
+                            
+                              <img src={shilpadotlk} alt='' style={{
+                                width:'300px'
+                              }}/>
+
+                            <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
+                            Callbook is a simple mobile app for organizing and accessing all your contacts in one place. Easily manage your network with an intuitive interface.
+                            </p>
+
+                            <button className='flex bg-transparent border-2 border-secondary font-poppins justify-center p-1 w-[50vw] h-auto text-xl font-semibold rounded-full hover:bg-[#ffd024]'>
+                              Check This Out
+                            </button>
+
+                          </div>
                     </div>
 
 
 
-                    <div className='flex flex-col h-auto w-full p-10' data-aos='fade-up' data-aos-delay='400'>
-                        <div className='sticky flex-col top-10 h-auto w-full bg-baseprimary rounded-lg'>
-                          <h2 className='font-kanit text-6xl text-primary'>Chocomate</h2>
-                          <img src={chocomate} alt=''/>
-
-                        </div>
-                        <div className='sticky flex top-10 h-screen w-full bg-[#c42121] rounded-lg'>
-                          <h2 className='font-kanit text-6xl text-primary'>Section 2</h2>
-                      </div>
-                      <div className='sticky flex-col top-10 h-screen w-full bg-baseprimary rounded-lg'>
-                          <h2 className='font-kanit text-6xl text-primary'>Section 3</h2>
-
-                      </div>
-                      <div className='sticky flex top-10 h-screen w-full bg-[#c42121] rounded-lg'>
-                          <h2 className='font-kanit text-6xl text-primary'>Section 4</h2>
-                      </div>
-                    </div>  
+                   
               </div>
 
       </section>
@@ -440,7 +556,7 @@ const [CounterOn, setCounterOn] = useState(false);
                                 }} className='rounded-full border-2 shadow-2xl shadow-baseprimary border-secondary' data-aos='flip-right'/>
                               <div className='flex flex-col h-auto w-[25vw] items-center justify-center space-y-1' data-aos='zoom-in'>
                                     <div className='flex h-auto w-auto items-center justify-center'>
-                                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>{CounterOn && <Countup start={0} end={44000} duration={2} delay={0.2}/>}</h2>
+                                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>{CounterOn && <Countup start={0} end={45000} duration={2} delay={0.2}/>}</h2>
                                       <h2 className='flex text-secondary text-7xl font-russoone text-center'>+</h2>
                                     </div>
                                     <h2 className='flex text-[#3a3a3a] text-6xl font-russoone font-bold text-center'>Supporters</h2>
@@ -488,7 +604,7 @@ const [CounterOn, setCounterOn] = useState(false);
                                 }} className='rounded-full border-2 border-secondary' data-aos='flip-right'/>
                               <div className='flex flex-col h-auto w-[25vw] items-center justify-center' data-aos='zoom-in'>
                                     <div className='flex h-auto w-[30vw] items-center justify-center'>
-                                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>{CounterOn && <Countup start={0} end={44000} duration={2} delay={0.2}/>}</h2>
+                                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>{CounterOn && <Countup start={0} end={45000} duration={2} delay={0.2}/>}</h2>
                                       <h2 className='flex text-secondary text-7xl font-russoone text-center'>+</h2>
                                     </div>
                                     <h2 className='flex text-[#3a3a3a] text-4xl font-russoone font-bold text-center'>Supporters</h2>
