@@ -40,6 +40,7 @@ import quoteimg from '../assests/quoteimg.png';
 
 import callbook from '../assests/mobile Apps/callbook.png';
 import shilpadotlk from '../assests/mobile Apps/Shilpadotlk.png';
+import paycue from '../assests/mobile Apps/paycue.png';
 
 //Dev-tools image files
 
@@ -144,7 +145,7 @@ const [nav, setNav] = useState(false);
             
              <div className={
                         nav
-                          ? 'fixed flex-col space-y-10 left-0 top-0 w-[75%] sm:w-100 md:w-[40%] h-full border-r border-r-gray-400 bg-secondary ease-in-out duration-500'
+                          ? 'fixed flex-col space-y-10 left-0 top-0 w-[75%] sm:w-100 md:w-[40%] h-full border-r border-r-gray-400 bg-secondary ease-in-out duration-500 z-50'
                           : 'fixed flex-col space-y-10 left-[-100%] top-0 w-[75%] sm:w-[50%] md:w-[40%] h-full ease-in-out duration-500'
                       } 
                     >
@@ -491,8 +492,8 @@ const [nav, setNav] = useState(false);
                     </div>
 
                     <div className='sm:hidden flex flex-col h-auto w-full items-center justify-center bg-primary p-5 space-y-5'>
-                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-2 rounded-xl items-center justify-start p-2 space-y-5'>
-                            <h2 className='flex text-justify font-londrina font-bold text-5xl text-baseprimary bg-secondary rounded-lg p-1'>CallBook Application</h2>
+                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5'>
+                            <h2 className='flex text-justify font-londrina font-bold text-5xl text-baseprimary bg-secondary rounded-lg p-2'>CallBook</h2>
                             
                               <img src={callbook} alt='' style={{
                                 width:'300px'
@@ -502,28 +503,48 @@ const [nav, setNav] = useState(false);
                             Callbook is a simple mobile app for organizing and accessing all your contacts in one place. Easily manage your network with an intuitive interface.
                             </p>
 
-                            <button className='flex bg-transparent border-2 border-secondary font-poppins justify-center p-1 w-[50vw] h-auto text-xl font-semibold rounded-full hover:bg-[#ffd024]'>
+                            <button className='flex bg-baseprimary text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
                               Check This Out
                             </button>
 
                           </div>
-                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-2 rounded-xl items-center justify-start p-2 space-y-5'>
-                            <h2 className='flex text-justify font-londrina font-bold text-5xl text-baseprimary bg-secondary rounded-lg p-1'>Shilpa.lk Application</h2>
+                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5'>
+                            <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#ffd024] bg-secondary rounded-lg p-2'>Shilpa.lk</h2>
                             
                               <img src={shilpadotlk} alt='' style={{
                                 width:'300px'
                               }}/>
 
                             <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
-                            Callbook is a simple mobile app for organizing and accessing all your contacts in one place. Easily manage your network with an intuitive interface.
+                            Shilpa.lk is a smart and user-friendly student course management platform. Students can easily log in to purchase courses, while teachers can log in to promote their courses and reach a broader audience.
                             </p>
 
-                            <button className='flex bg-transparent border-2 border-secondary font-poppins justify-center p-1 w-[50vw] h-auto text-xl font-semibold rounded-full hover:bg-[#ffd024]'>
+                            <h2 className='flex bg-[#d12626]  text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
+                            Not Available Yet
+                            </h2>
+
+                          </div>
+                          
+                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5'>
+                            <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#69164e] bg-primary shadow-2xl rounded-lg p-2'>PayCue</h2>
+                            
+                              <img src={paycue} alt='' style={{
+                                width:'200px'
+                              }}/>
+
+                            <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
+                            PayCue Payment Planner is a streamlined app for managing your finances. Create, update, and delete payment plans with ease, keeping your budget on track.                            </p>
+
+                            <button className='flex bg-[#69164e] text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
                               Check This Out
                             </button>
 
                           </div>
+                    
                     </div>
+                   
+
+
 
 
 
