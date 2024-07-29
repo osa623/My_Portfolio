@@ -26,8 +26,6 @@ import socialcircle from '../assests/social circle.png';
 import bwlogo from '../assests/bwlogo.png';
 
 //sections images
-
-import chocomate from '../assests/chocomate.png';
 import rocketimage from '../assests/rocketimage.png';
 import moonbg from '../assests/moonbg.png';
 import moonbackground from '../assests/moonbackground.png';
