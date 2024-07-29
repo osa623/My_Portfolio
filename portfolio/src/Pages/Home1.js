@@ -26,6 +26,7 @@ import socialcircle from '../assests/social circle.png';
 import bwlogo from '../assests/bwlogo.png';
 
 //sections images
+
 import rocketimage from '../assests/rocketimage.png';
 import moonbg from '../assests/moonbg.png';
 import moonbackground from '../assests/moonbackground.png';
@@ -279,7 +280,10 @@ const [nav, setNav] = useState(false);
                                       <Typewrittermobile/>
                               </div>    
                               <div className='sm:hidden flex flex-col w-auto h-auto items-start justify-center p-5' data-aos='zoom-in' data-aos-delay='800'>
-                                      <button className='bg-[#ffc400] rounded-3xl w-[50vw] h-[5vh] text-3xl font-bold font-bebasneue'>Contact me</button>      
+                                      <button className='bg-gradient-to-t from-[#28D146] to-[#5FFC7B] rounded-3xl w-[50vw] h-[5vh] text-3xl text-[#3e3737] font-bold font-bebasneue'>{''}<span>
+                                          <img src='' alt=''/>
+                                        
+                                        </span>{''}Contact me</button>      
                               </div>    
 
 
@@ -297,7 +301,7 @@ const [nav, setNav] = useState(false);
                                       <Typewritereffect/>
                                     </div>
                                     <div className='hidden md:flex flex-col w-auto h-auto items-start justify-center pt-10' data-aos='zoom-in' data-aos-delay='800'>
-                                      <button className='bg-[#ffc400] rounded-2xl w-[18vw] h-[5vh] font-bold font-kanit'>Contact me</button>      
+                                      <button className='bg-gradient-to-t from-[#28D146] to-[#5FFC7B] rounded-2xl w-[18vw] h-[5vh] font-bold font-kanit'>Contact me</button>      
                                     </div>
                             </div>
                                         
@@ -323,7 +327,7 @@ const [nav, setNav] = useState(false);
                           </div>
 
                         <div className='flex flex-col h-auto w-[75vw] ml-2 items-start justify-center pt-5'>
-                            <p className='flex w-auto items-center text-secondary text-center font-lorniasolid font-light text-2xl'>I am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p> 
+                            <p className=' w-auto items-center text-secondary text-center font-poppins font-light text-md'>{''}<span className='font-londrina text-2xl font-bold text-secondary'>I</span>{''} am a {''}<span className='font-londrina text-xl font-bold text-secondary'>Full Stack Developer</span>{''} focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p> 
                          </div>
                         <div className='flex h-auto w-auto items-center justify-center'>
                             <button className='bg-[#ffb700] flex  w-20 h-20 rounded-xl items-center justify-center text-xl font-russoone space-x-2 mb-2 cursor-pointer border-2 shadow-xl hover:border-black'>
@@ -358,7 +362,7 @@ const [nav, setNav] = useState(false);
                     </div>
                     <div className='flex h-auto max-w-[65vw] space-x-3' data-aos='zoom-in' data-aos-delay='600'>
                         <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary '>I</h2>
-                        <p className='flex w-[50vw] items-center text-secondary justify-between font-lorniasolid font-light text-2xl'> am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p>
+                        <p className='flex w-[50vw] items-center text-secondary justify-between font-poppins font-light text-2xl'> am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p>
                     </div>
                     <div className='flex h-auto max-w-[10vw]' data-aos='flip-down' data-aos-delay='1000'>
                       <button className='bg-[#ffb700] w-[10vw] h-[6vh] rounded-xl text-xl font-russoone border-2 shadow-xl hover:border-black'>
@@ -392,7 +396,7 @@ const [nav, setNav] = useState(false);
                   </div>
 
                   <div className='flex flex-col items-center justify-center'>
-                      <p className='w-[75vw] h-auto text-center font-londrina font-light text-xl'>These are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions</p>
+                      <p className='w-[75vw] h-auto text-center font-poppins font-light text-md'>These are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions</p>
                   </div>
 
                   <div className='flex flex-col w-full h-auto items-center justify-center'>
@@ -447,7 +451,7 @@ const [nav, setNav] = useState(false);
                             }} data-aos='fade-left' data-aos-delay='400'/>
                             <div className='flex w-auto h-auto items-center justify-center space-x-1'data-aos='zoom-in' data-aos-delay='450'>
                                 <h2 className='flex items-start justify-start text-8xl font-russoone text-baseprimary lg:mb-10'>T</h2>
-                                <p className='flex w-[35vw] h-auto text-2xl items-center justify-start text-secondary font-lorniasolid font-light'>hese are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions</p>
+                                <p className='flex w-[35vw] h-auto text-2xl items-center justify-start text-secondary font-poppins font-semibold'>hese are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions</p>
                             </div>
                           </div>
                         </div>   
@@ -456,7 +460,7 @@ const [nav, setNav] = useState(false);
 
                 <div className='relative flex md:h-[15vh] max-w-full'/> 
 
-                <section className='relative h-auto max-w-full '>
+                <section className='relative h-auto max-w-full overflow-hidden'>
                   <div className='flex flex-col h-auto max-w-full items-center justify-center pt-5 space-y-5'>\
 
                     {/*Image for large and medium screen models*/}
@@ -479,18 +483,18 @@ const [nav, setNav] = useState(false);
 
                     <div className='hidden md:flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
                       <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
-                      <p className='flex w-[75vw] h-auto md:text-2xl text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
+                      <p className='flex w-[75vw] h-auto md:text-2xl text-justify text-primary font-poppins'>hese are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
                     </div>
 
                      {/*Image for small screen models*/}
 
-                    <div className='sm:hidden flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
+                    <div className='sm:hidden flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-out' data-aos-delay='350'>
                       <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
-                      <p className='flex w-[75vw] h-auto text-xl  text-justify text-primary font-lorniasolid font-light'>hese are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
+                      <p className='flex w-[75vw] h-auto text-md  text-justify text-primary font-poppins'>hese are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
                     </div>
 
                     <div className='sm:hidden flex flex-col h-auto w-full items-center justify-center bg-primary p-5 space-y-5'>
-                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5'>
+                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5 overflow-hidden' data-aos='flip-right'>
                             <h2 className='flex text-justify font-londrina font-bold text-5xl text-baseprimary bg-secondary rounded-lg p-2'>CallBook</h2>
                             
                               <img src={callbook} alt='' style={{
@@ -506,7 +510,7 @@ const [nav, setNav] = useState(false);
                             </button>
 
                           </div>
-                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5'>
+                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5' data-aos='flip-left'>
                             <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#ffd024] bg-secondary rounded-lg p-2'>Shilpa.lk</h2>
                             
                               <img src={shilpadotlk} alt='' style={{
@@ -523,7 +527,7 @@ const [nav, setNav] = useState(false);
 
                           </div>
                           
-                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5'>
+                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5'data-aos='flip-up'>
                             <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#69164e] bg-primary shadow-2xl rounded-lg p-2'>PayCue</h2>
                             
                               <img src={paycue} alt='' style={{
@@ -537,7 +541,12 @@ const [nav, setNav] = useState(false);
                               Check This Out
                             </button>
 
-                          </div>
+                        </div>
+                        <div className='flex h-auto w-full items-center justify-center'>
+                              <h2 className='flex text-xl font-poppins font-semibold text-[#69164e]'>
+                                  See more
+                              </h2>
+                        </div>
                     
                     </div>
                    
@@ -566,7 +575,7 @@ const [nav, setNav] = useState(false);
                  </div>
                  <div className='flex h-auto w-[90vw] items-start justify-center space-x-1 cursor-default ' data-aos='zoom-in' data-aos-delay='350'>
                                 <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-10'>D</h2>
-                                <p className='flex w-[90vw] h-auto text-xl text-justify text-primary font-lorniasolid font-light '>ev life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
+                                <p className='flex w-[90vw] h-auto text-md text-justify text-primary font-poppins font-light '>ev life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
                  </div>
                  <div className='flex flex-col h-a w-full items-center justify-center space-y-8 bg-primary p-2' data-aos='flip-down' data-aos-delay='200'>
                                 <img src={bwlogo} alt='' style={{
