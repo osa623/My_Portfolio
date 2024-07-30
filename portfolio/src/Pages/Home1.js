@@ -11,6 +11,7 @@ import ScrollTrigger from 'react-scroll-trigger';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee} from '@fortawesome/free-solid-svg-icons';
+import { faPhone} from '@fortawesome/free-solid-svg-icons';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 
@@ -50,8 +51,15 @@ import tailwind from '../assests/devtools/tailwind css.png';
 import react from '../assests/devtools/react.png';
 import node from '../assests/devtools/node.png';
 import kotlin from '../assests/devtools/kotlin.png';
-import next from '../assests/devtools/node.png';
-import flutter from '../assests/devtools/kotlin.png';
+import next from '../assests/devtools/next.js.png';
+import flutter from '../assests/devtools/flutter.png';
+import php from '../assests/devtools/php.png';
+import mongodb from '../assests/devtools/mongodb.png';
+import androidstudio from '../assests/devtools/android studio.png';
+import aftereffects from '../assests/devtools/after effects.png';
+import adobepp from '../assests/devtools/premiere pro.png';
+import illustrator from '../assests/devtools/illustrator.png';
+import photoshop from '../assests/devtools/photoshop.png';
 
 // Effect backgrounds
 import Stareffect from '../utils/Stareffect';
@@ -98,7 +106,15 @@ const [nav, setNav] = useState(false);
     {name:'REACT', path: react},
     {name:'KOTLIN', path: kotlin},
     {name:'NEXT', path: next},
-    {name:'FLUTTER', path: flutter}
+    {name:'FLUTTER', path: flutter},
+    {name:'PHP', path: php},
+    {name:'Mongo DB', path: mongodb},
+    {name:'Android Studio', path: androidstudio},
+    {name:'After effects', path: aftereffects},
+    {name:'Premiere Pro', path: adobepp},
+    {name:'Illustrator', path: illustrator},
+    {name:'Illustrator', path: photoshop}
+
 
     
   
@@ -144,7 +160,7 @@ const [nav, setNav] = useState(false);
             
              <div className={
                         nav
-                          ? 'fixed flex-col space-y-10 left-0 top-0 w-[75%] sm:w-100 md:w-[40%] h-full border-r border-r-gray-400 bg-secondary ease-in-out duration-500 z-50'
+                          ? 'fixed flex-col space-y-10 left-0 top-0 w-[75%] sm:w-100 md:w-[40%] h-full border-r rounded-r-3xl border-r-gray-400 bg-secondary ease-in-out duration-500 z-50'
                           : 'fixed flex-col space-y-10 left-[-100%] top-0 w-[75%] sm:w-[50%] md:w-[40%] h-full ease-in-out duration-500'
                       } 
                     >
@@ -229,7 +245,7 @@ const [nav, setNav] = useState(false);
                 <div className='flex flex-col justify-start items-center sm:w-full sm:h-auto  md:w-[65vw] md:h-[65vh] md:mr-auto sm:mr-0  overflow-hidden md:pl-2 space-y-1'>
 
                   {/* Elements in when the scale size is medium and large */}
-                      <div className='hidden md:flex flex-col w-auto items-center justify-center'>
+                      <div className='hidden md:flex flex-col w-auto items-center h-auto justify-center'>
                         <img src={welcome} alt='Welcome' style={{ width: '800px' }} data-aos='zoom-in' />
                       </div>
 
@@ -255,7 +271,7 @@ const [nav, setNav] = useState(false);
                                       <h1 className='flex font-russoone text-center text-primary ' style={{
                                         fontSize:'65px',
                                         height:'60px'
-                                      }}>Full Stack</h1>
+                                      }}>Front-end</h1>
                                       <h2 className='flex  font-russoone text-[#fdd122]' style={{
                                         fontSize:'70px',
                                         
@@ -280,12 +296,14 @@ const [nav, setNav] = useState(false);
                                       <Typewrittermobile/>
                               </div>    
                               <div className='sm:hidden flex flex-col w-auto h-auto items-start justify-center p-5' data-aos='zoom-in' data-aos-delay='800'>
-                                      <button className='bg-gradient-to-t from-[#28D146] to-[#5FFC7B] rounded-3xl w-[50vw] h-[5vh] text-3xl text-[#3e3737] font-bold font-bebasneue'>{''}<span>
-                                          <img src='' alt=''/>
+                                      <button className='flex bg-gradient-to-t from-[#28D146] to-[#5FFC7B] rounded-3xl w-[50vw] h-[5vh] text-3xl text-[#3e3737] font-bold font-bebasneue items-center justify-center'>{''}<span>
+                                          <FontAwesomeIcon icon={faPhone} className='p-1 mr-2 text-primary' style={{
+                                            width:'25px',
+                                            height:'auto'
+                                          }}/>
                                         
                                         </span>{''}Contact me</button>      
                               </div>    
-
 
 
                             <div className='hidden md:flex flex-col h-auto w-auto justify-start items-start'>
@@ -297,7 +315,7 @@ const [nav, setNav] = useState(false);
 
 
                                     <div className='hidden md:flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
-                                      <h2 className='font-kanit text-3xl text-primary font-bold'>Full-Stack Developer &</h2>
+                                      <h2 className='font-kanit text-3xl text-primary font-bold'>Frontend Developer &</h2>
                                       <Typewritereffect/>
                                     </div>
                                     <div className='hidden md:flex flex-col w-auto h-auto items-start justify-center pt-10' data-aos='zoom-in' data-aos-delay='800'>
@@ -327,7 +345,7 @@ const [nav, setNav] = useState(false);
                           </div>
 
                         <div className='flex flex-col h-auto w-[75vw] ml-2 items-start justify-center pt-5'>
-                            <p className=' w-auto items-center text-secondary text-center font-poppins font-light text-md'>{''}<span className='font-londrina text-2xl font-bold text-secondary'>I</span>{''} am a {''}<span className='font-londrina text-xl font-bold text-secondary'>Full Stack Developer</span>{''} focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p> 
+                            <p className=' w-auto items-center text-secondary text-center font-poppins font-light text-md'>{''}<span className='font-poppins text-2xl font-bold text-secondary'>I</span>{''} am a {''}<span className='font-londrina text-xl font-bold text-[#133b5c]'>Front-End Developer</span>{' '},Currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p> 
                          </div>
                         <div className='flex h-auto w-auto items-center justify-center'>
                             <button className='bg-[#ffb700] flex  w-20 h-20 rounded-xl items-center justify-center text-xl font-russoone space-x-2 mb-2 cursor-pointer border-2 shadow-xl hover:border-black'>
@@ -362,7 +380,7 @@ const [nav, setNav] = useState(false);
                     </div>
                     <div className='flex h-auto max-w-[65vw] space-x-3' data-aos='zoom-in' data-aos-delay='600'>
                         <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary '>I</h2>
-                        <p className='flex w-[50vw] items-center text-secondary justify-between font-poppins font-light text-2xl'> am a full stack developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p>
+                        <p className='flex w-[50vw] items-center text-secondary justify-between font-poppins font-light text-2xl'> am a Front-End developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p>
                     </div>
                     <div className='flex h-auto max-w-[10vw]' data-aos='flip-down' data-aos-delay='1000'>
                       <button className='bg-[#ffb700] w-[10vw] h-[6vh] rounded-xl text-xl font-russoone border-2 shadow-xl hover:border-black'>
@@ -400,7 +418,7 @@ const [nav, setNav] = useState(false);
                   </div>
 
                   <div className='flex flex-col w-full h-auto items-center justify-center'>
-                      <div className='grid grid-flow-row grid-cols-3 gap-4 p-5'>
+                      <div className='grid grid-flow-row grid-cols-4 gap-4 p-5'>
                         {devtools.map((brand,index) =>(
                             <div key={index} className='border-2 border-secondary rounded-xl pt-2'>
                               <img src={brand.path}
@@ -408,7 +426,7 @@ const [nav, setNav] = useState(false);
                                   className='w-30 h-30 ' style={{
                                     objectFit:'contain'
                                   }} data-aos='flip-down'/>
-                                  <h2 className='flex flex-col  font-londrina text-xl text-center text-secondary' data-aos='zoom-in'>{brand.name}</h2>
+                                  
                                   </div>
 
                         ))}
@@ -438,7 +456,7 @@ const [nav, setNav] = useState(false);
                                           width:'150px',
                                         }}/>
                                         
-                                        <h2 className='font-russoone text-md text-secondary text-center'>{brand.name}</h2>
+                                        
                                     </div>
                                 ))};
                         
@@ -538,7 +556,7 @@ const [nav, setNav] = useState(false);
                             PayCue Payment Planner is a streamlined app for managing your finances. Create, update, and delete payment plans with ease, keeping your budget on track.                            </p>
 
                             <button className='flex bg-[#69164e] text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
-                              Check This Out
+                             <a href='https://github.com/osa623/Payment-Planner-Mobile-Application/tree/master'>Check This Out</a> 
                             </button>
 
                         </div>

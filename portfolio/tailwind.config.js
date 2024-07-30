@@ -6,21 +6,6 @@ module.exports = {
   theme: {
     extend: {
 
-      keyframes:{
-
-        rotate:{
-          '0%':{transform:'rotate(0deg)'},
-          '100%':{transform:'rotate(360deg)'},
-        },
-
-        animation:{
-          rotate:'rotate 3s linear infinite',
-        }
-
-
-      },
-
-
       colors:{ //adding colors to the platform
         primary:"#FFFFFF",
         secondary:"#000000",
@@ -39,6 +24,12 @@ module.exports = {
       londrina:['Londrina Solid', 'sans-serif'],
       atma:['Atma', 'sans serif']
 
+    },
+
+    screens: {
+      'sms': { 'max': '640px' },
+      'mds': { 'max':'1024px'},
+    
     },
     
     
