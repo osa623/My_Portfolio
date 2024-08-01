@@ -27,8 +27,9 @@ module.exports = {
     },
 
     screens: {
-      'sms': { 'max': '640px' },
-      'mds': { 'max':'1024px'},
+      'sms': { 'min': '10px', 'max': '640px' },
+      'mds': { 'min': '641px', 'max':'1024px'},
+      'lgs': { 'min': '1025px' ,'max':'3048px'}
     
     },
     

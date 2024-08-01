@@ -125,15 +125,15 @@ const [nav, setNav] = useState(false);
       <Stareffect/>
       <section className='relative flex-col h-auto w-full'>
 
-        <div className='flex flex-col h-auto w-full justify-between'>
-                <div className='hidden md:flex items-center md:justify-center sm:justify-start w-auto cursor-pointer p-5'>
+        <div className='flex flex-col h-auto w-full justify-between lgs:justify-center'>
+                <div className='hidden mds:flex lgs:flex lgs:justify-center bg-secondary mds:justify-center sms:justify-start cursor-pointer p-5'>
                   <img src={namelogo} alt='Logo' style={{ 
                     
                     width: '250px' }} />
 
                 </div>
-                <div className='flex justify-center items-center lg:p-2'>
-                      <ul className='hidden md:flex text-sm gap-10 font-kanit'>
+                <div className='flex lgs:w-full mds:w-full mds:justify-center bg-secondary lgs:justify-center mds:items-center lgs:p-2  z-50'>
+                      <ul className='hidden mds:flex mds:w-[75vw]  lgs:flex text-sm gap-10 font-kanit'>
                         <li className='hover-effect'>Home</li>
                         <li className='hover-effect'>Mobile Apps</li>
                         <li className='hover-effect'>Web Designs</li>
@@ -143,7 +143,7 @@ const [nav, setNav] = useState(false);
           </div> 
           <div className='flex h-auto w-full justify-between'>  
 
-          <div className='sm:hidden flex items-center md:justify-center sm:justify-start w-auto cursor-pointer p-5'>
+          <div className='hidden sms:flex items-center md:justify-center sm:justify-start w-auto cursor-pointer p-5'>
                   <img src={namelogo} alt='Logo' style={{ 
                     
                     width: '300px' }} />
@@ -151,7 +151,7 @@ const [nav, setNav] = useState(false);
                 </div>
 
                   <div className='flex h-auto w-auto justify-center items-center'>
-                    <div className="md:hidden transition-transform w-[15vw] " onClick={handleNav} style={{
+                    <div className="mds:hidden lgs:hidden transition-transform w-[15vw] " onClick={handleNav} style={{
                              transitionDuration:'200s'
                      }}>
                          {nav ? <AiOutlineClose size={30} color="#FFFFFF" /> : <AiOutlineMenu size={30} color="#FFFFFF" />}
@@ -160,7 +160,7 @@ const [nav, setNav] = useState(false);
             
              <div className={
                         nav
-                          ? 'fixed flex-col space-y-10 left-0 top-0 w-[75%] sm:w-100 md:w-[40%] h-full border-r rounded-r-3xl border-r-gray-400 bg-secondary ease-in-out duration-500 z-50'
+                          ? 'fixed flex-col space-y-10 left-0 top-0 w-[75%] sms:w-100 md:w-[40%] h-full border-r rounded-r-3xl border-r-gray-400 bg-secondary ease-in-out duration-500 z-50'
                           : 'fixed flex-col space-y-10 left-[-100%] top-0 w-[75%] sm:w-[50%] md:w-[40%] h-full ease-in-out duration-500'
                       } 
                     >
@@ -230,25 +230,27 @@ const [nav, setNav] = useState(false);
           
               </div>                
               </div>
-              <div className='flex flex-col justify-center items-center md:w-full md:h-[65vh] sm:h-auto mr-auto overflow-hidden pl-2'>
+              <div className='flex flex-col justify-center items-center mds:w-full mds:h-screen lgs:h-screen lgs:bg-gradient-to-b from-secondary to-transparent sms:h-auto mr-auto overflow-hidden pl-2'>
 
                 {/* Elements in when the scale size is smale */}
 
-                      <div className='sm:hidden flex flex-col w-full h-auto bg-transparent items-center justify-center p-2'>
+                      <div className='sm:hidden  flex flex-col w-full h-auto bg-transparent items-center justify-center p-2'>
                           <img src={sample2} alt='' style={{
                             width:'420px'
                           }}/>
                       
                       </div>
 
+                      <div className='hidden lgs:flex flex-col absolute  mds:w-[100vw] mds:h-auto mds:justify-start lgs:overflow-hidden z-40'>
+                        <h2 className='text-center font-russoone font-bold text-primary lgs:w-[100vw]' style={{
 
-                <div className='flex flex-col justify-start items-center sm:w-full sm:h-auto  md:w-[65vw] md:h-[65vh] md:mr-auto sm:mr-0  overflow-hidden md:pl-2 space-y-1'>
-
-                  {/* Elements in when the scale size is medium and large */}
-                      <div className='hidden md:flex flex-col w-auto items-center h-auto justify-center'>
-                        <img src={welcome} alt='Welcome' style={{ width: '800px' }} data-aos='zoom-in' />
+                          fontSize:'300px'
+                        }}>ASTRO</h2>
                       </div>
 
+
+                <div className='flex flex-col justify-start items-center sms:w-full sms:h-auto  mds:w-full mds:h-auto mds:mr-auto sms:mr-0  overflow-hidden mds:pl-2 space-y-1'>
+                   
                     {/* Elements in when the scale size is small */}
 
 
@@ -306,35 +308,15 @@ const [nav, setNav] = useState(false);
                               </div>    
 
 
-                            <div className='hidden md:flex flex-col h-auto w-auto justify-start items-start'>
-                                    <div className='flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
-                                      <h2 className='font-poppins text-4xl text-primary'>I'm </h2>
-                                      <h2 className='font-russoone text-6xl text-[#fdd122]'>Osanda Muthukumarana</h2>
-                                    </div>
-                                    
-
-
-                                    <div className='hidden md:flex w-auto items-center justify-start space-x-5' data-aos='fade-up'>
-                                      <h2 className='font-kanit text-3xl text-primary font-bold'>Frontend Developer &</h2>
-                                      <Typewritereffect/>
-                                    </div>
-                                    <div className='hidden md:flex flex-col w-auto h-auto items-start justify-center pt-10' data-aos='zoom-in' data-aos-delay='800'>
-                                      <button className='bg-gradient-to-t from-[#28D146] to-[#5FFC7B] rounded-2xl w-[18vw] h-[5vh] font-bold font-kanit'>Contact me</button>      
-                                    </div>
-                            </div>
+                           
                                         
                         </div> 
-                        <div className='absolute hidden md:flex right-0 bottom-0 justify-center items-center bg-transparent border-5 border-gray-500 rounded-l-full w-[35vw] h-[35vw] overflow-hidden' data-aos='fade-left'>
-                          
-                              <img src={sample} alt='Sample' style={{ width: '800px' }} data-aos='zoom-in' />
-                            
-                          </div>
                         </div>
                 </section>
       
-      <div className='hidden md:flex h-[20vh] w-full bg-transparent'/>
+      {/*<div className='hidden mds:flex h-[20vh] w-full bg-transparent'/>*/}
      
-      <section className='flex md:h-[40vh] sm:h-auto max-w-full border-none items-center justify-start cursor-default md:mt-10 overflow-hidden'>
+      <section className='flex md:h-[40vh] sms:h-auto max-w-full border-none items-center justify-start cursor-default md:mt-10 overflow-hidden'>
                   
                   <div className='sm:hidden flex flex-col w-full h-auto bg-primary  items-center space-y-4'>
                         <div className='flex flex-col h-auto w-[75vw] ml-2 items-center pt-10'>
@@ -838,36 +820,7 @@ const [nav, setNav] = useState(false);
                                 
             </div>  
             
-            <motion.div
-                          initial={{right:'-400px'}}
-                          whileInView={{right:'0px'}}
-                          transition={{duration:'4.0',ease:'easeInOut', delay:'0.3'}}
-                          className='absolute sm:hidden flex max-w-full h-auto top-20 p-5  animate-bounce' style={{
-                            animationDuration:'40s'
-                          }}>
-                       <div className='flex flex-col h-auto w-auto'>   
-                        <div className='flex bg-primary h-auto w-[90vw] rounded-xl items-center justify-center p-2 space-x-2 z-30'>
-                                  
-                           <p className='flex w-auto h-[10vh] font-londrina cursor-default text-center' style={{
-                            fontSize:'12px'
-                           }}>If you appreciate my Designing works and find it valuable,consider</p>
-                           <p className='flex font-londrina w-auto h-[10vh] text-sm  bg-[#ffb700] rounded-3xl text-center text-[#613215] cursor-pointer p-0'><a href='https://buymeacoffee.com/osandamuthukumarana'>Buy me a
-                           <FontAwesomeIcon icon={faCoffee} className='mx-5 size-5 rounded-full bg-primary border-8' />
-                           Coffee</a></p>
-                           <p className='flex  font-londrina  w-auto h-[10vh]  cursor-default' style={{
-                            fontSize:'12px'
-                           }}>Your support fuels my creativity and helps me continue crafting and sharing high-quality projects. Thank you for your generosity!</p>
-    
-                              </div>
-                              <div className='flex w-[60vw] h-[20vh] ml-20 rounded-3xl' style={{
-                            backgroundImage:`url(${quoteimg})`,
-                            backgroundPosition:'center',
-                            backgroundSize:'cover',
-                            rotate:'10deg',}}>
-                           </div>
-                        </div>  
-
-                          </motion.div>
+         
  
 
     </section>
