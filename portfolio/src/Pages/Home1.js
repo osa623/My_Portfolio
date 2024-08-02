@@ -66,6 +66,9 @@ import Stareffect from '../utils/Stareffect';
 import Typewritereffect from '../utils/Typewritereffect';
 import Typewrittermobile from '../utils/Typewrittermobile';
 
+//video files
+import samplevideo from '../assests/Comp 1.mp4'
+
 
 
 
@@ -132,14 +135,23 @@ const [nav, setNav] = useState(false);
                     width: '250px' }} />
 
                 </div>
-                <div className='flex lgs:w-full mds:w-full mds:justify-center bg-secondary lgs:justify-center mds:items-center lgs:p-2  z-50'>
-                      <ul className='hidden mds:flex mds:w-[75vw]  lgs:flex text-sm gap-10 font-kanit z-50'>
-                        <li className='hover-effect'>Home</li>
-                        <li className='hover-effect'>Mobile Apps</li>
-                        <li className='hover-effect'>Web Designs</li>
-                        <li className='hover-effect'>Social Circle</li>
-                      </ul>
-                </div>
+                <div className='flex lgs:w-full mds:w-full mds:justify-center bg-secondary lgs:justify-center mds:items-center lgs:p-2'>
+                    <ul className='hidden mds:flex mds:w-[75vw] lgs:flex text-sm gap-10 font-kanit z-50'>
+                                  <li className='hover-effect'>
+                                  <span className='hover-effect-text'>Home</span>
+                                   </li>
+                                  <li className='hover-effect'>
+                                  <span className='hover-effect-text'>Mobile Apps</span>
+                                   </li>
+                                  <li className='hover-effect'>
+                                    <span className='hover-effect-text'>Web Designs</span>
+                                  </li>
+                                  <li className='hover-effect'>
+                                    <span className='hover-effect-text'>Social Circle</span>
+                                  </li>
+                    </ul>
+                 </div>
+
           </div> 
           <div className='flex h-auto w-full justify-between'>  
 
@@ -230,7 +242,7 @@ const [nav, setNav] = useState(false);
           
               </div>                
               </div>
-              <div className='flex flex-col sms:justify-center items-center mds:justify-start mds:w-full mds:h-screen lgs:h-screen lgs:bg-gradient-to-b from-secondary mds:bg-gradient-to-b from-secondary to-transparent sms:h-auto mr-auto overflow-hidden pl-2'>
+              <div className='flex flex-col sms:justify-center items-center mds:justify-start mds:w-full mds:h-auto lgs:h-auto lgs:bg-gradient-to-b from-secondary mds:bg-gradient-to-b from-secondary to-transparent sms:h-auto mr-auto overflow-hidden pl-2'>
 
                 {/* Elements in when the scale size is small */}
 
@@ -246,12 +258,7 @@ const [nav, setNav] = useState(false);
                       <div className='hidden lgs:flex mds:flex flex-col  mds:w-auto mds:h-auto lgs:pt-2 lgs:h-auto mds:justify-start lgs:justify-start lgs:mb-1 mds:m-10 lgs:overflow-hidden z-40'>
                         
                         
-                      <div className='absolute flex-col w-auto bottom-0 right-20 h-auto bg-transparent items-center justify-center p-2'>
-                          <img src={sample} alt='' style={{
-                            width:'600px'
-                          }}/>
-                      
-                      </div>
+
               
                          <h2 className='text-center font-russoone font-bold lgs:w-[100vw] mds:w-auto text-primary' style={{
                              fontSize: 'calc(2vw + 1rem)',
@@ -264,7 +271,9 @@ const [nav, setNav] = useState(false);
                              height:'100px'
                           }}>{''}<span className='text-wrap text-baseprimary'>Full Stack</span>{' '}DEV</h2>
 
-                          
+                          <div className='flex justify-center'>
+                            <div className='flex bg-primary h-2 lgs:w-[40vw] mds:w-[50vw] lgs:mt-10 rounded-full' data-aos='flip-left'/>
+                            </div>
                           <Typewritereffect/>
                       </div>
 
@@ -334,11 +343,11 @@ const [nav, setNav] = useState(false);
                         </div>
                 </section>
       
-      {/*<div className='hidden mds:flex h-[20vh] w-full bg-transparent'/>*/}
+      {/*<div className='hidden mds:flex h-[20vh] w-full bg-transparent'/>  => additional one*/} 
      
-      <section className='flex md:h-[40vh] sms:h-auto max-w-full border-none items-center justify-start cursor-default md:mt-10 overflow-hidden'>
+      <section className='flex mds:flex-row mds:h-auto sms:h-auto max-w-full border-none items-center justify-start cursor-default mds:mt-10 overflow-hidden'>
                   
-                  <div className='sm:hidden flex flex-col w-full h-auto bg-primary  items-center space-y-4'>
+                  <div className='hidden sms:flex flex-col w-full h-auto bg-primary  items-center space-y-4'>
                         <div className='flex flex-col h-auto w-[75vw] ml-2 items-center pt-10'>
                                   <img src={about} alt=''style={{
                     
@@ -361,41 +370,47 @@ const [nav, setNav] = useState(false);
                         </div>
 
                   </div>
-                  
-                  
-                  
-                  
-                  
+                
             {/*medium and large screen size configurations*/}      
-                  <motion.div
-                  initial={{marginLeft:'-1400px'}}
-                  whileInView={{marginLeft:'0px'}}
-                  transition={{duration:'2.0', ease:'easeInOut', delay:'0.3'}}
-                  className='hidden md:flex h-auto w-auto space-x-10'>
+                      
+                  <div className='hidden mds:flex lgs:flex h-auto w-auto'> 
+                      <div className='flex lgs:w-[40vw] lgs:h-auto p-2 z-40 ml-10 rounded-full lgs:justify-center overflow-hidden'>
+                      <video src={samplevideo} autoPlay loop muted playsInlin/>
+                      </div>
+                      
+                      <div className='flex flex-col lgs:w-[60vw] lgs:justify-start  lgs:items-center lgs:h-auto p-2 lgs:space-y-5'>
+                          <div className='h-auto lgs:w-[30vw] justify-center items-center'>
+                                      <img src={about} alt=''style={{
+                        
+                                      }} 
+                                      data-aos='flip-up'/>
+                              </div>
+                              <div className='h-auto lgs:w-[45vw]  lgs:items-start lgs:justify-center pt-5'>
+                                     <p className=' w-auto  text-fontsecondary font-dmsans font-light text-left text-xl' style={{
+                                 
+                                     }}>{''}<span className='font-atma text-3xl font-bold text-primary'>I</span>{''} am Osanda Muthukumarana, currently an{'  '}
+                                    <span className="relative inline-table">
+                                        <motion.div
+                                        initial={{width:0}}
+                                        whileInView={{width:'auto'}}
+                                        transition={{duration:'1',ease:'easeInOut', delay:'0.3'}} className="absolute inset-0 bg-primary h-auto"/>
+                                        <span className="relative text-[#ff5927] font-bold p-0.2 whitespace-nowrap">undergraduate at SLIIT</span>
+                                  </span>
+                                     {''}, has a strong foundation in web development, crafting {' '}
+                                     <span className='relative inline-table'>
+                                     <motion.div
+                                        initial={{width:0}}
+                                        whileInView={{width:'auto'}}
+                                        transition={{duration:'1',ease:'easeInOut', delay:'0.3'}} className="absolute inset-0 bg-fontbasic h-auto"/>
+                                     <span className='relative text-secondary font-bold p-0.2 whitespace-nowrap'> Dynamic Front-End Interfaces and Robust Back-End Systems.</span>
+                                     </span>
+                                     {''} With experience in mobile app development, I aim to leverage cutting-edge technologies for impactful solution.Beyond technical skills, I enjoy creating engaging automobile content and editing videos, showcasing my versatility and creativity. My dedication to both technology and creative expression allows me to approach projects holistically, ensuring they are functional and engaging. As I continue to grow, I strive to contribute significantly to the tech industry and automotive content creation.</p> 
+                              </div>
+                            
 
-                  <div className='flex h-[35vh] w-full bg-primary items-center justify-start space-x-5 mr-3 rounded-r-full shadow-xl shadow-[#ffb700] pr-10'>
-                    <div className='flex flex-col h-[20vh] w-[25vw] ml-5 items-center pt-10'>
-                            <img src={about} alt=''style={{
-              
-                            }} 
-                            data-aos='fade-right'/>
-                    </div>
-                    <div className='flex h-auto max-w-[65vw] space-x-3' data-aos='zoom-in' data-aos-delay='600'>
-                        <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary '>I</h2>
-                        <p className='flex w-[50vw] items-center text-secondary justify-between font-poppins font-light text-2xl'> am a Front-End developer focused on the MERN stack, currently an undergraduate at SLIIT. have a strong foundation in web development, crafting frontend and robust backend systems,along with experience in mobile app development. My goal is to expand my expertise and leverage cutting-edge technologies for impactful solutions.I also enjoy creating automobile content and editing videos , showcasing my versatility and creativity</p>
-                    </div>
-                    <div className='flex h-auto max-w-[10vw]' data-aos='flip-down' data-aos-delay='1000'>
-                      <button className='bg-[#ffb700] w-[10vw] h-[6vh] rounded-xl text-xl font-russoone border-2 shadow-xl hover:border-black'>
-                          My Resume
-                      </button>
+                      </div>
 
-                    </div>
-
-                    </div>
-                    <img src={rocketimage} alt='' style={{
-                      width:'500px'
-                    }} />
-                  </motion.div>
+                   </div>   
 
       </section>
       
