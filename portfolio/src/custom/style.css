@@ -3,7 +3,7 @@
 }
 
 .hover-effect::after {
-  @apply absolute top-0 left-0 w-full h-full bg-baseprimary rounded-xl;
+  @apply absolute top-0 left-0 w-full h-full bg-baseprimary rounded-xl z-40;
   content: '';  
   transform: translate(-100%, 0) rotate(20deg);
   transform-origin: top left;

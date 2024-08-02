@@ -133,7 +133,7 @@ const [nav, setNav] = useState(false);
 
                 </div>
                 <div className='flex lgs:w-full mds:w-full mds:justify-center bg-secondary lgs:justify-center mds:items-center lgs:p-2  z-50'>
-                      <ul className='hidden mds:flex mds:w-[75vw]  lgs:flex text-sm gap-10 font-kanit'>
+                      <ul className='hidden mds:flex mds:w-[75vw]  lgs:flex text-sm gap-10 font-kanit z-50'>
                         <li className='hover-effect'>Home</li>
                         <li className='hover-effect'>Mobile Apps</li>
                         <li className='hover-effect'>Web Designs</li>
@@ -230,26 +230,46 @@ const [nav, setNav] = useState(false);
           
               </div>                
               </div>
-              <div className='flex flex-col justify-center items-center mds:w-full mds:h-screen lgs:h-screen lgs:bg-gradient-to-b from-secondary to-transparent sms:h-auto mr-auto overflow-hidden pl-2'>
+              <div className='flex flex-col sms:justify-center items-center mds:justify-start mds:w-full mds:h-screen lgs:h-screen lgs:bg-gradient-to-b from-secondary mds:bg-gradient-to-b from-secondary to-transparent sms:h-auto mr-auto overflow-hidden pl-2'>
 
-                {/* Elements in when the scale size is smale */}
+                {/* Elements in when the scale size is small */}
 
                       <div className='sm:hidden  flex flex-col w-full h-auto bg-transparent items-center justify-center p-2'>
-                          <img src={sample2} alt='' style={{
+                          <img src={sample} alt='' style={{
                             width:'420px'
                           }}/>
                       
                       </div>
 
-                      <div className='hidden lgs:flex flex-col absolute  mds:w-[100vw] mds:h-auto mds:justify-start lgs:overflow-hidden z-40'>
-                        <h2 className='text-center font-russoone font-bold text-primary lgs:w-[100vw]' style={{
+                {/* Elements in when the scale size is medium and large */}
 
-                          fontSize:'300px'
-                        }}>ASTRO</h2>
+                      <div className='hidden lgs:flex mds:flex flex-col  mds:w-auto mds:h-auto lgs:pt-2 lgs:h-auto mds:justify-start lgs:justify-start lgs:mb-1 mds:m-10 lgs:overflow-hidden z-40'>
+                        
+                        
+                      <div className='absolute flex-col w-auto bottom-0 right-20 h-auto bg-transparent items-center justify-center p-2'>
+                          <img src={sample} alt='' style={{
+                            width:'600px'
+                          }}/>
+                      
+                      </div>
+              
+                         <h2 className='text-center font-russoone font-bold lgs:w-[100vw] mds:w-auto text-primary' style={{
+                             fontSize: 'calc(2vw + 1rem)',
+                             height:'50px'
+                          }}>I'M {''}<span className='text-4xl'>OSANDA MUTHUKUMARANA</span>{''}</h2> 
+                          
+                       
+                          <h2 className='text-center font-russoone font-bold lgs:w-[100vw] mds:w-auto text-fontbasic' style={{
+                             fontSize: 'calc(5vw + 2rem)',
+                             height:'100px'
+                          }}>{''}<span className='text-wrap text-baseprimary'>Full Stack</span>{' '}DEV</h2>
+
+                          
+                          <Typewritereffect/>
                       </div>
 
 
-                <div className='flex flex-col justify-start items-center sms:w-full sms:h-auto  mds:w-full mds:h-auto mds:mr-auto sms:mr-0  overflow-hidden mds:pl-2 space-y-1'>
+                <div className='hidden sms:flex flex-col justify-start items-center sms:w-full sms:h-auto  mds:w-full mds:h-auto mds:mr-auto sms:mr-0  overflow-hidden mds:pl-2 space-y-1'>
                    
                     {/* Elements in when the scale size is small */}
 

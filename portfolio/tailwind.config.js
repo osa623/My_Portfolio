@@ -10,6 +10,7 @@ module.exports = {
         primary:"#FFFFFF",
         secondary:"#000000",
         baseprimary:"#00bfff",
+        fontbasic:"#fdd122"
     },
     fontFamily:{
 
@@ -28,7 +29,7 @@ module.exports = {
 
     screens: {
       'sms': { 'min': '10px', 'max': '640px' },
-      'mds': { 'min': '641px', 'max':'1024px'},
+      'mds': { 'min': '640px', 'max':'1024px'},
       'lgs': { 'min': '1025px' ,'max':'3048px'}
     
     },

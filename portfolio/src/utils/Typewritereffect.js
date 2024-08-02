@@ -3,21 +3,24 @@ import Typewriter from 'typewriter-effect';
 
 const Typewritereffect = () => {
   return (
-    <div className="text-3xl text-center text-primary font-kanit">
+    <h2 className="text-center font-russoone font-bold text-primary  lgs:w-[100vw] mds:w-auto" style={{
+      fontSize: 'calc(10vw + 2.5rem)',
+      
+    }}>
       <Typewriter
         options={{
           strings: [
-            'Content Creator',
-            'Video Editor',
-            'Automobile Enthusiast'
+            'ASTROPHILE',
+            'AUTOPHILE',
+            'DEVOP'
           ],
           autoStart: true,
           loop: true,
-          deleteSpeed: 50,
+          deleteSpeed: 100,
           cursor:'|'
         }}
       />
-    </div>
+    </h2>
   )
 }
 
