@@ -263,7 +263,7 @@ const [nav, setNav] = useState(false);
                          <h2 className='text-center font-russoone font-bold lgs:w-[100vw] mds:w-auto text-primary' style={{
                              fontSize: 'calc(2vw + 1rem)',
                              height:'50px'
-                          }}>I'M {''}<span className='text-4xl'>OSANDA MUTHUKUMARANA</span>{''}</h2> 
+                          }}>{''}<span className='text-4xl'>Imagine. Build. Achieve.</span>{''}</h2> 
                           
                        
                           <h2 className='text-center font-russoone font-bold lgs:w-[100vw] mds:w-auto text-fontbasic' style={{
@@ -374,38 +374,27 @@ const [nav, setNav] = useState(false);
             {/*medium and large screen size configurations*/}      
                       
                   <div className='hidden mds:flex lgs:flex h-auto w-auto'> 
-                      <div className='flex lgs:w-[40vw] lgs:h-auto p-2 z-40 ml-10 rounded-full lgs:justify-center overflow-hidden'>
+                      <div className='flex lgs:w-[40vw] mds:w-[50vw] lgs:h-auto p-2 z-40 lgs:ml-10 rounded-full lgs:justify-center overflow-hidden' data-aos='fade-right'>
                       <video src={samplevideo} autoPlay loop muted playsInlin/>
                       </div>
                       
-                      <div className='flex flex-col lgs:w-[60vw] lgs:justify-start  lgs:items-center lgs:h-auto p-2 lgs:space-y-5'>
-                          <div className='h-auto lgs:w-[30vw] justify-center items-center'>
+                      <div className='flex flex-col lgs:w-[60vw] lgs:justify-start mds:w-[50vw] items-center lgs:h-auto p-2 lgs:space-y-5'>
+                          <div className='h-auto lgs:w-[30vw] justify-center items-center mds:p-4'>
                                       <img src={about} alt=''style={{
                         
                                       }} 
                                       data-aos='flip-up'/>
                               </div>
-                              <div className='h-auto lgs:w-[45vw]  lgs:items-start lgs:justify-center pt-5'>
-                                     <p className=' w-auto  text-fontsecondary font-dmsans font-light text-left text-xl' style={{
+                              <div className='h-auto lgs:w-[45vw]  lgs:items-start lgs:justify-center lgs:pt-5 mds:p-2'>
+                                     <p className=' w-auto cursor-pointer  text-fontsecondary font-dmsans font-light text-left lgs:text-lg mds:text-sm' style={{
                                  
-                                     }}>{''}<span className='font-atma text-3xl font-bold text-primary'>I</span>{''} am Osanda Muthukumarana, currently an{'  '}
-                                    <span className="relative inline-table">
-                                        <motion.div
-                                        initial={{width:0}}
-                                        whileInView={{width:'auto'}}
-                                        transition={{duration:'1',ease:'easeInOut', delay:'0.3'}} className="absolute inset-0 bg-primary h-auto"/>
-                                        <span className="relative text-[#ff5927] font-bold p-0.2 whitespace-nowrap">undergraduate at SLIIT</span>
-                                  </span>
-                                     {''}, has a strong foundation in web development, crafting {' '}
-                                     <span className='relative inline-table'>
-                                     <motion.div
-                                        initial={{width:0}}
-                                        whileInView={{width:'auto'}}
-                                        transition={{duration:'1',ease:'easeInOut', delay:'0.3'}} className="absolute inset-0 bg-fontbasic h-auto"/>
-                                     <span className='relative text-secondary font-bold p-0.2 whitespace-nowrap'> Dynamic Front-End Interfaces and Robust Back-End Systems.</span>
-                                     </span>
-                                     {''} With experience in mobile app development, I aim to leverage cutting-edge technologies for impactful solution.Beyond technical skills, I enjoy creating engaging automobile content and editing videos, showcasing my versatility and creativity. My dedication to both technology and creative expression allows me to approach projects holistically, ensuring they are functional and engaging. As I continue to grow, I strive to contribute significantly to the tech industry and automotive content creation.</p> 
+                                     }} data-aos='fade-left'>{''}<span className='font-dmsans text-3xl font-bold text-primary'>I AM</span>{''} Osanda Muthukumarana, currently an undergraduate at SLIIT, has a strong foundation in Web Development, crafting Dynamic Front-End Interfaces and Robust Back-End Systems. With experience in Mobile Application Development, I aim to leverage cutting-edge technologies for impacful solution.Beyond technical skills, I enjoys creating Automobile Content and Editing Videos showcasing my versatility and creativity. My dedication to both technology and creative expression allows me to approach projects holistically, ensuring they are functional and engaging. As I continue to grow, I strive to contribute significantly to the tech industry and automotive content creation.</p> 
                               </div>
+                              <button class="group relative lgs:h-12 lgs:w-[15vw] mds:w-[20vw] mds:h-8  overflow-hidden rounded-xl bg-white lgs:text-lg mds:text-md shadow mds:m-5" data-aos='fade-up' data-aos-delay='250'>
+                                     <div class="absolute inset-0 w-3 bg-baseprimary transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                                     <span class="relative text-black font-russoone group-hover:text-white hover:font-bold transition-all duration-[100ms] hover:ease-out">My Resume</span>
+                              </button>
+                              
                             
 
                       </div>
@@ -414,18 +403,18 @@ const [nav, setNav] = useState(false);
 
       </section>
       
-      <div className='relative flex md:h-[10vh] max-w-full justify-center items-center m-5'>
-          <div className='flex h-1 w-[60vw] bg-primary rounded-3xl'/>
+      <div className='hidden sms:flex md:h-[10vh] max-w-full justify-center items-center m-5'>
+          <div className='flex h-1 w-[60vw] bg-primary rounded-3xl' data-aos='flip-left'/>
       </div> 
       
 
 
-        <section className='flex md:h-[60vh] sm:h-auto max-w-full items-center justify-center overflow-hidden'>
+        <section className='flex sms:h-auto max-w-full items-center justify-center overflow-hidden lg:mt-5'>
 
       
                 {/* small size screen configs */}
                   
-                <div className='sm:hidden flex flex-col bg-primary w-full h- items-center justify-center space-y-3'>
+                <div className='hidden sms:flex flex-col bg-primary w-full h- items-center justify-center space-y-3'>
                   <div className='flex items-center justify-center h-auto w-[75vw] mt-5'>
                       <img src={mytools} alt='' data-aos='flip-down' data-aos-delay='400'/>
                   </div>
@@ -452,146 +441,206 @@ const [nav, setNav] = useState(false);
                 </div>
 
                 {/* medium and large screen configs */}
-                <motion.div
-                      initial={{marginRight:'-2500px'}}
-                      whileInView={{marginRight:'1000px'}}
-                      transition={{duration:'2.0', ease:'easeInOut', delay:'0.3'}}
-                      className='hidden md:flex h-auto w-full space-x-10'>  
-                                <img src={rocketimage} alt='' style={{
-                                  width:'500px',
-                                  rotate:'180deg'
-                                }}/>
 
-                      <div className='flex h-[40vh] w-full bg-primary rounded-l-full p-10  shadow-xl shadow-[#ffb700]'>  
-                          <div className='flex h-[30vh] w-[50vw] pt-4 pb-4 ml-10 bg-primary rounded-l-full '>
-                            <Marquee className='rounded-l-full'>
-                                {devtools.map((brand, index) =>(
-                                    
-                                    <div key={index} className='flex flex-col items-center justify-center rounded-l-full' data-aos='flip-down' data-aos-delay='700'>
-                                        
-                                        <img src={brand.path} alt='' style={{
-                                          width:'150px',
-                                        }}/>
-                                        
-                                        
-                                    </div>
-                                ))};
-                        
-                            </Marquee>
-                          </div>
-                          <div className='flex flex-col items-center w-[60vw] max-h-auto justify-center space-y-6 '>
-                            <img src={mytools} alt=''
-                            style={{
-                              width:'400px'
-                            }} data-aos='fade-left' data-aos-delay='400'/>
-                            <div className='flex w-auto h-auto items-center justify-center space-x-1'data-aos='zoom-in' data-aos-delay='450'>
-                                <h2 className='flex items-start justify-start text-8xl font-russoone text-baseprimary lg:mb-10'>T</h2>
-                                <p className='flex w-[35vw] h-auto text-2xl items-center justify-start text-secondary font-poppins font-semibold'>hese are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions</p>
+                <div className='hidden lgs:flex mds:flex h-auto w-full'>
+                      <div className='flex flex-col h-auto lgs:w-[40vw] mds:w-[50vw] lgs:justify-center mds:items-center lgs:items-center lgs:space-y-2'>
+                            <div className='flex items-center lgs:w-[30vw] mds:w-[40vw] justify-center  h-auto mt-5 lgs:p-5'>
+                                <img src={mytools} alt='' data-aos='flip-down' data-aos-delay='400'/>
                             </div>
-                          </div>
-                        </div>   
-                </motion.div>   
+                            <div className='flex flex-col items-center justify-center lgs:w-[35vw] mds:p-5'>
+                                <p className=' h-auto text-center font-dmsans text-primary font-light lgs:text-lg mds:text-sm' data-aos='fade-right'>{''}<span className='lgs:text-3xl mds:text-2xl font-bold'>These</span>{''} are the main tools and languages I use to create projects, building responsive and efficient applications with strong front-end and back-end foundations for tailored solutions. I leverage modern frameworks and libraries to ensure scalability and performance, while maintaining clean, maintainable code. My approach is rooted in best practices and continuous learning to stay updated with the latest industry trends, ensuring each project not only meets but exceeds client expectations.</p>
+                            </div>
+
+                      </div>
+                      <div className='flex flex-col h-auto lgs:w-[60vw] mds:w-[50vw] justify-center items-center'>
+                            <div className='flex lgs:h-[20vh] lgs:w-[50vw] mr-5'>
+                                  <Marquee className='overflow-hidden'>
+                                      {devtools.map((brand, index) =>(
+                                          
+                                          <div key={index} className='flex flex-col items-center justify-center rounded-l-full '  data-aos='fade-up'>
+                                              
+                                              <img src={brand.path} className='lgs:w-[8vw] mds:w-[10vw]' alt='tools array'/>
+                                              
+                                              
+                                          </div>
+                                      ))};
+                              
+                                  </Marquee>
+                                  
+                            </div>
+                            <div className='flex lgs:h-[20vh] lgs:w-[50vw] mr-5'>
+                                  <Marquee direction='right' className=''>
+                                      {devtools.map((brand, index) =>(
+                                          
+                                          <div key={index} className='flex flex-col items-center justify-center rounded-l-full'  data-aos='fade-down'>
+                                              
+                                              <img src={brand.path} alt=''className='lgs:w-[8vw] mds:w-[10vw]'/>
+                                              
+                                              
+                                          </div>
+                                      ))};
+                              
+                                  </Marquee>
+                                  
+                            </div>
+
+
+                      </div>
+    
+
+                </div>
+
+                 
                 </section>
 
-                <div className='relative flex md:h-[15vh] max-w-full'/> 
+                <div className='relative flex mds:h-[15vh] lgs:h-[10vh] max-w-full'/> 
 
                 <section className='relative h-auto max-w-full overflow-hidden'>
-                  <div className='flex flex-col h-auto max-w-full items-center justify-center pt-5 space-y-5'>\
+                    <div className=' hidden sms:flex flex-col h-auto max-w-full items-center justify-center pt-5 space-y-5'>\
 
-                    {/*Image for large and medium screen models*/}
+                                {/*Image for large and medium screen models*/}
 
-                    <div className='hidden md:flex h-auto w-full items-center justify-center'>
-                          <img src={myworks} alt='' style={{
-                            width:'500px'
-                          }} data-aos='zoom-in' data-aos-delay='300'/>
-                    </div> 
+                                <div className='hidden md:flex h-auto w-full items-center justify-center'>
+                                      <img src={myworks} alt='' style={{
+                                        width:'500px'
+                                      }} data-aos='zoom-in' data-aos-delay='300'/>
+                                </div> 
 
-                    {/*Image for small screen models*/}
+                                {/*Image for small screen models*/}
 
-                    <div className='sm:hidden flex h-auto w-[75vw] items-center justify-center'>
-                          <img src={myworks} alt='' style={{
-                            width:'500px'
-                          }} data-aos='zoom-in' data-aos-delay='300'/>
-                    </div> 
+                                <div className='sm:hidden flex h-auto w-[75vw] items-center justify-center'>
+                                      <img src={myworks} alt='' style={{
+                                        width:'500px'
+                                      }} data-aos='zoom-in' data-aos-delay='300'/>
+                                </div> 
 
-                    {/*Image for large and medium screen models*/}
+                                {/*Image for small screen models*/}
 
-                    <div className='hidden md:flex h-auto w-full items-start justify-center space-x-2' data-aos='zoom-out' data-aos-delay='350'>
-                      <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
-                      <p className='flex w-[75vw] h-auto md:text-2xl text-justify text-primary font-poppins'>hese are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions. Each project reflects my commitment to using the latest technologies to deliver high-quality results tailored to meet client needs.</p>
+                                <div className='sm:hidden flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-out' data-aos-delay='350'>
+                                  <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
+                                  <p className='flex w-[75vw] h-auto text-md  text-justify text-primary font-poppins'>hese are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
+                                </div>
+
+                                <div className='sm:hidden flex flex-col h-auto w-full items-center justify-center bg-primary p-5 space-y-5'>
+                                      <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5 overflow-hidden' data-aos='flip-right'>
+                                        <h2 className='flex text-justify font-londrina font-bold text-5xl text-baseprimary bg-secondary rounded-lg p-2'>CallBook</h2>
+                                        
+                                          <img src={callbook} alt='' style={{
+                                            width:'300px'
+                                          }}/>
+
+                                        <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
+                                        Callbook is a simple mobile app for organizing and accessing all your contacts in one place. Easily manage your network with an intuitive interface.
+                                        </p>
+
+                                        <button className='flex bg-baseprimary text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
+                                          Check This Out
+                                        </button>
+
+                                      </div>
+                                      <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5' data-aos='flip-left'>
+                                        <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#ffd024] bg-secondary rounded-lg p-2'>Shilpa.lk</h2>
+                                        
+                                          <img src={shilpadotlk} alt='' style={{
+                                            width:'300px'
+                                          }}/>
+
+                                        <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
+                                        Shilpa.lk is a smart and user-friendly student course management platform. Students can easily log in to purchase courses, while teachers can log in to promote their courses and reach a broader audience.
+                                        </p>
+
+                                        <h2 className='flex bg-[#d12626]  text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
+                                        Not Available Yet
+                                        </h2>
+
+                                      </div>
+                                      
+                                      <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5'data-aos='flip-up'>
+                                        <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#69164e] bg-primary shadow-2xl rounded-lg p-2'>PayCue</h2>
+                                        
+                                          <img src={paycue} alt='' style={{
+                                            width:'200px'
+                                          }}/>
+
+                                        <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
+                                        PayCue Payment Planner is a streamlined app for managing your finances. Create, update, and delete payment plans with ease, keeping your budget on track.                            </p>
+
+                                        <button className='flex bg-[#69164e] text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
+                                        <a href='https://github.com/osa623/Payment-Planner-Mobile-Application/tree/master'>Check This Out</a> 
+                                        </button>
+
+                                    </div>
+                                    <div className='flex h-auto w-full items-center justify-center'>
+                                          <h2 className='flex text-xl font-poppins font-semibold text-[#69164e]'>
+                                              See more
+                                          </h2>
+                                    </div>
+                                
+                                  </div>               
                     </div>
+                    <div className='hidden mds:flex lgs:flex flex-col h-auto w-full items-center justify-center pt-5 space-y-3'>
+                                <div className='flex h-auto lgs:w-[35vw] items-center justify-center'>
+                                      <img src={myworks} alt='' data-aos='zoom-in' data-aos-delay='300'/>
+                                </div>  
+                                <div className='flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-out' data-aos-delay='350'>
+                                  <p className='lgs:w-[60vw] h-auto lgs:text-lg  text-center text-primary font-dmsans'>{''}<span className='text-2xl'>These</span>{''} are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
+                                </div>
+                                <div className='flex h-auto w-full items-center justify-center bg-transparent p-5 space-y-5'>
+                                      <div className='flex flex-col bg-transparent w-[30vw] h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5 overflow-hidden' data-aos='flip-right'>
+                                        <h2 className='flex text-justify font-londrina font-bold text-5xl text-baseprimary bg-secondary rounded-lg p-2'>CallBook</h2>
+                                        
+                                          <img src={callbook} alt='' style={{
+                                            width:'300px'
+                                          }}/>
 
-                     {/*Image for small screen models*/}
+                                        <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
+                                        Callbook is a simple mobile app for organizing and accessing all your contacts in one place. Easily manage your network with an intuitive interface.
+                                        </p>
 
-                    <div className='sm:hidden flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-out' data-aos-delay='350'>
-                      <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
-                      <p className='flex w-[75vw] h-auto text-md  text-justify text-primary font-poppins'>hese are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
-                    </div>
+                                        <button className='flex bg-baseprimary text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
+                                          Check This Out
+                                        </button>
 
-                    <div className='sm:hidden flex flex-col h-auto w-full items-center justify-center bg-primary p-5 space-y-5'>
-                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5 overflow-hidden' data-aos='flip-right'>
-                            <h2 className='flex text-justify font-londrina font-bold text-5xl text-baseprimary bg-secondary rounded-lg p-2'>CallBook</h2>
-                            
-                              <img src={callbook} alt='' style={{
-                                width:'300px'
-                              }}/>
+                                      </div>
+                                      <div className='flex flex-col bg-primary w-[30vw] h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5' data-aos='flip-left'>
+                                        <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#ffd024] bg-secondary rounded-lg p-2'>Shilpa.lk</h2>
+                                        
+                                          <img src={shilpadotlk} alt='' style={{
+                                            width:'300px'
+                                          }}/>
 
-                            <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
-                            Callbook is a simple mobile app for organizing and accessing all your contacts in one place. Easily manage your network with an intuitive interface.
-                            </p>
+                                        <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
+                                        Shilpa.lk is a smart and user-friendly student course management platform. Students can easily log in to purchase courses, while teachers can log in to promote their courses and reach a broader audience.
+                                        </p>
 
-                            <button className='flex bg-baseprimary text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
-                              Check This Out
-                            </button>
+                                        <h2 className='flex bg-[#d12626]  text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
+                                        Not Available Yet
+                                        </h2>
 
-                          </div>
-                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5' data-aos='flip-left'>
-                            <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#ffd024] bg-secondary rounded-lg p-2'>Shilpa.lk</h2>
-                            
-                              <img src={shilpadotlk} alt='' style={{
-                                width:'300px'
-                              }}/>
+                                      </div>
+                                      
+                                      <div className='flex flex-col bg-primary w-[30vw] h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5'data-aos='flip-up'>
+                                        <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#69164e] bg-primary shadow-2xl rounded-lg p-2'>PayCue</h2>
+                                        
+                                          <img src={paycue} alt='' style={{
+                                            width:'200px'
+                                          }}/>
 
-                            <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
-                            Shilpa.lk is a smart and user-friendly student course management platform. Students can easily log in to purchase courses, while teachers can log in to promote their courses and reach a broader audience.
-                            </p>
+                                        <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
+                                        PayCue Payment Planner is a streamlined app for managing your finances. Create, update, and delete payment plans with ease, keeping your budget on track.                            </p>
 
-                            <h2 className='flex bg-[#d12626]  text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
-                            Not Available Yet
-                            </h2>
+                                        <button className='flex bg-[#69164e] text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
+                                        <a href='https://github.com/osa623/Payment-Planner-Mobile-Application/tree/master'>Check This Out</a> 
+                                        </button>
 
-                          </div>
-                          
-                          <div className='flex flex-col bg-primary w-full h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5'data-aos='flip-up'>
-                            <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#69164e] bg-primary shadow-2xl rounded-lg p-2'>PayCue</h2>
-                            
-                              <img src={paycue} alt='' style={{
-                                width:'200px'
-                              }}/>
-
-                            <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
-                            PayCue Payment Planner is a streamlined app for managing your finances. Create, update, and delete payment plans with ease, keeping your budget on track.                            </p>
-
-                            <button className='flex bg-[#69164e] text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
-                             <a href='https://github.com/osa623/Payment-Planner-Mobile-Application/tree/master'>Check This Out</a> 
-                            </button>
-
-                        </div>
-                        <div className='flex h-auto w-full items-center justify-center'>
-                              <h2 className='flex text-xl font-poppins font-semibold text-[#69164e]'>
-                                  See more
-                              </h2>
-                        </div>
-                    
-                    </div>
-                   
+                                    </div>
+                                
+                                  </div>
 
 
 
 
-
-                   
-              </div>
+                       </div>
 
       </section>
 
