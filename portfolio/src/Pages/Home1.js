@@ -12,14 +12,13 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee} from '@fortawesome/free-solid-svg-icons';
 import { faPhone} from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 
 // Main-Image files
 import namelogo from '../assests/logo_1.png';
 import sample from '../assests/sample.png';
-import sample2 from '../assests/sample2.png';
-import welcome from '../assests/welcome.png';
 import about from '../assests/about.png';
 import mytools from '../assests/my tools.png';
 import myworks from '../assests/my works.png';
@@ -578,64 +577,92 @@ const [nav, setNav] = useState(false);
                                 
                                   </div>               
                     </div>
+
+                    
+                                {/*componenets for medium and large screen models*/}
+                   
                     <div className='hidden mds:flex lgs:flex flex-col h-auto w-full items-center justify-center pt-5 space-y-3'>
-                                <div className='flex h-auto lgs:w-[35vw] items-center justify-center'>
+                                <div className='flex h-auto mds:w-[40vw] lgs:w-[35vw] items-center justify-center'>
                                       <img src={myworks} alt='' data-aos='zoom-in' data-aos-delay='300'/>
                                 </div>  
                                 <div className='flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-out' data-aos-delay='350'>
-                                  <p className='lgs:w-[60vw] h-auto lgs:text-lg  text-center text-primary font-dmsans'>{''}<span className='text-2xl'>These</span>{''} are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
+                                  <p className='mds:w-[50vw] lgs:w-[60vw] h-auto lgs:text-lg  text-center text-primary font-dmsans'>{''}<span className='text-2xl'>These</span>{''} are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
                                 </div>
-                                <div className='flex h-auto w-full items-center justify-center bg-transparent p-5 space-y-5'>
-                                      <div className='flex flex-col bg-transparent w-[30vw] h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5 overflow-hidden' data-aos='flip-right'>
-                                        <h2 className='flex text-justify font-londrina font-bold text-5xl text-baseprimary bg-secondary rounded-lg p-2'>CallBook</h2>
+
+                                <div className='flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-in' data-aos-delay='350'>
+                                  <h2 className='mds:w-[50vw] lgs:w-[60vw] h-auto lgs:text-4xl  text-center text-primary font-russoone'>Mobile Applications</h2>
+                                </div>
+
+
+                                
+                                <div className='flex h-auto w-full items-center justify-center bg-transparent p-5 space-x-5'>
+                                      <div className='flex flex-col bg-transparent mds:w-[30vw] lgs:w-[30vw] lgs:h-auto lgs:p-10 mds:p-5   border-double border-primary border-2 rounded-xl items-center lgs:justify-start  p-2 space-y-5 overflow-hidden' data-aos='flip-right'>
+                                              <h2 className='flex text-justify font-londrina font-bold text-5xl text-baseprimary cursor-default rounded-lg p-2'>CallBook</h2>
+                                              
+                                                <img src={callbook} alt='' className='hover:scale-125 transform transition-transform duration-100 ease-in-out' style={{
+                                                  width:'175px'
+                                                }}/>
+
+                                              <p className='flex lgs:w-[25vw] font-dmsans text-center text-primary lgs:text-md mds:text-sm '>
+                                              Callbook is a simple mobile app for organizing and accessing all your contacts in one place. Easily manage your network with an intuitive interface.
+                                              </p>
+
+                                              <button class="group relative lgs:h-12 lgs:w-[15vw]  mds:w-[20vw] mds:h-8  overflow-hidden rounded-xl bg-white lgs:text-lg mds:text-md shadow mds:m-5" data-aos='fade-up' data-aos-delay='250'>
+                                                <div class="absolute inset-0 w-3 bg-baseprimary transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                                                <span class="relative text-black font-russoone group-hover:text-white hover:font-bold transition-all duration-[100ms] hover:ease-out">Check this out {''}<FontAwesomeIcon icon={faGithub} alt=' ' className='relative'/>{''}</span>                      
+                                              </button>
                                         
-                                          <img src={callbook} alt='' style={{
-                                            width:'300px'
-                                          }}/>
-
-                                        <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
-                                        Callbook is a simple mobile app for organizing and accessing all your contacts in one place. Easily manage your network with an intuitive interface.
-                                        </p>
-
-                                        <button className='flex bg-baseprimary text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
-                                          Check This Out
-                                        </button>
 
                                       </div>
-                                      <div className='flex flex-col bg-primary w-[30vw] h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5' data-aos='flip-left'>
-                                        <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#ffd024] bg-secondary rounded-lg p-2'>Shilpa.lk</h2>
-                                        
-                                          <img src={shilpadotlk} alt='' style={{
-                                            width:'300px'
-                                          }}/>
+                                      <div className='flex flex-col bg-transparent mds:w-[30vw]  lgs:w-[30vw]  lgs:h-auto lgs:p-10 mds:p-5  border-double border-primary border-2 rounded-xl items-center justify-start p-2 space-y-5 overflow-hidden' data-aos='flip-left'>
+                                                  <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#ffd024] bg-transparent cursor-default  rounded-lg p-2'>Shilpa.lk</h2>
+                                                  
+                                                    <img src={shilpadotlk} alt='' className='hover:scale-125 transform transition-transform duration-100 ease-in-out' style={{
+                                                      width:'175px'
+                                                    }}/>
 
-                                        <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
-                                        Shilpa.lk is a smart and user-friendly student course management platform. Students can easily log in to purchase courses, while teachers can log in to promote their courses and reach a broader audience.
-                                        </p>
+                                                  <p className='flex lgs:w-[25vw] font-dmsans text-center text-primary lgs:text-md mds:text-sm'>
+                                                  Shilpa.lk is a smart and user-friendly student course management platform. Students can easily log in to purchase courses, while teachers can log in to promote their courses.
+                                                  </p>
 
-                                        <h2 className='flex bg-[#d12626]  text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
-                                        Not Available Yet
-                                        </h2>
+                                                  <button class="group relative lgs:h-12 lgs:w-[15vw] mds:w-[20vw] mds:h-8  overflow-hidden rounded-xl bg-white lgs:text-md mds:text-sm shadow mds:m-5" data-aos='fade-up' data-aos-delay='250'>
+                                                      <div class="absolute inset-0 w-3 bg-fontbasic transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                                                      
+                                                      <span class="relative text-black font-russoone group-hover:text-white hover:font-bold transition-all duration-[100ms] hover:ease-out">Not Available Yet {''}<FontAwesomeIcon icon={faGithub} alt=' ' className='relative'/>
+                                                        <div className='relative h-auto w-auto justify-center'>
+                                                                        
+                                                        </div>
+                                                     
+                                                      {''}</span>                      
+                                                  </button> 
+
 
                                       </div>
                                       
-                                      <div className='flex flex-col bg-primary w-[30vw] h-auto border-double border-secondary border-4 rounded-xl items-center justify-start p-2 space-y-5'data-aos='flip-up'>
-                                        <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#69164e] bg-primary shadow-2xl rounded-lg p-2'>PayCue</h2>
-                                        
-                                          <img src={paycue} alt='' style={{
-                                            width:'200px'
-                                          }}/>
+                                      <div className='flex flex-col bg-transparent mds:w-[30vw]  lgs:w-[30vw]  lgs:h-auto lgs:p-10 mds:p-5   border-double border-primary border-2 rounded-xl items-center justify-start p-2 space-y-5 overflow-hidden'data-aos='flip-up'>
+                                                        <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#69164e] cursor-default bg-transparent shadow-2xl rounded-lg p-2'>PayCue</h2>
+                                                        
+                                                          <img src={paycue} alt='' className='hover:scale-125 transform transition-transform duration-100 ease-in-out' style={{
+                                                            width:'175px'
+                                                          }}/>
 
-                                        <p className='flex w-[75vw] font-poppins text-center text-secondary text-md '>
-                                        PayCue Payment Planner is a streamlined app for managing your finances. Create, update, and delete payment plans with ease, keeping your budget on track.                            </p>
-
-                                        <button className='flex bg-[#69164e] text-primary font-poppins justify-center p-1 w-[50vw] h-auto text-xl rounded-full'>
-                                        <a href='https://github.com/osa623/Payment-Planner-Mobile-Application/tree/master'>Check This Out</a> 
-                                        </button>
+                                                        <p className='flex lgs:w-[25vw] font-dmsans text-center text-primary lgs:text-md mds:text-sm '>
+                                                        PayCue Payment Planner is a streamlined app for managing your finances. Create, update, and delete payment plans with ease, keeping your budget on track.                            </p>
+                                                        
+                                                        <button class="group relative lgs:h-12 lgs:w-[15vw] mds:w-[20vw] mds:h-8  overflow-hidden rounded-xl bg-white lgs:text-lg mds:text-md shadow mds:m-5" data-aos='fade-up' data-aos-delay='250'>
+                                                                <div class="absolute inset-0 w-3 bg-[#69164e] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                                                                <span class="relative text-black font-russoone group-hover:text-white hover:font-bold transition-all duration-[100ms] hover:ease-out">Check this out {''}<FontAwesomeIcon icon={faGithub} alt=' ' className='relative'/>{''}</span>                      
+                                                        </button> 
 
                                     </div>
                                 
-                                  </div>
+                                </div>
+                                <div className='flex h-auto w-auto'>
+                                <div className='flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-in' data-aos-delay='350'>
+                                  <h2 className='mds:w-[50vw] lgs:w-[60vw] h-auto lgs:text-4xl  text-center text-primary font-russoone'>Web Applications</h2>
+                                </div>
+
+                                </div>
 
 
 
@@ -705,8 +732,7 @@ const [nav, setNav] = useState(false);
                                 width:'400px'
                               }} data-aos='fade-right' data-aos-delay='300'/>
                               <div className='flex h-auto w-[30vw] items-start justify-center space-x-1 cursor-default ' data-aos='zoom-in' data-aos-delay='350'>
-                                <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-10'>D</h2>
-                                <p className='flex w-[30vw] h-auto text-2xl text-justify text-primary font-lorniasolid font-light '>ev life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
+                                <p className='w-[30vw] h-auto text-md text-justify text-primary font-dmsans font-light '>{''}<span className='font-bold text-3xl'>Dev</span>{''} life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
                               </div>
                           </div>
                           <div className='flex h-[30vh] w-[60vw] items-center justify-center space-x-8 border-4 border-gray-600 bg-primary rounded-xl' data-aos='flip-down' data-aos-delay='200'>
