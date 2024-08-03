@@ -6,13 +6,14 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import '../custom/stareffect.css';
 import Marquee from "react-fast-marquee";
+import emailjs from 'emailjs-com';
 import Countup from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee} from '@fortawesome/free-solid-svg-icons';
 import { faEarth } from '@fortawesome/free-solid-svg-icons';
 import { faPhone} from '@fortawesome/free-solid-svg-icons';
+import { faMailForward} from '@fortawesome/free-solid-svg-icons';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 //social media icons
@@ -35,12 +36,12 @@ import bwlogo from '../assests/bwlogo.png';
 
 //sections images
 
-import rocketimage from '../assests/rocketimage.png';
+
 import moonbg from '../assests/moonbg.png';
 import moonbackground from '../assests/moonbackground.png';
 import earthimage from '../assests/earthimage.png';
 import astronut from '../assests/astronut.png';
-import quoteimg from '../assests/quoteimg.png';
+
 
 
 //mobile app images
@@ -88,6 +89,26 @@ const [CounterOn, setCounterOn] = useState(false);
 // navigation bar mobile res
 const [nav, setNav] = useState(false);
 
+
+//email sending part 
+
+const [formSubmit, setFormSubmit] = useState(false);
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', event.target, 'YOUR_USER_ID')
+    .then((result) => {
+        console.log(result.text);
+        setFormSubmit(true);
+
+        setTimeout(() => {
+          setFormSubmit(false);
+        }, 3000);
+    }, (error) => {
+        console.log(error.text);
+    });
+};
 
    const handleNav = () => {
     setNav(!nav);
@@ -857,7 +878,7 @@ const [nav, setNav] = useState(false);
 
 
     <section className='relative  h-[140vh] max-w-full  overflow-hidden'>
-            <div className='flex flex-col h-[120vh] w-full'>   
+            <div className='flex flex-col lgs:h-[120vh] w-full'>   
               
               {/*medium and larger screen responsiveness */}
                     <div className='absolute hidden md:flex bottom-0 max-w-full h-auto z-30'>
@@ -952,28 +973,70 @@ const [nav, setNav] = useState(false);
                       }}/>
                     </div>
 
-                        <motion.div 
-                        initial={{opacity:'0'}}
-                        whileInView={{opacity:'100'}}
-                        transition={{duration:'4.0', ease:'easeInOut', delay:'5.0'}}
-                        className="absolute hidden md:flex top-2 left-5  lg:w-auto h-[40vh] z-40 overflow-hidden">
-                           <div className=' bg-primary flex  w-auto lg:h-[30vh]  md:h-[25vh] rounded-full items-center p-10 justify-center space-x-3'>
+                    <div className='flex h-auto w-auto z-50'>
+ 
+                                      <form onSubmit={handleSubmit} class="mx-auto mt-16 max-w-xl sm:mt-20 border-2 lgs:p-10 lgs:rounded-2xl bg-primary bg-opacity-50">
+                                                 
+                                                <h2 className='flex lgs:w-[30vw] h-auto text-start font-russoone text-6xl'>Let's Talk</h2>
+                                                
+                                                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
 
-                           <p className='flex lg:w-[15vw] h-auto lg:text-2xl md:text-xl font-londrina  cursor-default'>If you appreciate my Designing works and find it valuable,consider</p>
-                           <p className='flex lg:w-[10vw] max:lg:h-[25vh] md:h-[20vh] lg:text-3xl md:text-2xl font-londrina lg:p-2 bg-[#ffb700] rounded-3xl text-center text-[#613215] cursor-pointer p-0'><a href='https://buymeacoffee.com/osandamuthukumarana'>Buy me a
-                           <FontAwesomeIcon icon={faCoffee} className='mx-5 size-11 rounded-full bg-primary border-8' />
-                           Coffee</a></p>
-                           <p className='flex lg:w-[35vw] md:w-[50vw] h-auto  lg:text-2xl md:text-xl font-londrina  cursor-default'>Your support fuels my creativity and helps me continue crafting and sharing high-quality projects. Thank you for your generosity!</p>
-                           </div>
-                           <div className='flex w-[18vw] h-auto rounded-3xl' style={{
-                            backgroundImage:`url(${quoteimg})`,
-                            backgroundPosition:'center',
-                            backgroundSize:'cover',
-                            rotate:'-20deg',}}>
-                           </div>
-                          
-                      
-                        </motion.div>
+                                                  <div>
+                                                    <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
+                                                    <div class="mt-2.5">
+                                                      <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                                                    </div>
+                                                  </div>
+                                                  <div>
+                                                    <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
+                                                    <div class="mt-2.5">
+                                                      <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                                                    </div>
+                                                  </div>
+                                                  <div class="sm:col-span-2">
+                                                    <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+                                                    <div class="mt-2.5">
+                                                      <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                                                    </div>
+                                                  </div>
+                                                  <div class="sm:col-span-2">
+                                                    <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Message</label>
+                                                    <div class="mt-2.5">
+                                                      <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+                                                    </div>
+                                                  </div>
+                                                  <div class="flex gap-x-4 sm:col-span-2">
+                                                    <div class="flex h-6 items-center">
+                                                      <button type="button" class="flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" role="switch" aria-checked="false" aria-labelledby="switch-1-label">
+                                                        <span class="sr-only">Agree to policies</span>
+                                                        <span aria-hidden="true" class="h-4 w-4 translate-x-0 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"></span>
+                                                      </button>
+                                                    </div>
+                                                    <label class="text-sm leading-6 text-gray-600" id="switch-1-label">
+                                                      By selecting this, you agree to our
+                                                      <a href="#" class="font-semibold text-indigo-600">privacy&nbsp;policy</a>.
+                                                    </label>
+                                                  </div>
+                                                </div>
+                                                <div className='flex w-full h-auto justify-center items-center lgs:mt-5 overflow-hidden'>
+
+                                                      <button type='submit' class="group relative lgs:h-12 lgs:w-[15vw] mds:w-[20vw] mds:h-8  overflow-hidden rounded-xl bg-white lgs:text-lg mds:text-md shadow mds:m-5" data-aos='fade-up' data-aos-delay='250'>
+                                                                      <div class="absolute inset-0 w-3 bg-[#afadae] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                                                                      <span class="relative text-black font-russoone group-hover:text-white hover:font-bold transition-all duration-[100ms] hover:ease-out">Send Message {''}<FontAwesomeIcon icon={faMailForward} alt=' ' className='relative'/>{''}</span>                      
+                                                      </button> 
+
+                                                </div>
+
+                                      </form>
+                                      {formSubmit && (
+                                          <div className="mt-4 text-center text-green-600 font-semibold">
+                                            Thank you for your message! We'll get back to you soon.
+                                          </div>
+                                       )}
+
+
+                    </div>
+
 
 
 
