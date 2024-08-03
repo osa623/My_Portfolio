@@ -11,9 +11,17 @@ import ScrollTrigger from 'react-scroll-trigger';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee} from '@fortawesome/free-solid-svg-icons';
+import { faEarth } from '@fortawesome/free-solid-svg-icons';
 import { faPhone} from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+
+//social media icons
+
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 
 // Main-Image files
@@ -86,6 +94,7 @@ const [nav, setNav] = useState(false);
    }
 
 
+   //icon
 
 
    // Initialize AOS
@@ -274,7 +283,29 @@ const [nav, setNav] = useState(false);
                             <div className='flex bg-primary h-2 lgs:w-[40vw] mds:w-[50vw] lgs:mt-10 rounded-full' data-aos='flip-left'/>
                             </div>
                           <Typewritereffect/>
+
+                          <div className='flex h-auto w-full justify-center lgs:p-2'>
+                                <motion.div
+                                initial={{width:'0px'}}
+                                whileInView={{width:'30vw'}}
+                                transition={{duration:'2', ease:'easeInOut', delay:'0.3'}}
+                                className='flex flex-row  lgs:h-[8vh] bg-primary  justify-center items-center rounded-full'>
+                                   <motion.div
+                                   initial={{opacity:0}}
+                                   whileInView={{opacity:1}}
+                                   transition={{duration:'4', ease:'easeInOut', delay:'0.3'}}
+                                   className='flex h-auto w-auto lgs:space-x-5 mds:p-5 mds:space-x-2'>
+                                      <FontAwesomeIcon icon={faFacebook} alt='' className='h-8 w-auto cursor-pointer  transform transition-transform duration-500 ease-in-out hover:scale-125'/>
+                                      <FontAwesomeIcon icon={faInstagram} alt='' className='h-8 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
+                                      <FontAwesomeIcon icon={faGithub} alt='' className='h-8 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
+                                      <FontAwesomeIcon icon={faDiscord} alt='' className='h-8 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
+                                      <FontAwesomeIcon icon={faLinkedin} alt='' className='h-8 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
+                                  </motion.div>
+                                </motion.div>
+                          </div>
+
                       </div>
+
 
 
                 <div className='hidden sms:flex flex-col justify-start items-center sms:w-full sms:h-auto  mds:w-full mds:h-auto mds:mr-auto sms:mr-0  overflow-hidden mds:pl-2 space-y-1'>
@@ -344,7 +375,7 @@ const [nav, setNav] = useState(false);
       
       {/*<div className='hidden mds:flex h-[20vh] w-full bg-transparent'/>  => additional one*/} 
      
-      <section className='flex mds:flex-row mds:h-auto sms:h-auto max-w-full border-none items-center justify-start cursor-default mds:mt-10 overflow-hidden'>
+      <section className='flex mds:flex-row mds:h-auto sms:h-auto max-w-full border-none items-center justify-start cursor-default mds:mt-10 lgs:mt-20 overflow-hidden'>
                   
                   <div className='hidden sms:flex flex-col w-full h-auto bg-primary  items-center space-y-4'>
                         <div className='flex flex-col h-auto w-[75vw] ml-2 items-center pt-10'>
@@ -657,9 +688,71 @@ const [nav, setNav] = useState(false);
                                     </div>
                                 
                                 </div>
-                                <div className='flex h-auto w-auto'>
+                                <div className='flex flex-col h-auto w-auto'>
                                 <div className='flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-in' data-aos-delay='350'>
                                   <h2 className='mds:w-[50vw] lgs:w-[60vw] h-auto lgs:text-4xl  text-center text-primary font-russoone'>Web Applications</h2>
+                                </div>
+                                <div className='flex h-auto w-full items-center justify-center bg-transparent p-5 space-x-5'>
+                                      <div className='flex flex-col bg-transparent mds:w-[30vw] lgs:w-[30vw] lgs:h-auto lgs:p-10 mds:p-5   border-double border-primary border-2 rounded-xl items-center lgs:justify-start  p-2 space-y-5 overflow-hidden' data-aos='flip-right'>
+                                              <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#69164e] cursor-default rounded-lg p-2'>Baos Wheels</h2>
+                                              
+                                                <img src={callbook} alt='' className='hover:scale-125 transform transition-transform duration-100 ease-in-out' style={{
+                                                  width:'175px'
+                                                }}/>
+
+                                              <p className='flex lgs:w-[25vw] font-dmsans text-center text-primary lgs:text-md mds:text-sm '>
+                                              Baos Wheels is an automotive entertainment platform where you can watch reviews, read articles, and explore a wealth of content related to cars and the auto industry.
+                                              </p>
+
+                                              <button class="group relative lgs:h-12 lgs:w-[15vw]  mds:w-[20vw] mds:h-8  overflow-hidden rounded-xl bg-white lgs:text-lg mds:text-md shadow mds:m-5" data-aos='fade-up' data-aos-delay='250'>
+                                                <div class="absolute inset-0 w-3 bg-[#69164e] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                                                <span class="relative text-black font-russoone group-hover:text-white hover:font-bold transition-all duration-[100ms] hover:ease-out">Check this out {''}<FontAwesomeIcon icon={faEarth} alt=' ' className='relative pl-1'/>{''}</span>                      
+                                              </button>
+                                        
+
+                                      </div>
+                                      <div className='flex flex-col bg-transparent mds:w-[30vw]  lgs:w-[30vw]  lgs:h-auto lgs:p-10 mds:p-5  border-double border-primary border-2 rounded-xl items-center justify-start p-2 space-y-5 overflow-hidden' data-aos='flip-left'>
+                                                  <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#ffd024] bg-transparent cursor-default  rounded-lg p-2'>Chocomate</h2>
+                                                  
+                                                    <img src={shilpadotlk} alt='' className='hover:scale-125 transform transition-transform duration-100 ease-in-out' style={{
+                                                      width:'175px'
+                                                    }}/>
+
+                                                  <p className='flex lgs:w-[25vw] font-dmsans text-center text-primary lgs:text-md mds:text-sm'>
+                                                  ChocoMate is a chocolate factory website where you can explore and purchase a wide variety of delectable chocolate products. From handcrafted truffles to rich chocolate bars.
+                                                  </p>
+
+                                                  <button class="group relative lgs:h-12 lgs:w-[15vw] mds:w-[20vw] mds:h-8  overflow-hidden rounded-xl bg-white lgs:text-md mds:text-sm shadow mds:m-5" data-aos='fade-up' data-aos-delay='250'>
+                                                      <div class="absolute inset-0 w-3 bg-fontbasic transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                                                      
+                                                      <span class="relative text-black font-russoone group-hover:text-white hover:font-bold transition-all duration-[100ms] hover:ease-out">Check this out {''}<FontAwesomeIcon icon={faGithub} alt=' ' className='relative'/>
+                                                        <div className='relative h-auto w-auto justify-center'>
+                                                                        
+                                                        </div>
+                                                     
+                                                      {''}</span>                      
+                                                  </button> 
+
+
+                                      </div>
+                                      
+                                      <div className='flex flex-col bg-transparent mds:w-[30vw]  lgs:w-[30vw]  lgs:h-auto lgs:p-10 mds:p-5   border-double border-primary border-2 rounded-xl items-center justify-start p-2 space-y-5 overflow-hidden'data-aos='flip-up'>
+                                                        <h2 className='flex text-justify font-londrina font-bold text-5xl text-[#afadae] cursor-default bg-transparent shadow-2xl rounded-lg p-2'>Clickmate</h2>
+                                                        
+                                                          <img src={paycue} alt='' className='hover:scale-125 transform transition-transform duration-100 ease-in-out' style={{
+                                                            width:'175px'
+                                                          }}/>
+
+                                                        <p className='flex lgs:w-[25vw] font-dmsans text-center text-primary lgs:text-md mds:text-sm '>
+                                                        ClickMate is a photography management system where you can hire photographers, purchase photo collections, and customize photo albums.</p>
+                                                        
+                                                        <button class="group relative lgs:h-12 lgs:w-[15vw] mds:w-[20vw] mds:h-8  overflow-hidden rounded-xl bg-white lgs:text-lg mds:text-md shadow mds:m-5" data-aos='fade-up' data-aos-delay='250'>
+                                                                <div class="absolute inset-0 w-3 bg-[#afadae] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                                                                <span class="relative text-black font-russoone group-hover:text-white hover:font-bold transition-all duration-[100ms] hover:ease-out">Check this out {''}<FontAwesomeIcon icon={faGithub} alt=' ' className='relative'/>{''}</span>                      
+                                                        </button> 
+
+                                    </div>
+                                
                                 </div>
 
                                 </div>
