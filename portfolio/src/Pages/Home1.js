@@ -93,20 +93,43 @@ const [nav, setNav] = useState(false);
 //email sending part 
 
 const [formSubmit, setFormSubmit] = useState(false);
+const [formData, setFormData] = useState({
+  user_name: '',
+  user_email: '',
+  message: ''
+});
+const [formError, setFormError] = useState('');
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value
+  });
+};
 
 const handleSubmit = (event) => {
   event.preventDefault();
 
+  const { user_name, user_email, message } = formData;
+
+  // Validate the form fields
+  if (!user_name || !user_email || !message) {
+    setFormError('Please fill in all fields');
+    return;
+  }
+
   emailjs.sendForm('service_0xi9jwq', 'template_ua7ckvq', event.target, 'goVOCoAqSw4rEeUqN')
     .then((result) => {
-        console.log(result.text);
-        setFormSubmit(true);
+      console.log(result.text);
+      setFormSubmit(true);
+      setFormError('');
+      setFormData({ user_name: '', user_email: '', message: '' });
 
-        setTimeout(() => {
-          setFormSubmit(false);
-        }, 3000);
+      setTimeout(() => {
+        setFormSubmit(false);
+      }, 3000);
     }, (error) => {
-        console.log(error.text);
+      console.log(error.text);
     });
 };
 
@@ -844,7 +867,7 @@ const handleSubmit = (event) => {
                           <div className='flex flex-col w-[35vw] h-auto items-center justify-center space-y-4 p-2'>
                               <img src={socialcircle} alt='' style={{
                               }} data-aos='fade-right' data-aos-delay='300'/>
-                              <div className='flex h-auto w-[30vw] items-start justify-center space-x-1 cursor-default ' data-aos='zoom-in' data-aos-delay='350'>
+                              <div className='flex h-auto w-[30vw] items-start justify-center space-x-1 cursor-default ' data-aos='fade-right' data-aos-delay='350'>
                                 <p className='lgs:w-[30vw] h-auto lgs:text-md mds:text-sm text-justify text-primary font-dmsans font-light '>{''}<span className='font-bold text-3xl'>Dev</span>{''} life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
                               </div>
                           </div>
@@ -974,46 +997,68 @@ const handleSubmit = (event) => {
 
                     <div className='flex lgs:flex-col h-auto w-auto'>
  
-                                      <form onSubmit={handleSubmit} class="mx-auto mt-16 lgs:max-w-xl sms:mt-20 border-2 lgs:p-10 mds:p-12 rounded-2xl bg-fontsecondary bg-opacity-80 z-50">
-                                                 
-                                                <h2 className='flex lgs:w-[30vw] h-auto text-start font-russoone text-6xl'>Let's Talk</h2>
-                                                
-                                                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-
-                                                  
-                                                  <div class="sm:col-span-2">
-                                                    <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
-                                                    <div class="mt-2.5">
-                                                      <input type="text" name="user_name" id="username" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
-                                                    </div>
-                                                  </div>
-                                                  <div class="sm:col-span-2">
-                                                    <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
-                                                    <div class="mt-2.5">
-                                                      <input type="email" name="user_email" id="useremail" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
-                                                    </div>
-                                                  </div>
-                                                  <div class="sm:col-span-2">
-                                                    <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Message</label>
-                                                    <div class="mt-2.5">
-                                                      <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
-                                                    </div>
-                                                  </div>
-                                                  <div class="flex gap-x-4 sm:col-span-2">
-                                                    <div class="flex h-6 items-center">
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <div className='flex w-full h-auto justify-center items-center lgs:mt-5 overflow-hidden'>
-
-                                                      <button type='submit' class="group relative lgs:h-12 lgs:w-[15vw] mds:w-[20vw] mds:h-8  overflow-hidden rounded-xl bg-white lgs:text-lg mds:text-md shadow mds:m-5">
-                                                                      <div class="absolute inset-0 w-3 bg-[#afadae] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-                                                                      <span class="relative text-black font-russoone group-hover:text-white hover:font-bold transition-all duration-[100ms] hover:ease-out">Send Message {''}<FontAwesomeIcon icon={faMailForward} alt=' ' className='relative'/>{''}</span>                      
-                                                      </button> 
-
-                                                </div>
-
-                                      </form>
+                    <form onSubmit={handleSubmit} className="mx-auto mt-16 lgs:max-w-xl sms:mt-20 border-2 lgs:p-10 mds:p-12 rounded-2xl bg-fontsecondary bg-opacity-80 z-50">
+                                <h2 className='flex lgs:w-[30vw] h-auto text-start font-russoone text-6xl'>Let's Talk</h2>
+                                
+                                {formError && <p className="text-red-500">{formError}</p>}
+                                
+                                <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                                  <div className="sm:col-span-2">
+                                    <label htmlFor="user_name" className="block text-sm font-semibold leading-6 text-gray-900">First name</label>
+                                    <div className="mt-2.5">
+                                      <input
+                                        type="text"
+                                        name="user_name"
+                                        value={formData.user_name}
+                                        onChange={handleChange}
+                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="sm:col-span-2">
+                                    <label htmlFor="user_email" className="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+                                    <div className="mt-2.5">
+                                      <input
+                                        type="email"
+                                        name="user_email"
+                                        value={formData.user_email}
+                                        onChange={handleChange}
+                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                        required
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="sm:col-span-2">
+                                    <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">Message</label>
+                                    <div className="mt-2.5">
+                                      <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        rows="4"
+                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                        required
+                                      ></textarea>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className='flex w-full h-auto justify-center items-center lgs:mt-5 overflow-hidden'>
+                                  <button type='submit' className="group relative lgs:h-12 lgs:w-[15vw] mds:w-[20vw] mds:h-8 overflow-hidden rounded-xl bg-white lgs:text-lg mds:text-md shadow mds:m-5">
+                                    <div className="absolute inset-0 w-3 bg-[#afadae] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+                                    <span className="relative text-black font-russoone group-hover:text-white hover:font-bold transition-all duration-[100ms] hover:ease-out">
+                                      Send Message <FontAwesomeIcon icon={faMailForward} alt=' ' className='relative'/>
+                                    </span>
+                                  </button>
+                                </div>
+                     </form>
+                              {formSubmit && (
+                                <div className='absolute hidden mds:flex lgs:flex w-auto h-auto top-10 right-12' style={{ animationDuration:'20s' }}>
+                                  <div className='flex bg-primary lgs:w-[25vw] h-auto justify-center lgs:border-2 border-[#ec3434] rounded-3xl lgs:p-4'>
+                                    <p className='lgs:text-center font-semibold font-dmsans'>Thank you for reaching out to me! I appreciate your message and will get back to you as soon as possible.</p>
+                                  </div>
+                                </div>
+                              )}
                                       <div className='absolute hidden mds:flex lgs:flex max-w-full h-auto top-40 right-0 z-40' style={{
                                                  animationDuration:'20s'
                                                  }}>
@@ -1021,18 +1066,6 @@ const handleSubmit = (event) => {
                                                        width:'400px',
                                                        }}/>
                                              </div>
-                                             
-                                      {formSubmit && (
-                                            <div className='absolute hidden mds:flex lgs:flex w-auto h-auto top-10 right-12' style={{
-                                              animationDuration:'20s'
-                                              }}>
-                                                   <div className='flex bg-primary lgs:w-[25vw] h-auto justify-center lgs:border-2 border-[#ec3434] rounded-3xl lgs:p-4'>
-                                                     <p className='lgs:text-center font-semibold font-dmsans '>Thank you for reaching out to me! I appreciate your message and will get back to you as soon as possible.</p>
-                                                   </div>
-
-                                          </div>
-
-                                       )}
 
 
                     </div>
