@@ -6,7 +6,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import '../custom/stareffect.css';
 import Marquee from "react-fast-marquee";
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import Countup from 'react-countup';
 import ScrollTrigger from 'react-scroll-trigger';
 import { motion } from 'framer-motion';
@@ -97,7 +97,7 @@ const [formSubmit, setFormSubmit] = useState(false);
 const handleSubmit = (event) => {
   event.preventDefault();
 
-  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', event.target, 'YOUR_USER_ID')
+  emailjs.sendForm('service_0xi9jwq', 'template_ua7ckvq', event.target, 'goVOCoAqSw4rEeUqN')
     .then((result) => {
         console.log(result.text);
         setFormSubmit(true);
@@ -155,7 +155,7 @@ const handleSubmit = (event) => {
   return (
     <main className='relative h-auto w-full bg-secondary '>
       <Stareffect/>
-      <section className='relative flex-col h-auto w-full'>
+      <section className='relative flex-col h-auto w-full' id='home'>
 
         <div className='flex flex-col h-auto w-full justify-between lgs:justify-center'>
                 <div className='hidden mds:flex lgs:flex lgs:justify-center bg-secondary mds:justify-center sms:justify-start cursor-pointer p-5'>
@@ -167,16 +167,16 @@ const handleSubmit = (event) => {
                 <div className='flex lgs:w-full mds:w-full mds:justify-center bg-secondary lgs:justify-center mds:items-center lgs:p-2'>
                     <ul className='hidden mds:flex mds:w-[75vw] lgs:flex text-sm gap-10 font-kanit z-50'>
                                   <li className='hover-effect'>
-                                  <span className='hover-effect-text'>Home</span>
+                                  <span className='hover-effect-text'><a href='#home'>Home</a></span>
                                    </li>
                                   <li className='hover-effect'>
-                                  <span className='hover-effect-text'>Mobile Apps</span>
+                                  <span className='hover-effect-text'><a href='#mobile-apps'>Mobile Apps</a></span>
                                    </li>
                                   <li className='hover-effect'>
-                                    <span className='hover-effect-text'>Web Designs</span>
+                                    <span className='hover-effect-text'><a href='#web-apps'>Web Desings</a></span>
                                   </li>
                                   <li className='hover-effect'>
-                                    <span className='hover-effect-text'>Social Circle</span>
+                                    <span className='hover-effect-text'><a href='#social-circle'>Social Circle</a></span>
                                   </li>
                     </ul>
                  </div>
@@ -307,20 +307,20 @@ const handleSubmit = (event) => {
 
                           <div className='flex h-auto w-full justify-center lgs:p-2'>
                                 <motion.div
-                                initial={{width:'0px'}}
-                                whileInView={{width:'30vw'}}
+                                initial={{width:'0'}}
+                                whileInView={{width:'25vw'}}
                                 transition={{duration:'2', ease:'easeInOut', delay:'0.3'}}
-                                className='flex flex-row  lgs:h-[8vh] bg-primary  justify-center items-center rounded-full'>
+                                className='flex flex-row  lgs:h-[8vh] bg-primary  justify-center items-center rounded-full mds:w-1/2 lgs:w-1/4'>
                                    <motion.div
                                    initial={{opacity:0}}
                                    whileInView={{opacity:1}}
                                    transition={{duration:'4', ease:'easeInOut', delay:'0.3'}}
                                    className='flex h-auto w-auto lgs:space-x-5 mds:p-5 mds:space-x-2'>
-                                      <FontAwesomeIcon icon={faFacebook} alt='' className='h-8 w-auto cursor-pointer  transform transition-transform duration-500 ease-in-out hover:scale-125'/>
-                                      <FontAwesomeIcon icon={faInstagram} alt='' className='h-8 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
-                                      <FontAwesomeIcon icon={faGithub} alt='' className='h-8 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
-                                      <FontAwesomeIcon icon={faDiscord} alt='' className='h-8 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
-                                      <FontAwesomeIcon icon={faLinkedin} alt='' className='h-8 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
+                                      <FontAwesomeIcon icon={faFacebook} alt='' className='lgs:h-8 mds:h-5 w-auto cursor-pointer  transform transition-transform duration-500 ease-in-out hover:scale-125'/>
+                                      <FontAwesomeIcon icon={faInstagram} alt='' className='lgs:h-8 mds:h-5 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
+                                      <FontAwesomeIcon icon={faGithub} alt='' className='lgs:h-8  mds:h-5 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
+                                      <FontAwesomeIcon icon={faDiscord} alt='' className='lgs:h-8 mds:h-5 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
+                                      <FontAwesomeIcon icon={faLinkedin} alt='' className='lgs:h-8 mds:h-5 w-auto cursor-pointer  transform transition-transform duration-150 ease-in-out hover:scale-125'/>
                                   </motion.div>
                                 </motion.div>
                           </div>
@@ -559,7 +559,7 @@ const handleSubmit = (event) => {
 
                                 {/*Image for small screen models*/}
 
-                                <div className='sm:hidden flex h-auto w-[75vw] items-center justify-center'>
+                                <div className='hidden sms:flex h-auto w-[75vw] items-center justify-center'>
                                       <img src={myworks} alt='' style={{
                                         width:'500px'
                                       }} data-aos='zoom-in' data-aos-delay='300'/>
@@ -567,7 +567,7 @@ const handleSubmit = (event) => {
 
                                 {/*Image for small screen models*/}
 
-                                <div className='sm:hidden flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-out' data-aos-delay='350'>
+                                <div className='hidden sms:flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-out' data-aos-delay='350'>
                                   <h2 className='flex items-start justify-start text-7xl font-russoone text-baseprimary lg:mb-20'>T</h2>
                                   <p className='flex w-[75vw] h-auto text-md  text-justify text-primary font-poppins'>hese are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
                                 </div>
@@ -637,7 +637,7 @@ const handleSubmit = (event) => {
                                 <div className='flex h-auto mds:w-[40vw] lgs:w-[35vw] items-center justify-center'>
                                       <img src={myworks} alt='' data-aos='zoom-in' data-aos-delay='300'/>
                                 </div>  
-                                <div className='flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-out' data-aos-delay='350'>
+                                <div className='flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' id='mobile-apps' data-aos='zoom-out' data-aos-delay='350'>
                                   <p className='mds:w-[50vw] lgs:w-[60vw] h-auto lgs:text-lg  text-center text-primary font-dmsans'>{''}<span className='text-2xl'>These</span>{''} are some of the web applications and mobile applications I've built, showcasing my skill in creating responsive and innovative solutions.</p>
                                 </div>
 
@@ -710,7 +710,7 @@ const handleSubmit = (event) => {
                                 
                                 </div>
                                 <div className='flex flex-col h-auto w-auto'>
-                                <div className='flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' data-aos='zoom-in' data-aos-delay='350'>
+                                <div className='flex h-auto w-full items-start justify-center space-x-2 overflow-hidden' id='web-apps' data-aos='zoom-in' data-aos-delay='350'>
                                   <h2 className='mds:w-[50vw] lgs:w-[60vw] h-auto lgs:text-4xl  text-center text-primary font-russoone'>Web Applications</h2>
                                 </div>
                                 <div className='flex h-auto w-full items-center justify-center bg-transparent p-5 space-x-5'>
@@ -788,7 +788,7 @@ const handleSubmit = (event) => {
       <div className='hidden md:flex h-[5vh] max-w-full'/> 
 
    <ScrollTrigger onEnter={()=> setCounterOn(true)} onExit={()=> setCounterOn(false)}>
-      <section className='relative h-auto max-w-full overflow-hidden z-30'>
+      <section className='relative h-auto max-w-full overflow-hidden'>
 
         {/*small screen configs */}
 
@@ -839,35 +839,34 @@ const handleSubmit = (event) => {
               
         {/*medium and large screen configs */}
       
-              <div className='hidden md:flex w-auto h-auto'>
-                        <div className='flex h-[60vh] max-w-full items-center justify-start space-x-3'>
+              <div className='hidden mds:flex lgs:flex w-auto h-auto mds:z-30'>
+                        <div className='flex h-[60vh] max-w-full items-center justify-start space-x-3' id='social-circle'>
                           <div className='flex flex-col w-[35vw] h-auto items-center justify-center space-y-4 p-2'>
                               <img src={socialcircle} alt='' style={{
-                                width:'400px'
                               }} data-aos='fade-right' data-aos-delay='300'/>
                               <div className='flex h-auto w-[30vw] items-start justify-center space-x-1 cursor-default ' data-aos='zoom-in' data-aos-delay='350'>
-                                <p className='w-[30vw] h-auto text-md text-justify text-primary font-dmsans font-light '>{''}<span className='font-bold text-3xl'>Dev</span>{''} life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
+                                <p className='lgs:w-[30vw] h-auto lgs:text-md mds:text-sm text-justify text-primary font-dmsans font-light '>{''}<span className='font-bold text-3xl'>Dev</span>{''} life aside, Baos Wheels is where my passion for automobiles shines. As an automobile content creator, I share insightful reviews, captivating stories, and the latest trends in the automotive industry, including mechanical explanations to engage enthusiasts and curious minds alike.</p>
                               </div>
                           </div>
-                          <div className='flex h-[30vh] w-[60vw] items-center justify-center space-x-8 border-4 border-gray-600 bg-primary rounded-xl' data-aos='flip-down' data-aos-delay='200'>
+                          <div className='flex lgs:h-auto lgs:w-[60vw] mds:h-auto  mds:w-[60vw] mds:p-5 items-center lgs:p-5 justify-center space-x-8 border-4 border-gray-600 bg-primary rounded-xl' data-aos='flip-down' data-aos-delay='200'>
                                 <img src={bwlogo} alt='' style={{
                                   width:'150px',
                             
-                                }} className='rounded-full border-2 border-secondary' data-aos='flip-right'/>
-                              <div className='flex flex-col h-auto w-[25vw] items-center justify-center' data-aos='zoom-in'>
+                                }} className='rounded-full border-2 border-secondary mds:h-auto' data-aos='flip-right'/>
+                              <div className='flex flex-col h-auto lgs:w-[25vw] mds:w-[20vw] items-center justify-center' data-aos='zoom-in'>
                                     <div className='flex h-auto w-[30vw] items-center justify-center'>
-                                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>{CounterOn && <Countup start={0} end={45000} duration={2} delay={0.2}/>}</h2>
-                                      <h2 className='flex text-secondary text-7xl font-russoone text-center'>+</h2>
+                                      <h2 className='flex text-secondary lgs:text-7xl mds:text-4xl font-russoone text-center'>{CounterOn && <Countup start={0} end={45000} duration={2} delay={0.2}/>}</h2>
+                                      <h2 className='flex text-secondary lgs:text-7xl mds:text-4xl font-russoone text-center'>+</h2>
                                     </div>
-                                    <h2 className='flex text-[#3a3a3a] text-4xl font-russoone font-bold text-center'>Supporters</h2>
-                                    <h2 className='flex text-secondary w-[22vw] text-2xl font-kanit text-center'>Have gathered from all the main and popular platforms</h2>
+                                    <h2 className='flex text-[#3a3a3a] lgs:text-4xl mds:text-2xl font-russoone font-bold text-center'>Supporters</h2>
+                                    <h2 className='flex text-secondary lgs:w-[22vw] mds:w-[25vw] lgs:text-2xl mds:text-lg font-dmsans text-center'>Have gathered from all the main and popular platforms</h2>
                               </div>
                               <div className='flex flex-col h-auto w-[15vw] items-center justify-center space-y-2'>
-                                  <button className=' bg-blue-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='250'>Facebook</button>
-                                  <button className=' bg-secondary w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='300'>Tiktok</button>
-                                  <button className=' bg-red-600 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='350'>Youtube</button>
-                                  <button className=' bg-pink-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='400'>Instagram</button>
-                                  <button className=' bg-gray-700 w-[10vw] h-[4vh] text-xl rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='450'>Web</button>
+                                  <button className=' bg-blue-700 w-[10vw] lgs:h-[4vh] mds:h-[5vh] lgs:text-xl mds:text-sm rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='250'>Facebook</button>
+                                  <button className=' bg-secondary w-[10vw] h-[4vh] mds:h-[5vh] lgs:text-xl mds:text-sm rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='300'>Tiktok</button>
+                                  <button className=' bg-red-600 w-[10vw] lgs:h-[4vh] mds:h-[5vh] lgs:text-xl mds:text-sm rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='350'>Youtube</button>
+                                  <button className=' bg-pink-700 w-[10vw] lgs:h-[4vh] mds:h-[5vh] lgs:text-xl mds:text-sm rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='400'>Instagram</button>
+                                  <button className=' bg-gray-700 w-[10vw] lgs:h-[4vh] mds:h-[5vh] lgs:text-xl mds:text-sm rounded-xl text-center text-primary font-russoone' data-aos='fade-left' data-aos-delay='450'>Web</button>
                               </div>
                           </div>
                         </div>
@@ -877,17 +876,17 @@ const handleSubmit = (event) => {
     </ScrollTrigger> 
 
 
-    <section className='relative  h-[140vh] max-w-full  overflow-hidden'>
+    <section className='relative  h-auto max-w-full overflow-hidden'>
             <div className='flex flex-col lgs:h-[120vh] w-full'>   
               
               {/*medium and larger screen responsiveness */}
-                    <div className='absolute hidden md:flex bottom-0 max-w-full h-auto z-30'>
+                    <div className='absolute hidden mds:flex lgs:flex bottom-0 lgs:w-full h-auto z-30'>
                       <img src={moonbg} alt='' style={{
                         
                         
                       }}/>
                        </div>
-                       <div className='absolute sm:hidden flex bottom-0 max-w-full h-auto z-30'>
+                       <div className='absolute hidden sms:flex bottom-0 max-w-full h-auto z-30'>
                       <img src={moonbg} alt='' style={{
                         width:'auto',
                         height:'350px'
@@ -973,30 +972,25 @@ const handleSubmit = (event) => {
                       }}/>
                     </div>
 
-                    <div className='flex h-auto w-auto z-50'>
+                    <div className='flex lgs:flex-col h-auto w-auto'>
  
-                                      <form onSubmit={handleSubmit} class="mx-auto mt-16 max-w-xl sm:mt-20 border-2 lgs:p-10 lgs:rounded-2xl bg-primary bg-opacity-50">
+                                      <form onSubmit={handleSubmit} class="mx-auto mt-16 lgs:max-w-xl sms:mt-20 border-2 lgs:p-10 mds:p-12 rounded-2xl bg-fontsecondary bg-opacity-80 z-50">
                                                  
                                                 <h2 className='flex lgs:w-[30vw] h-auto text-start font-russoone text-6xl'>Let's Talk</h2>
                                                 
                                                 <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
 
-                                                  <div>
+                                                  
+                                                  <div class="sm:col-span-2">
                                                     <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
                                                     <div class="mt-2.5">
-                                                      <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
-                                                    </div>
-                                                  </div>
-                                                  <div>
-                                                    <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
-                                                    <div class="mt-2.5">
-                                                      <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                                                      <input type="text" name="user_name" id="username" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
                                                     </div>
                                                   </div>
                                                   <div class="sm:col-span-2">
                                                     <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
                                                     <div class="mt-2.5">
-                                                      <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+                                                      <input type="email" name="user_email" id="useremail" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
                                                     </div>
                                                   </div>
                                                   <div class="sm:col-span-2">
@@ -1007,20 +1001,12 @@ const handleSubmit = (event) => {
                                                   </div>
                                                   <div class="flex gap-x-4 sm:col-span-2">
                                                     <div class="flex h-6 items-center">
-                                                      <button type="button" class="flex w-8 flex-none cursor-pointer rounded-full bg-gray-200 p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" role="switch" aria-checked="false" aria-labelledby="switch-1-label">
-                                                        <span class="sr-only">Agree to policies</span>
-                                                        <span aria-hidden="true" class="h-4 w-4 translate-x-0 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"></span>
-                                                      </button>
                                                     </div>
-                                                    <label class="text-sm leading-6 text-gray-600" id="switch-1-label">
-                                                      By selecting this, you agree to our
-                                                      <a href="#" class="font-semibold text-indigo-600">privacy&nbsp;policy</a>.
-                                                    </label>
                                                   </div>
                                                 </div>
                                                 <div className='flex w-full h-auto justify-center items-center lgs:mt-5 overflow-hidden'>
 
-                                                      <button type='submit' class="group relative lgs:h-12 lgs:w-[15vw] mds:w-[20vw] mds:h-8  overflow-hidden rounded-xl bg-white lgs:text-lg mds:text-md shadow mds:m-5" data-aos='fade-up' data-aos-delay='250'>
+                                                      <button type='submit' class="group relative lgs:h-12 lgs:w-[15vw] mds:w-[20vw] mds:h-8  overflow-hidden rounded-xl bg-white lgs:text-lg mds:text-md shadow mds:m-5">
                                                                       <div class="absolute inset-0 w-3 bg-[#afadae] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
                                                                       <span class="relative text-black font-russoone group-hover:text-white hover:font-bold transition-all duration-[100ms] hover:ease-out">Send Message {''}<FontAwesomeIcon icon={faMailForward} alt=' ' className='relative'/>{''}</span>                      
                                                       </button> 
@@ -1028,10 +1014,24 @@ const handleSubmit = (event) => {
                                                 </div>
 
                                       </form>
+                                      <div className='absolute hidden mds:flex lgs:flex max-w-full h-auto top-40 right-0 z-40' style={{
+                                                 animationDuration:'20s'
+                                                 }}>
+                                                      <img src={astronut} alt='' style={{
+                                                       width:'400px',
+                                                       }}/>
+                                             </div>
+                                             
                                       {formSubmit && (
-                                          <div className="mt-4 text-center text-green-600 font-semibold">
-                                            Thank you for your message! We'll get back to you soon.
+                                            <div className='absolute hidden mds:flex lgs:flex w-auto h-auto top-10 right-12' style={{
+                                              animationDuration:'20s'
+                                              }}>
+                                                   <div className='flex bg-primary lgs:w-[25vw] h-auto justify-center lgs:border-2 border-[#ec3434] rounded-3xl lgs:p-4'>
+                                                     <p className='lgs:text-center font-semibold font-dmsans '>Thank you for reaching out to me! I appreciate your message and will get back to you as soon as possible.</p>
+                                                   </div>
+
                                           </div>
+
                                        )}
 
 
@@ -1040,46 +1040,16 @@ const handleSubmit = (event) => {
 
 
 
-
-                         <motion.div
-                          initial={{right:'-500px'}}
-                          whileInView={{right:'30px'}}
-                          transition={{duration:'4.0',ease:'easeInOut', delay:'0.3'}}
-                          className='absolute hidden md:flex max-w-full h-auto top-40  animate-bounce' style={{
-                            animationDuration:'20s'
-                          }}>
-                            <img src={astronut} alt='' style={{
-                              width:'500px',
-                              rotatez:'120deg',
-                            }}/>
-                          </motion.div>
-
-                          <motion.div
-                          initial={{right:'-300px'}}
-                          whileInView={{right:'0px'}}
-                          transition={{duration:'4.0',ease:'easeInOut', delay:'0.3'}}
-                          className='absolute sm:hidden flex max-w-full h-auto top-80  animate-bounce' style={{
-                            animationDuration:'40s'
-                          }}>
-                            <img src={astronut} alt='' style={{
-                              width:'300px',
-                              rotatez:'120deg',
-                            }}/>
-                          </motion.div>
-
-
-
-
                           <motion.div
                           initial={{bottom:'-400px'}}
                           whileInView={{bottom:'50px'}}
                           transition={{duration:'3.0',ease:'easeInOut', delay:'0.3'}}
-                          className='absolute min-w-sm h-auto animate-spin animate-duration-300 lg:max-w-4xl lg:min-w-2xl md:max-w-2xl' style={{
+                          className='absolute min-w-sm h-auto animate-spin animate-duration-300 lgs:max-w-4xl lgs:min-w-2xl md:max-w-2xl' style={{
                             animationDuration:'400s'
                           }}>
                             <img src={earthimage} alt='' style={{
-                              width:'900px',
-                              rotatez:'120deg'
+                              width:'750px',
+                             
                             }}/>
                           </motion.div>
 
