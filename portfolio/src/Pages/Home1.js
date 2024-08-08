@@ -83,6 +83,9 @@ import samplevideo from '../assests/Comp 1.mp4'
 
 const Home1 = () => {
 
+
+
+
   //count animation
 const [CounterOn, setCounterOn] = useState(false);
 
@@ -815,7 +818,7 @@ const handleSubmit = (event) => {
 
         {/*small screen configs */}
 
-              <div className='sm:hidden flex flex-col h-auto w-auto items-center space-y-4'>
+              <div className='hidden sms:flex flex-col h-auto w-auto items-center space-y-4'>
                 <div className='flex flex-col w-[75vw] h-auto items-center justify-center space-y-4 p-2'>
                                 <img src={socialcircle} alt='' style={{
                                   width:'500px'

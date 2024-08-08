@@ -18,6 +18,7 @@ const Stareffect = () => {
                         <div class="star-animation" id="stars2"></div>
                         <div class="star-animation" id="stars3"></div>
                         <div class="star-animation" id="stars4"></div>
+                        <div class="star-animation" id="stars5"></div>
                     </div>
               </div>
   )
