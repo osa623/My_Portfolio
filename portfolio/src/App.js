@@ -2,14 +2,14 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //import Home from './Pages/Home'; // Correct path
-import Home1 from './Pages/Home1';
+import Portfolio from './Pages/Portfolio';
 
 
 function App() {
   return (
     <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home1 />} />
+            <Route path="/" element={<Portfolio />} />
           </Routes>
     </BrowserRouter>
   );

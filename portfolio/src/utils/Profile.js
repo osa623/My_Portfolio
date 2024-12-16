@@ -3,63 +3,50 @@ import '../custom/profileAnimation.css';
 
 const Profile = () => {
   return (
+    <div className='flex scale-150 h-[40vh] rounded-full'>
 
-      <div className='flex h-auto w-auto'>
-        <div className='flex flex-col scale-60 h- w-auto items-center justify-center'>
-            <div class='animation-example'>
-                <div class='item'>
-                    <div class='line'></div>
-                    <div class='dot'></div>
-                    <div class='circle'></div>
-                </div>
-                <div class='item'>
-                    <div class='line'></div>
-                    <div class='dot'></div>
-                    <div class='circle'></div>
-                </div>
-                <div class='item'>
-                    <div class='line'></div>
-                    <div class='dot'></div>
-                    <div class='circle'></div>
-                </div>
-                <div class='item'>
-                    <div class='line'></div>
-                    <div class='dot'></div>
-                    <div class='circle'></div>
-                </div>
-                <div class='item -type2'>
-                    <div class='line'></div>
-                    <div class='dot'></div>
-                    <div class='circle'></div>
-                </div>
-                <div class='item -type2'>
-                    <div class='line'></div>
-                    <div class='dot'></div>
-                    <div class='circle'></div>
-                </div>
-                <div class='item -type2'>
-                    <div class='line'></div>
-                    <div class='dot'></div>
-                    <div class='circle'></div>
-                </div>
-                <div class='item -type2'>
-                    <div class='line'></div>
-                    <div class='dot'></div>
-                    <div class='circle'></div>
-                </div>
-                <div class='center'>
-                    <div class='circle'></div>
-                    <div class='circle'></div>
-                    <div class='circle'></div>
-                </div>
+            <div>
+            <ol reversed className="paces" lang="en">
+                <li className="pace js text-primary text-sm">
+                JAVASCRIPT
+                </li>
+                <li className="pace css text-primary">
+                CSS
+
+                </li>
+                <li className="pace html text-primary">
+                HTML
+
+                </li>
+                <li className="pace url text-primary">
+                REACT
+
+                </li>
+                <li className="pace http text-primary">
+                NODEJS
+
+                </li>
+                <li className="pace tcpip text-primary">
+                MONGODB
+
+                </li>
+            </ol>
+            <footer>
+                <blockquote>
+                <p>
+                    Fast gets all the attention,<br />
+                    but Slow has all the power
+                </p>
+                <cite>Stewart Brand "Pacelayers"</cite>
+                </blockquote>
+                <a href="https://vimeo.com/373128517">The Layers of the Web - Jeremy Keith</a>
+            </footer>
             </div>
 
-        </div>  
 
-      </div>
- 
+    </div>
 
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

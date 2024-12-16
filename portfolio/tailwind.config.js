@@ -10,6 +10,7 @@ module.exports = {
         primary:"#FFFFFF",
         secondary:"#000000",
         baseprimary:"#00bfff",
+        theme01: "#9C2473",
         fontbasic:"#fdd122",
         fontsecondary:"#E5E4E2"
     },
